@@ -1,0 +1,44 @@
+.services-blocks {
+    border-bottom: 1px solid #ccc;
+}
+.services-blocks:after {
+    content:'';
+    display: block;
+    clear: both;
+    padding-bottom: 15px;
+}
+.services-blocks h3 {
+    color: #00b300;
+}
+.services-blocks p {
+    color: #333;
+    font-size: 14px;
+}
+.align-left {
+    width: 250px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+.services-blocks > *:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.align-right {
+ width: 250px;
+    float: right;
+    margin-left: 15px;   
+    margin-bottom: 5px;
+}
+.mf-icons {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 15px;
+    flex-wrap: wrap;
+}
+.mf-icons > div {
+    width: 150px;
+    padding: 0 20px;
+}
+.mf-icons img { width: inherit;}

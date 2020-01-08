@@ -1,0 +1,16 @@
+.droplet-image-trust {
+    background: url('../../images/Droplet-Banner-01.jpg') no-repeat;
+    background-size: contain;
+    height: 200px;
+}
+.droplet-image-discipline {
+    background: url('../../images/Droplet-Banner-02.jpg') no-repeat;
+    background-size: contain;
+    height: 200px;
+}
+
+.droplet-image-longitivity {
+    background: url('../../images/Droplet-Banner-03.jpg') no-repeat;
+    background-size: contain;
+    height: 200px;
+}
