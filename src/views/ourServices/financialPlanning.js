@@ -24,8 +24,8 @@ class financialPlanning extends React.Component {
 </p>
 				</div>
 				<div className="services-blocks">
-					<img src={require("../../images/Financial-Services-01.jpg")} alt="Trust Yourself" className="align-left" />
 					<h3>Be True To Yourself And Your Advisor</h3>
+					<img src={require("../../images/Financial-Services-01.jpg")} alt="Trust Yourself" className="align-left" />
 					<p>Make sure you do not hide any of your income or expenses and investments if any to your family members as well as your advisor. Being open to your advisor will help him understand your financial priorities.
 						</p>
 					<p>Have a monthly budget in place and start to track down all your expenses; this will help your advisor to identify where you spend unnecessarily and how better he can help you in realigning your
@@ -34,9 +34,9 @@ based on your risk profile.
 </p>
 				</div>
 				<div className="services-blocks">
+					<h3>Managing/Assessing Risk </h3>
 					<img src={require("../../images/Financial-Services-02.jpg")}
 						alt="Managing/Assessing Risk" className="align-right" />
-					<h3>Managing/Assessing Risk </h3>
 					<p>Not all your fingers are of same size. Similarly, every individuals risk appetite differs based on various factors such as existing commitments, requirements, income, and age and so on.
 					</p>
 					<p>The risk can be categorized as aggressive, moderate, and conservative and there are few who are not sure of the risk at all.
@@ -56,9 +56,10 @@ based on your risk profile.
 </p>
 				</div>
 				<div className="services-blocks">
+					<h3>Asset Allocation</h3>
 					<img src={require("../../images/Financial-Services-04.jpg")}
 						alt="Asset Allocation" className="align-right" />
-					<h3>Asset Allocation</h3>
+
 					<p>Do not put all your eggs in one basket. Diversification is very important and it varies among individuals based on their risk profiling.
 					</p>
 					<p>In Indian context, almost 90% of our assets are tied towards real estate, gold, and 10% towards useless insurance schemes and endowment policies.

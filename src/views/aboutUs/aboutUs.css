@@ -1,194 +1,57 @@
-.header-layer {
-    padding-left:15px;
-    padding-right:15px;
-    padding-bottom:15px;
+.droplet-values {
     display: flex;
-    align-items: flex-end;
-    position: relative;
+    justify-content: space-around;
+    margin: 0 -10px;
 }
-.droplet-logo {
-    background: url('../../images/Droplet-Wealth-Advisor-Logo.png') no-repeat;
-    width: 150px;
-    height: 40px;
-    background-size: contain;
-}
-.droplet-menu {
-    display: none;
-}
-.header-layer > *:last-child{
-    margin-left: auto;
-}
-.header-tabs {
-    list-style: none;
-    display: flex;
-    margin-bottom: 0;
-    font-size: 14px;
-}
-.header-tabs .link {
-    color: #ccc;
-}
-.header-tabs .link.active, .header-tabs .link.active:before {
-    color: #333;
-}
-.header-tabs [class*="icon-"]:before {
-    display: none;
-}
-@media all and (max-width: 1024px){
-    .header-layer  {
-        align-items:baseline;
-    }
-    .header-tabs {
-        width: 220px;
-        position: absolute;
-        display: block;
-        left: -265px;
-        z-index: 150;
-        top: 50px;
-        background-color: #fff;
-        height: calc(100vh - 60px); 
-    transition: left 0.5s;
-    box-shadow: 2px 2px 5px 0px rgba(51,51,51,1);
-   }
-   .header-tabs > li  {
-       padding: 12px;
-       margin-left: 0;
-       border-bottom: 1px solid #ccc;
-   }
-    .header-tabs > li > * {
-        margin-left: 0 !important;
-    }
-    .header-tabs.slide-right {
-        left: -40px;
-        transition: left 0.5s;
-    }
-    .header-tabs [class*="icon-"]:before {
-        display: inline-block;
-    }
-    .droplet-logo{
-        width: 100px;
-        height: 25px;
-    }
-    .droplet-menu {
-        display: inline-block;
-        margin-right: 10px;
-        cursor: pointer;
-    }
-    .droplet-menu:before {
-        display: inline-block;
-        content: "\efa2";
-        font-size: 30px;
-        font-family: 'icofont';
-    }
-    ul.services-list [class*="icon-"]:before{
-      display: inline-block;
-    width: 20px;
-    height: 20px;
-    vertical-align: bottom;
-    margin-right: 10px;
-}
-    .services-list , .services-list.open{
-    position: initial;
-    width: inherit;
-    left: 0;
-    margin-left: -12px !important;
-    margin-right: -12px;
-    border-left: 0;
-    border-right: 0;
-    }
-    .services-list > li > * {
-        padding-left: 45px !important;
-    }
-    .services-list > li:last-child , .services-list.open > li:last-child {
-        border-bottom: 0;
-    }
-}
-.header-tabs > li > *{
-text-decoration: none;
-margin-left: 12px;
-font-weight: bold;
-}
-.header-tabs > li.services-wrap{
-    padding-bottom: 0;
-}
-.header-tabs > li.services-wrap .icon-services{
-    border-bottom: 0;
-    padding-bottom: 12px;
-}
-.icon-services.close, .icon-services.close:before {
-    color: #333;
-}
-
-.header-container {
-  display: flex; 
-  width: 100%;
-}
-.header-container > *:last-child {
-  margin-left: auto;
-}
-.services-wrap {
-    position: relative;
-}
-ul.services-list{
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    list-style: none;
-    margin-left: 5px;
-    width: 150px;
-    top: 45px;
-    background-color: #fff;
-    height: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s;
-    border-color: #ccc;
-    border-width: 0 1px 0 1px;
-    border-style: solid;
-}
-ul.services-list.open {
-    height: auto;
-    z-index: 150;
-    transition: max-height 1s;
-    max-height: 150px;
-    border-top: 1px solid #ccc;
-}
-
-ul.service-list > li > *.active {
-  color: #333;
-}
-ul.services-list > li > *{
-    color: #ccc; 
-}
-ul.services-list > li > * {
-    padding: 9px 6px;
-    display: block;
-    text-decoration: none;
-    border-bottom: 1px solid #ccc;
-}
-.connect-options [class*= "icon-"] {
-    background: gold;
-    border-radius: 35px;
-    width: 35px;
-    height: 35px;
-    text-align: center;
+.droplet-values > div {
     margin: 0 5px;
-    display: inline-block;
-
+    width: 33.33%
 }
-.connect-options [class*= "icon-"]:before {
-    display: inline-block;
-    font-size: 18px;
-color:#333;
-font-family:'icofont';
-text-align: center;
-line-height: 35px;
+.droplet-values h2 {
+    margin: 0 -15px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #fff;
 }
-.connect-options .icon-call:before{
-content: "\ec46";
+.droplet-value-trust, .droplet-value-discipline, .droplet-value-longevity {
+    min-height: 200px;
+    position: relative;
 }
-.connect-options .icon-facebook:before{
-     content: "\ed37";
+.droplet-value-trust {
+    background: url('../../images/trust.jpg') no-repeat;
+    background-size: cover;
 }
-.connect-options .icon-instagram:before{
-     content: "\ed46";
+.droplet-value-discipline {
+    background: url('../../images/discipline.jpg') no-repeat;
+    background-size: cover;
+}
+.droplet-value-longevity {
+     background: url('../../images/longevity.jpg') no-repeat;
+    background-size: cover;
+}
+.droplet-value-trust:after, .droplet-value-discipline:after, .droplet-value-longevity:after {
+    content: '';
+    position: absolute;
+    background-color: #ccc;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+.droplet-value-trust > div, .droplet-value-discipline > div, .droplet-value-longevity > div  {
+    padding: 10px 15px; 
+    color: #fff;
+    line-height: 21px;
+    font-style: italic;
+    font-weight: 600;
+}
+@media all and (max-width: 767px){
+    .droplet-values {
+        flex-direction: column;
+        margin: 0;
+    }
+    .droplet-values > div {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
 }

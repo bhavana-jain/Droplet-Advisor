@@ -12,14 +12,14 @@ class SimpleMap extends Component {
 			<div style={{ height: '250px', width: '100%' }}>
 				<ReactBingmaps
 					bingmapKey="AtboYP1XJWjbXDFLfVGmduvzW7Z5G5vf5YWhgOec8BLDpmiX8mXYPOUIbgEI3tVA"
-					center={[12.9048, 80.0891]}
+					center={[13.1058, 80.2561]}
 					zoom={15}
 					navigationBarMode={"compact"}
 
 					pushPins={
 						[
 							{
-								"location": [12.9048, 80.0891],
+								"location": [13.1058, 80.2561],
 								"option": { title: 'Droplet Wealth Advisory', color: 'red', class:'custom' },
 
 							}

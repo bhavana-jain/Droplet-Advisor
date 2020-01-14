@@ -72,7 +72,7 @@ class Header extends React.Component {
 							<li><NavLink to='/home' className="link icon-home" onClick={this.setDefault}>Home</NavLink>
 							</li>
 							<li>
-								<NavLink to='/contactus' className="link icon-team" onClick={this.setDefault}>About Us </NavLink>
+								<NavLink to='/about-us' className="link icon-team" onClick={this.setDefault}>About Us </NavLink>
 							</li>
 							<li className={"services-wrap"}>
 								<div className={"link icon-services " + (this.state.droplist ? "close" : '') + (this.state.childActive ? " close active" : "")}
@@ -86,7 +86,7 @@ class Header extends React.Component {
 								</ul>
 							</li>
 							<li>
-								<NavLink to='/contactus' onClick={this.setDefault} className="link icon-blog">Blogs</NavLink>
+								<NavLink to='/blog' onClick={this.setDefault} className="link icon-blog">Blogs</NavLink>
 							</li>
 							<li>
 								<NavLink to='/contactus' onClick={this.setDefault} className="link icon-connect">Contact Us </NavLink>
