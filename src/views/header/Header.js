@@ -16,24 +16,27 @@ class Header extends React.Component {
 		this.slideMenu = this.slideMenu.bind(this);
 		this.updateSource = this.updateSource.bind(this);
 		this.setDefault = this.setDefault.bind(this);
+		this.hideSideMenu = this.hideSideMenu.bind(this)
 	}
 
 	setDefault() {
 		this.setState({
 			childActive: false,
-			droplist: false
+			droplist: false,
+			slideMenu: false
 		})
 	}
 
 	updateSource() {
 		this.setState({
-			childActive: true
+			childActive: true,
+			slideMenu: false
 		})
 	}
 	// Our services droplist
 	renderServices(e) {
 		this.setState({
-			droplist: !this.state.droplist
+			droplist: !this.state.droplist,
 		})
 	}
 
@@ -41,6 +44,11 @@ class Header extends React.Component {
 	slideMenu() {
 		this.setState({
 			slideMenu: !this.state.slideMenu
+		})
+	}
+	hideSideMenu() {
+		this.setState({
+			slideMenu: false
 		})
 	}
 
@@ -94,7 +102,7 @@ class Header extends React.Component {
 						</ul>
 					</div>
 				</header>
-
+				<div className={"page-overlay " + (this.state.slideMenu == true ? 'active' : '')} onClick={this.hideSideMenu}></div>
 			</div>
 		)
 	}

@@ -201,3 +201,16 @@ content: "\ec46";
 .connect-options .icon-email:before{
     content:"\ef12";
 }
+.page-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0;
+    display: none;
+}
+.page-overlay.active {
+    display: block;
+}
