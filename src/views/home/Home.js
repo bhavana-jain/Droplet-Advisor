@@ -20,7 +20,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				<AliceCarousel mouseTrackingEnabled
+				{/* <AliceCarousel mouseTrackingEnabled
 					responsive={this.bannerResponsive}
 					dotsDisabled={true}
 					buttonsDisabled={true}>
@@ -47,7 +47,7 @@ class Home extends React.Component {
 							<i className="quote-by">- Warren Buffett</i>
 						</div>
 					</div>
-				</AliceCarousel>
+				</AliceCarousel> */}
 				{/* Our Services */}
 				<div className="services-bg">
 					<div className="container">
@@ -77,23 +77,7 @@ class Home extends React.Component {
 
 
 				</AliceCarousel> */}
-				<div className="container">
-					<h2> The Droplet Team</h2>
-					<ul className="droplet-team">
-						<li>
-							<div className="team" data-name="S"></div>
-						</li>
-						<li>
-							<div className="team" data-name="P"></div>
-						</li>
-						<li>
-							<div className="team" data-name="D"></div>
-						</li>
-						<li>
-							<div className="team" data-name="R"></div>
-						</li>
-					</ul>
-				</div>
+
 			</div>
 		)
 	}
