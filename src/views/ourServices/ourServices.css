@@ -1,21 +1,26 @@
 .services-blocks {
     border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
 }
 .services-blocks:after {
     content:'';
     display: block;
     clear: both;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
-.services-blocks h3 {
-    color: #00b300;
+.services-blocks h3, .services-blocks h2, .services-blocks h1 {
+    color: red;
+}
+.services-blocks.animated {
+    padding-top: 0 !important;
 }
 .services-blocks p {
     color: #333;
     font-size: 14px;
+    line-height: 25px;
 }
 .align-left {
-    width: 250px;
+    width: 43%;
     float: left;
     margin-right: 15px;
     margin-bottom: 5px;
@@ -25,7 +30,7 @@
     margin-bottom: 0;
 }
 .align-right {
- width: 250px;
+ width: 43%;
     float: right;
     margin-left: 15px;   
     margin-bottom: 5px;
@@ -42,10 +47,39 @@
     padding: 0 20px;
 }
 .mf-icons img { width: inherit;}
+.mf-icons img:hover {
+    border: 2px solid yellow;
+    border-radius: 100%;
+    transform: scale(1.3);
+    transition: transform .5s;
+}
+.services-description {
+    float: left;
+    width: 55%;
+}
+.services-description h3 {margin-top: 0;}
+.planning-bg {
+    background: url('../../images/banner-home.png') no-repeat;
+    width: auto;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+.mf-bg {
+      background: url('../../images/banner-home.png') no-repeat;
+    width: auto;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
 @media all and (max-width: 767px){
     .align-left, .align-right {
     width: 100%;
     float: none;
     margin: 0 0 5px 0;
+}
+.services-description {
+    float: none;
+    width: 100%;
 }
 }

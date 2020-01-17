@@ -13,10 +13,11 @@ import financialPlanning from './views/ourServices/financialPlanning';
 import insurance from './views/ourServices/insurance';
 import mutualFunds from './views/ourServices/mutualFunds';
 import Blogs from './views/blogs/blogs';
-import realtyReality from './views/blogs/blog-details/realtyReality';
-import tiffenForKid from './views/blogs/blog-details/tiffenForKid';
-import losingFewCrores from './views/blogs/blog-details/losing-few-crores';
-import securingFuture from './views/blogs/blog-details/securingFuture';
+import BlogDetails from './views/blogs/blog'
+// import realtyReality from './views/blogs/realtyReality';
+// import tiffenForKid from './views/blogs/blog-details/tiffenForKid';
+// import losingFewCrores from './views/blogs/blog-details/losing-few-crores';
+// import securingFuture from './views/blogs/blog-details/securingFuture';
 
 
 class App extends React.Component {
@@ -41,12 +42,14 @@ class App extends React.Component {
 						<Route path="/financialplanning" component={financialPlanning} />
 						<Route path='/insurance' component={insurance} />
 						<Route path='/mutualFunds' component={mutualFunds} />
-						<Route exact path='/blog' component={Blogs} />
-						<Route exact path='blogs/:id' component={Home} />
-						<Route path='/blog/reality-about-realty' component={realtyReality} />
+						<Switch>
+							<Route exact path='/blog' component={Blogs} />
+							<Route path='/blog/:id' component={BlogDetails} />
+						</Switch>
+						{/* <Route path='/blogs/reality-about-realty' component={realtyReality} />
 						<Route path='/blog/tiffen-for-kid' component={tiffenForKid} />
 						<Route path='/blog/losing-few-crores' component={losingFewCrores} />
-						<Route path='/blog/secure-your-future' component={securingFuture} />
+						<Route path='/blog/secure-your-future' component={securingFuture} /> */}
 					</Switch>
 					<footer className="clear">
 						<ul className="ul-reset flex connect-options">

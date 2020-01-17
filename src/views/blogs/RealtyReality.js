@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../../blogs/blog.css';
+import './blog.css';
 
-class realtyReality extends React.Component {
+export default class RealtyReality extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -10,7 +10,7 @@ class realtyReality extends React.Component {
 	render() {
 		return (
 			<div className="container blogs-wrap">
-				<img src={require("../../../images/blogs/Reality-about-Realty-1080x675.jpg")}
+				<img src={require("../../images/blogs/Reality-about-Realty-1080x675.jpg")}
 					alt="Reality about Realty" className="align-right" />
 				<h2>Reality about Realty</h2>
 				<h6>by admin | Apr 15, 2018 | Uncategorized | 0 comments</h6>
@@ -41,4 +41,3 @@ class realtyReality extends React.Component {
 		)
 	}
 }
-export default realtyReality;

@@ -1,31 +1,38 @@
 .droplet-values {
     display: flex;
     justify-content: space-around;
-    margin: 0 -10px;
+    flex-direction: column;
 }
 .droplet-values > div {
-    margin: 0 5px;
-    width: 33.33%
+   display: flex;
 }
 .droplet-values h2 {
     margin: 0 -15px;
     padding: 10px 15px;
     border-bottom: 1px solid #fff;
 }
+.droplet-value-content {
+    padding-left: 10px;
+}
 .droplet-value-trust, .droplet-value-discipline, .droplet-value-longevity {
     min-height: 200px;
     position: relative;
+    width: 40%;
 }
 .droplet-value-trust {
-    background: url('../../images/trust.jpg') no-repeat;
+    background: url('../../images/Droplet-Banner-01.jpg') no-repeat;
     background-size: cover;
+        background-size: cover;
+    background-position: 85%;
 }
 .droplet-value-discipline {
-    background: url('../../images/discipline.jpg') no-repeat;
+    background: url('../../images/Droplet-Banner-02.jpg') no-repeat;
     background-size: cover;
+        background-size: cover;
+    background-position: 85%;
 }
 .droplet-value-longevity {
-     background: url('../../images/longevity.jpg') no-repeat;
+     background: url('../../images/Droplet-Banner-03.jpg') no-repeat;
     background-size: cover;
 }
 .droplet-value-trust:after, .droplet-value-discipline:after, .droplet-value-longevity:after {
