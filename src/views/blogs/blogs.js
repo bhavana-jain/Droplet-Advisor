@@ -1,27 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import data from '../blogs.json'
 import { NavLink, useParams } from 'react-router-dom';
+import RealtyReality from './RealtyReality';
 
-class Blogs extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			blogName: '',
-			module: null
-		}
-	}
+const newdata = data.map((data) => {
+	const BlogName = data.comp;
+	const BlogNameUrl = "/blog/" + BlogName;
+	//alert(BlogNameUrl);
+	return (
+		<div key={data.id}>
+			<div>{data.title}</div>
+			<div>{data.comp}</div>
+			<NavLink to={BlogNameUrl}>
+				Learn More
+                        </NavLink>
+		</div>
+
+	)
+}
+)
+
+
+
+
+export default class Blogs extends React.Component {
 	render() {
-		let NewBlog = this.props.match.params.id
-		// import(`${NewBlog}`)
-		// 	.then(blogName => this.setState({ blogName: blogName.default }))
-		// const { blogName: Component } = this.state;
-		console.log(NewBlog)
 		return (
+			<div className=" m-3 p-3 owncard ">  {newdata}  </div>
 
-			<div>
-				<div>{this.props.match.params.id}</div>
-			</div>
 		)
 	}
 }
-export default Blogs;

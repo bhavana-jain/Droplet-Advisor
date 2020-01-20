@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "NPS - Non Performing Saving!",
+        "comp": "RealtyReality",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "created-on": "2019-04-12"
+    },
+    {
+        "id": 2,
+        "title": "Starting Late and losing a few crores",
+        "comp": "losing-few-crores",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "created-on": "2019-04-12"
+    },
+    {
+        "id": 3,
+        "title": "Securing your future with Rs 5000",
+        "comp": "securingFuture",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "created-on": "2019-04-12"
+    },
+    {
+        "id": 4,
+        "title": "Reality about Realty",
+        "comp": "RealtyReality",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "created-on": "2019-04-12"
+    },
+    {
+        "id": 5,
+        "title": "A Tiffen for your Kid",
+        "comp": "tiffenForKid",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "created-on": "2019-04-12"
+    }
+]

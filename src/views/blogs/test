@@ -1,0 +1,13 @@
+const Blog = this.props.match.params.id
+		this.setState({
+			BlogName: this.props.match.params.id
+		})
+		let Tag = `${this.state.BlogName}`
+		let NewBlogUrl = "./" + Blog;
+		//	alert(Tag, NewBlogUrl);
+
+		import(`${NewBlogUrl}`).then((module) => {
+			//	alert(module.default);
+
+		})
+		return React.createElement(`${this.props.match.params.id}`, null)

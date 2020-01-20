@@ -1,3 +1,46 @@
+.droplet-home-banner {
+    height: 350px;
+    width: 100%;
+}
+.droplet-home-banner > img {
+     width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+.droplet-value-list {
+    height: 450px;
+    width: 100%;
+    position: relative;
+}
+.droplet-value-list img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+.droplet-value .slider.animated {
+    padding: 0 !important;
+}
+.droplet-value .carousel .slide {
+    background: transparent;
+}
+.droplet-value {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    margin-top: -90px;
+    color: #fff;
+    font-size: 26px;
+    font-style: italic;
+    line-height: 32px;
+}
+.droplet-value p {
+    text-align: left;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 30px;
+}
 .droplet-image-trust {
     background: url('../../images/resizeimage.jpg') no-repeat;
     background-size: cover;
@@ -35,6 +78,7 @@
     background-position: center;
     height: auto;
     position: relative;
+    background-attachment: fixed;
 }
 .services-bg:after {
     content:'';
@@ -43,7 +87,7 @@
     left: 0;
     top: 0;
     background-color: #f2f2f2;
-    opacity: 0.6;
+    opacity: 0.85;
     width: 100%;
     height: 100%;
 }
@@ -94,4 +138,33 @@ min-height: 150px;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     font-weight: bold;
+}
+.planning-bg {
+    background: url('../../images/Droplet-Banner-01.jpg') no-repeat;
+    width: auto;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+.droplet-overview {
+    position: relative;
+    z-index: 60;
+    padding: 15px;
+}
+h1, h2, h3 {
+    color: red;
+}
+@media all and (max-width: 767px) {
+    .droplet-value p {
+    font-size: 15px;
+    line-height: 18px;
+} 
+.droplet-home-banner {
+    height: 200px;
+    width: 100%;
+}
+.droplet-value {
+    margin-top: -55px;
+    left: 15px;
+}
 }

@@ -1,0 +1,59 @@
+.contact-us-form {
+	width: 60%;
+	float:left;
+}
+.locate-us {
+	width: 38%;
+	float: right;
+}
+
+@media all and  (max-width: 767px){
+	.contact-us-form {
+	width: 100%;
+	float:none;
+}
+.locate-us {
+	width: 100%;
+	float: none;
+	clear: both;
+	margin-top: 15px;
+}
+}
+@media all and(min-width:768px) and (max-width: 1024px){
+	.contact-us-form {
+	width: 100%;
+	float:none;
+}
+.locate-us {
+	width: 100%;
+	float: left;
+	margin-top: 15px;
+}
+.droplet-location {
+	float: left;
+	margin-left: 10px;
+}
+}
+.droplet-location {
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 15px;
+}
+.droplet-location h4 {
+	margin: 0;
+}
+.droplet-location [class*= "icofont-"]{
+	padding: 6px 0;
+}
+.droplet-location [class*= "icofont-"]:before {
+	    font-size: 18px;
+    vertical-align: middle;
+    width: 30px;
+    display: inline-block;
+    background: gold;
+    border-radius: 35px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+}
