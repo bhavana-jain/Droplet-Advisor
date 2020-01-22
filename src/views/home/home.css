@@ -13,6 +13,28 @@
     width: 100%;
     position: relative;
 }
+.slider > li:nth-child(odd) p {
+    margin-left: -500px;
+}
+
+.slider > li:nth-child(even) p{
+    margin-top: -500px;
+}
+.slider li.selected:nth-child(odd) p{
+    margin-left: 10px;
+    transition:  margin-left .5s
+}
+.slider li.selected:nth-child(even) p {
+    margin-top: 5px;
+    
+    transition: margin-top .5s
+}
+.slide {
+    opacity: 0;
+}
+.slide.selected {
+    opacity: 1;
+}
 .droplet-value-list img {
     width: inherit;
     height: inherit;
@@ -109,7 +131,51 @@ box-shadow: 0px 0px 5px 2px rgba(204,204,204,1);
 padding: 10px;
 margin: 0  10px;
 width: calc( 100% / 3);
-min-height: 150px;
+height: 150px;
+position: relative;
+transform-style: preserve-3d;
+transform-origin: left;
+backface-visibility: hidden;
+}
+.services-brief {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #fff;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px) !important;
+display: flex;
+flex-direction: column;
+height: inherit;
+align-items: center;
+justify-content: center;
+z-index: 10;
+}
+.services-block-inner {
+    position: relative;
+    z-index: 20;
+display: flex;
+flex-direction: column;
+height: inherit;
+align-items: center;
+justify-content: center;
+background: #fff;
+transform: rotateY(0deg);
+backface-visibility: hidden;
+    transition: transform 1s, opacity 1.5s;
+
+}
+.services-block-inner.flip {
+        transform: rotateY(-180deg);
+    transition: transform 1s;
+    transition: transform 1s, opacity 1.5s;
+     opacity: 0; 
+    transform-origin: right;
+    z-index: 1;
+}
+.services-brief {
+    backface-visibility: hidden;
+
 }
 .droplet-team {
     margin: 0;
@@ -152,7 +218,14 @@ min-height: 150px;
     padding: 15px;
 }
 h1, h2, h3 {
-    color: red;
+    color: #dc2214;
+}
+.insurance-icon {
+    background: url('../../images/insurance-icon.png') no-repeat;
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+    margin-bottom: 5px;
 }
 @media all and (max-width: 767px) {
     .droplet-value p {
@@ -167,4 +240,73 @@ h1, h2, h3 {
     margin-top: -55px;
     left: 15px;
 }
+}
+.scene {
+  width: 100%;
+  height: 250px;
+  perspective: 35%;
+  display: flex;
+
+}
+
+.card {
+  width: 33.33%;
+  height: 100%;
+  margin: 0 10px;
+  transition: transform .75s;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  cursor: pointer;
+  position: relative;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px 2px rgba(204,204,204,1);
+}
+.card__face h3 {margin-top: 5px;color:#333;}
+.card__face--front {
+  background: transparent;
+}
+
+.card__face--back {
+  background: transparent;
+  transform: rotateY(180deg);
+  color: #333;
+  font-weight: bold;
+  line-height: 22px;
+  font-size: 18px;
+  
+}
+.card__face--back p {
+    line-height: 22px;
+    padding: 0 10px;
+}
+
+.card__face--back .btn {
+    padding: 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.services-overview {
+    backface-visibility: hidden;
 }

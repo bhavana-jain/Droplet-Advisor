@@ -3,40 +3,50 @@
         "id": 1,
         "title": "NPS - Non Performing Saving!",
         "comp": "RealtyReality",
+        "compName": "RealtyReality",
         "author": "Admin",
         "category": "uncatogerized",
-        "created-on": "2019-04-12"
+        "createdOn": "2019-04-12",
+        "image": "A-Tiffen-for-you-Kid-1080x675"
     },
     {
         "id": 2,
         "title": "Starting Late and losing a few crores",
         "comp": "losing-few-crores",
+        "compName": "losingFewCrores",
         "author": "Admin",
         "category": "uncatogerized",
-        "created-on": "2019-04-12"
+        "createdOn": "2019-04-12",
+        "image": "A-Tiffen-for-you-Kid-1080x675"
     },
     {
         "id": 3,
         "title": "Securing your future with Rs 5000",
         "comp": "securingFuture",
+        "compName": "securingFuture",
         "author": "Admin",
         "category": "uncatogerized",
-        "created-on": "2019-04-12"
+        "createdOn": "2019-04-12",
+        "image": "A-Tiffen-for-you-Kid-1080x675"
     },
     {
         "id": 4,
         "title": "Reality about Realty",
         "comp": "RealtyReality",
+        "compName": "RealtyReality",
         "author": "Admin",
         "category": "uncatogerized",
-        "created-on": "2019-04-12"
+        "createdOn": "2019-04-12",
+        "image": "A-Tiffen-for-you-Kid-1080x675"
     },
     {
         "id": 5,
         "title": "A Tiffen for your Kid",
         "comp": "tiffenForKid",
+        "compName": "RealtyReality",
         "author": "Admin",
         "category": "uncatogerized",
-        "created-on": "2019-04-12"
+        "createdOn": "2019-04-12",
+        "image": "A-Tiffen-for-you-Kid-1080x675"
     }
 ]
