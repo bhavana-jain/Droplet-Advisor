@@ -11,7 +11,7 @@ class losingFewCrores extends React.Component {
 		return (
 			<div className="container blogs-wrap">
 				<img src={require("../../../images/blogs/Starting-Late-and-losing-a-few-Crores-1080x675.jpg")}
-					alt="Starting Late and losing a few Crores" className="align-left" />
+					alt="Starting Late and losing a few Crores" />
 				<h2>Starting Late and losing a few Crores</h2>
 				<h6>by admin | Apr 01, 2018 | Uncategorized | 0 comments</h6>
 				<p>My first Salary was Rs 12000. This was my life’s first big income and until that point, This income had no expense against it.

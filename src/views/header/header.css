@@ -3,8 +3,13 @@
     padding-right:15px;
     padding-bottom:15px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
+}
+.sticky-header .droplet-logo {
+    width: 120px;
+    height: 40px;
+    transition: width .2s, height .2s;
 }
 .droplet-logo {
     background: url('../../images/Droplet-Wealth-Advisor-Logo.png') no-repeat;
@@ -25,10 +30,13 @@
     font-size: 14px;
 }
 .header-tabs .link {
-    color: #ccc;
+    color: #333;
+    padding: 10px;
 }
 .header-tabs .link.active, .header-tabs .link.active:before {
-    color: #333;
+    color: #dc2214;
+    background-color: gold;
+    border-radius: 10px;
 }
 .header-tabs [class*="icon-"]:before {
     display: none;
@@ -65,7 +73,7 @@
         display: inline-block;
     }
     .droplet-logo{
-        width: 100px;
+        width: 250px;
         height: 25px;
     }
     .droplet-menu {
@@ -213,4 +221,12 @@ content: "\ec46";
 }
 .page-overlay.active {
     display: block;
+}
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+    width: 100%;
 }

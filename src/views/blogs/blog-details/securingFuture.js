@@ -11,7 +11,7 @@ class securingFuture extends React.Component {
 		return (
 			<div className="container blogs-wrap">
 				<img src={require("../../../images/blogs/pawn-mirror-chess-king-1024x640.jpg")}
-					alt="Reality about Realty" className="align-left" />
+					alt="Reality about Realty" />
 				<h2>Securing your Future with Rs 5000</h2>
 				<h6>by admin | Apr 12, 2019 | Uncategorized | 0 comments</h6>
 				<p>Earlier, we wrote a blog about investing 30K and earning an income of 50K every month. Most of them might have thought that they need such a huge amount to start investing. Nothing so! At Droplet, our wish is to be all-inclusive and that constant endeavor has resulted in this blog. </p>

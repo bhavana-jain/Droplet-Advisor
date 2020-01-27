@@ -10,13 +10,14 @@ class Header extends React.Component {
 		this.state = {
 			sideMenu: false,
 			droplist: false,
-			childActive: false
+			childActive: false,
+			fixHeader: false
 		};
 		this.renderServices = this.renderServices.bind(this);
 		this.slideMenu = this.slideMenu.bind(this);
 		this.updateSource = this.updateSource.bind(this);
 		this.setDefault = this.setDefault.bind(this);
-		this.hideSideMenu = this.hideSideMenu.bind(this)
+		this.hideSideMenu = this.hideSideMenu.bind(this);
 	}
 
 	setDefault() {
@@ -35,6 +36,7 @@ class Header extends React.Component {
 	}
 	// Our services droplist
 	renderServices(e) {
+		e.preventDefault();
 		this.setState({
 			droplist: !this.state.droplist,
 		})
@@ -53,6 +55,9 @@ class Header extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log(this.divElement.clientHeight);
+		let headerFix = false;
+		document.addEventListener('scroll', this.updateHeader);
 		document.body.addEventListener('click', function (e) {
 			let headerTabs = document.getElementById('header-tabs');
 			let serviceList = document.getElementById('services-list');
@@ -69,28 +74,41 @@ class Header extends React.Component {
 			}
 		});
 	}
+	updateHeader = () => {
+		if (document.documentElement.scrollTop - 30 >= this.divElement.clientHeight) {
+			this.setState({
+				fixHeader: true
+			})
+		}
+		else {
+			this.setState({
+				fixHeader: false
+			})
+		}
+		console.log(document.documentElement.scrollTop);
+	}
 	render() {
 		return (
-			<div className="border-bottom-grey">
+			<div className={"border-bottom-grey " + (this.state.fixHeader ? "sticky-header" : "")} ref={(divElement) => { this.divElement = divElement }}>
 				<header className="container header-layer">
 					<div className="droplet-menu" id="droplet-menu" onClick={this.slideMenu}></div>
 					<NavLink className="droplet-logo" to='/home'></NavLink>
 					<div>
 						<ul className={"header-tabs clear " + (this.state.slideMenu == true ? 'slide-right' : '')} id="header-tabs">
-							<li><NavLink to='/home' className="link icon-home" onClick={this.setDefault}>Home</NavLink>
+							<li><NavLink to='/home' activeClassName="active" className="link icon-home" onClick={this.setDefault}>Home</NavLink>
 							</li>
 							<li>
 								<NavLink to='/about-us' className="link icon-team" onClick={this.setDefault}>About Us </NavLink>
 							</li>
 							<li className={"services-wrap"}>
-								<div className={"link icon-services " + (this.state.droplist ? "close" : '') + (this.state.childActive ? " close active" : "")}
-									onClick={this.renderServices}>Our Services</div>
+								<NavLink to='/our-services/financialplanning' className={"link icon-services " + (this.state.droplist ? "close" : '') + (this.state.childActive ? " close active" : "")}
+									onClick={this.renderServices}>Our Services</NavLink>
 								<ul className={"services-list " + (this.state.droplist ? "open" : "")} id="services-list">
-									<li><NavLink to='/financialplanning'
+									<li><NavLink to='/our-services/financialplanning'
 										onClick={this.updateSource}
 										className="icon-planning" onClick={this.updateSource}>Financial Planning</NavLink></li>
-									<li><NavLink to='/mutualFunds' onClick={this.updateSource} className="icon-mf">Mutual Funds</NavLink></li>
-									<li><NavLink to='/insurance' onClick={this.updateSource} className="icon-insurance">Insurance</NavLink></li>
+									<li><NavLink to='/our-services/mutualFunds' onClick={this.updateSource} className="icon-mf">Mutual Funds</NavLink></li>
+									<li><NavLink to='/our-services/insurance' onClick={this.updateSource} className="icon-insurance">Insurance</NavLink></li>
 								</ul>
 							</li>
 							<li>

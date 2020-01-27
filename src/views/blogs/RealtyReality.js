@@ -11,7 +11,7 @@ export default class RealtyReality extends React.Component {
 		return (
 			<div className="container blogs-wrap">
 				<img src={require("../../images/blogs/Reality-about-Realty-1080x675.jpg")}
-					alt="Reality about Realty" className="align-right" />
+					alt="Reality about Realty" />
 				<h2>Reality about Realty</h2>
 				<h6>by admin | Apr 15, 2018 | Uncategorized | 0 comments</h6>
 				<p>The state of our mind is in such a state that it takes a lot of courage to just state the facts since the facts we state have to peddle through the fake facts (aka lies) to reach it shores. The shores we are trying to reach are nothing but you  – “Readers”. And by the time, it reaches its shores, it is so confusing which is real and fake that the confusion swallows everything leaving nothing for the readers who await. We are afraid the knowledge is not crossing the shores! For the sails have not left the shores, not set forth towards knowledge. Alas!

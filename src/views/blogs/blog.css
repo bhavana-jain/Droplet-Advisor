@@ -1,5 +1,8 @@
-.blogs-wrap img.align-right, .blogs-wrap img.align-left{
-	width: 500px;
+.blogs-wrap img, .blogs-wrap img{
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	margin-bottom: 15px;
 }
 .blogs-wrap h2 {
 	margin-top: 0;
@@ -68,7 +71,7 @@ img.blog-info-img {
 	overflow: hidden;
 }
 .blog-list img {
-	width: 20%;
+	width: 15%;
 	height: auto;
 	float: left;
 }
