@@ -49,9 +49,9 @@ class Home extends React.Component {
 						<h1 className="text-center"> Who We Are</h1>
 						<p>At any point of time, there is 40% of population that is at work in our country. The average life span @ work in 30 years. At Droplet, we believe that every 30 Years, at least half of this workforce should become “financially independent”. However, Financial Independence is still a relatively unknown term in our country. Our Mission is to educate the masses about Financial Independence.</p>
 						<button className="btn">Know More About Us</button>
-						<LazyLoad debounce={true} unmountIfInvisible={true} className="services-overview">
+						<LazyLoad debounce={true} className="services-overview">
 							<h1 className="text-center"> <span style={{ "color": "#000" }}>We provide all kind of </span>
-								<Animated animationIn="fadeInLeft" animationInDelay={3000} isVisible={true}>
+								<Animated animationIn="fadeInLeft" animationInDelay={1500} isVisible={true}>
 									<span>business, Advisory &amp; financial Support
     </span>
 								</Animated>
@@ -63,7 +63,7 @@ class Home extends React.Component {
 					</div>
 
 				</div>
-				<div className="container text-center">
+				<div className="container text-center bottom-spacer">
 					<h1>Our Blogs </h1>
 					<div className="blogs-home"><Blogs /></div>
 					<NavLink to='/blog' className="btn">View All Blogs</NavLink>

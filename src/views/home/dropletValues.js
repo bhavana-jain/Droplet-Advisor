@@ -13,13 +13,13 @@ class DropletValues extends React.Component {
 				<div className="slider-bg-images">
 					<img src={require('../../images/banner-stock.png')} />
 					<img src={require('../../images/Droplet-Banner-01.jpg')} className="slide1" />
-					<img src={require('../../images/Droplet-Banner-02.jpg')} />
+					<img src={require('../../images/Droplet-Banner-02.jpg')} className="slide2" />
 					<img src={require('../../images/banner-stock.png')} />
 					<img src={require('../../images/Droplet-Banner-03.jpg')} className="slide3" />
 					<img src={require('../../images/Droplet-Banner-01.jpg')} className="slide1" />
 					<img src={require('../../images/banner-stock.png')} />
 					<img src={require('../../images/Droplet-Banner-02.jpg')} className="slide2" />
-					<img src={require('../../images/Droplet-Banner-01.jpg')} />
+					<img src={require('../../images/Droplet-Banner-01.jpg')} className="slide1"/>
 					<img src={require('../../images/Droplet-Banner-02.jpg')} className="slide2" />
 
 				</div>

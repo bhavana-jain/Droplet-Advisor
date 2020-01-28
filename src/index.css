@@ -221,3 +221,6 @@ background: url('images/mf.svg') no-repeat;
   content:'';
 background: url('images/insurance.svg') no-repeat;
 }
+.bottom-spacer {
+  margin-bottom: 15px;
+}
