@@ -5,6 +5,8 @@
 }
 .droplet-values > div {
    display: flex;
+       background: #f2f2f2;
+    margin-bottom: 12px;
 }
 .droplet-values h2 {
     margin: 0 -15px;
@@ -12,7 +14,7 @@
     border-bottom: 1px solid #fff;
 }
 .droplet-value-content {
-    padding-left: 10px;
+    padding-left: 15px;
 }
 .droplet-value-trust, .droplet-value-discipline, .droplet-value-longevity {
     min-height: 200px;
@@ -61,4 +63,106 @@
         width: 100%;
         margin: 0 0 10px 0;
     }
+}
+.team-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.team-wrap p {
+    padding: 0 20px;
+}
+.team {
+        background: gold;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px; 
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+}
+.team-wrap-inner {
+    width: 50%;
+    margin-bottom: 20px;
+}
+.team-wrap-inner.selected {
+    background: gold;
+    padding: 15px 15px 0 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.team:after {
+    content: attr(data-name);
+    position: absolute;
+    font-size: 55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-weight: bold;
+}
+.member-name {
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    font-size: 20px;
+}
+.member-role {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.team-profile {
+    background: gold;
+}
+.profile-description {
+    display: none;
+    padding: 15px;
+    opacity: 0;
+}
+.profile-description.fade-in {
+    display: block;
+    opacity: 1;
+    transition: opacity .5s;
+}
+.testimonial-bg {
+    background: #f2f2f2;
+}
+.client-review {
+    position: relative;
+    padding:0 15px;
+}
+.client-review:before {
+    content:'"';
+    font-size: 50px;
+    position: absolute;
+    top:-22px;
+    left: 11px;
+    opacity: 0.2;
+}
+.client-name {
+    text-align: center;
+    font-style: italic;
+}
+@media all and (max-width: 1024px ) and (orientation: portrait) {
+    .droplet-values > div {
+        flex-direction: column;
+    }
+    .droplet-value-trust, .droplet-valu.e-discipline,  .droplet-value-longevity{
+        width: 100%;
+    }
+    
+.team-wrap-inner {
+    width: 100%;
+}
+}
+@media all and (max-width: 1024px) and (orientation: landscape) {
+    
+.team-wrap-inner {
+    width: 50%;
+}
 }

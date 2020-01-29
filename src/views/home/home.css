@@ -185,26 +185,6 @@ backface-visibility: hidden;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.team {
-        background: gold;
-    width: 150px;
-    height: 150px;
-    /* border-radius: 50px; */
-    border-top-right-radius: 150px;
-    border-bottom-right-radius: 150px;
-    border-top-left-radius: 150px;
-    position: relative;
-}
-.team:after {
-    content: attr(data-name);
-    position: absolute;
-    font-size: 55px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-weight: bold;
-}
 .planning-bg {
     background: url('../../images/Droplet-Banner-01.jpg') no-repeat;
     width: auto;
@@ -330,6 +310,7 @@ h1, h2, h3 {
 .card__face--back p {
     line-height: 22px;
     padding: 0 10px;
+    font-weight: normal;
 }
 
 .card__face--back .btn {
@@ -344,6 +325,7 @@ h1, h2, h3 {
 
 .slider {
   position: relative;
+  height: 250px;
 }
 .slide1,.slide2,.slide3,.slide4,.slide5 {
   position: absolute;
@@ -361,10 +343,12 @@ animation:fadeImg 12s infinite;
 img.slide2 {
     animation:fadeImg2 12s infinite;
 -webkit-animation:fadeImg2 12s infinite;
+animation-delay: 24s;
 }
 img.slide3 {
     animation:fadeImg3 12s infinite;
 -webkit-animation:fadeImg3 12s infinite;
+animation-delay: 36s;
 }
 .slide1 {
       background-size: cover;
@@ -405,24 +389,24 @@ img.slide3 {
 }
 @keyframes fadeImg
 {
-  0%   {opacity:1; filter: grayscale(0)}
-  33.333% { opacity: 0.3; filter: grayscale(0)}
-  66.666% { opacity: 0.5; filter: grayscale(200%)}
-  100% { opacity: 1; filter: grayscale(500%)}
+  0%   {opacity:1;}
+  33.333% { opacity: 0.3;}
+  66.666% { opacity: 0.5;}
+  100% { opacity: 1;}
 }
 @keyframes fadeImg2
 {
-  0%   {opacity:0.3; filter: grayscale(200%)}
-  33.333% { opacity: 1; filter: grayscale(0)}
-  66.666% { opacity: 0.5; filter: grayscale(0) }
-  100% { opacity: 0.3; filter: grayscale(500%)}
+  0%   {opacity:0.3;}
+  33.333% { opacity: 1;}
+  66.666% { opacity: 0.5;}
+  100% { opacity: 0.3;}
 }
 @keyframes fadeImg3
 {
-  0%   {opacity:0.3; filter: grayscale(500%)}
-  33.333% { opacity: 0.5; filter: grayscale(200%)}
-  66.666% { opacity: 1; filter: grayscale(0)}
-  100% { opacity: 0.3; filter: grayscale(500%)}
+  0%   {opacity:0.3;}
+  33.333% { opacity: 0.5;}
+  66.666% { opacity: 1;}
+  100% { opacity: 0.3;}
 }
 .blogs-home {
     display: flex;
@@ -434,16 +418,6 @@ img.slide3 {
     margin: 0 5px 15px 5px;
     padding: 0;
     position: relative;
-}
-.blogs-home > .blog-list:after {
-    content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-width: 0 16px 16px 0;
-  border-style: solid;
-  border-color: #ccc transparent;
-
 }
 .blogs-home > .blog-list img {
         width: 100%;
@@ -471,11 +445,15 @@ img.slide3 {
     flex-wrap: wrap;
 }
 .slider-bg-images > img {
-    width: calc(100% / 5);
+    max-width: 100%;
+    max-height: 100%;
     opacity: 0.3;
     object-fit: cover;
+    object-position: center;
     filter: drop-shadow(2px 4px 6px black) grayscale(500%);
-    max-height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .slider-content {
         position: absolute;

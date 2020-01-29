@@ -1,14 +1,11 @@
 import React from 'react';
 import GetStarted from '../../components/getStarted';
 import LazyLoad from 'react-lazyload';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesList from './services';
 import DropletValues from './dropletValues';
 import Blogs from '../blogs/blogs'
 import { Animated } from "react-animated-css";
 import { NavLink } from 'react-router-dom';
-
-import { Carousel } from 'react-responsive-carousel';
 
 import './home.css';
 
@@ -23,25 +20,6 @@ class Home extends React.Component {
 		return (
 			<div>
 				<DropletValues />
-				{/* <div className="relative droplet-home-banner">
-					<img src={require("../../images/finance-banner2.jpg")} />
-
-					<Carousel emulateTouch showThumbs={false} showArrows={false} infiniteLoop={true}
-						showStatus={false} autoPlay={true} interval={5000}
-						onChange={this.renderContent} className="droplet-value">
-						<div className="droplet-value-list">
-							<p>Trust that you will believe, at Droplet, <br /> in each of our endeavors, we will keep <br /> your needs and expectation first.</p>
-						</div>
-						<div className="droplet-value-list">
-							<p>The Ants reflect discipline. When it shines, <br />they work hard with discipline so that they <br />can live off the rainy days with peace.</p>
-						</div>
-						<div className="droplet-value-list">
-							<p>We deal in a product that is inherently <br />
-								perceived risky. However, research has <br />
-								proven that longevity negates risk.</p>
-						</div>
-					</Carousel>
-				</div> */}
 				{/* Our Services */}
 
 				<div className="text-center services-bg">

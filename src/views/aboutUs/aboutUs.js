@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './aboutUs.css';
 import GetStarted from '../../components/getStarted';
-import { Link, NavLink } from 'react-router-dom';
-import ContactUs from '../../views/contactUs/ContactUs'
+import ScrollAnimation from 'react-animate-on-scroll';
+import OurTeam from './ourTeam';
+import Testimonials from './testimonials';
 
 class AboutUs extends React.Component {
 	constructor(props) {
@@ -13,10 +13,12 @@ class AboutUs extends React.Component {
 		return (
 			<div>
 				<div className="container">
-					<h1>Our Story</h1>
-					<p>At any point of time, there is 40% of population that is at work in our country. The average life span @ work in 30 years. At Droplet, we believe that every 30 Years, at least half of this workforce should become “financially independent”. However, Financial Independence is still a relatively unknown term in our country. Our Mission is to educate the masses about Financial Independence.</p>
+					<div className="text-center">
+						<h1>Our Story</h1>
+						<p>At any point of time, there is 40% of population that is at work in our country. The average life span @ work in 30 years. At Droplet, we believe that every 30 Years, at least half of this workforce should become “financially independent”. However, Financial Independence is still a relatively unknown term in our country. Our Mission is to educate the masses about Financial Independence.</p>
+					</div>
 					<div className="droplet-values">
-						<div>
+						<ScrollAnimation animateIn="fadeIn" animateOnce={true} >
 							<div className="droplet-value-trust"></div>
 							<div className="droplet-value-content">
 								<h2>Trust</h2>
@@ -25,8 +27,8 @@ class AboutUs extends React.Component {
 								<br />Trust that you will believe, at Droplet, in each of our endeavors, we will keep your needs and expectation first.
 								</p>
 							</div>
-						</div>
-						<div>
+						</ScrollAnimation>
+						<ScrollAnimation animateIn="fadeIn" animateOnce={true} >
 
 							<div className="droplet-value-content">
 								<h2>Discipline</h2>
@@ -35,8 +37,8 @@ class AboutUs extends React.Component {
 <br />We hope you will give it your best.</p>
 							</div>
 							<div className="droplet-value-discipline"></div>
-						</div>
-						<div>
+						</ScrollAnimation>
+						<ScrollAnimation animateIn="fadeIn" animateOnce={true} >
 							<div className="droplet-value-longevity">	</div>
 							<div className="droplet-value-content">
 								<h2>Longevity</h2>
@@ -47,9 +49,11 @@ We wish, just like the Banyan Tree, you would remain stay put in the game for a 
 
 							</div>
 
-						</div>
+						</ScrollAnimation>
 					</div>
 				</div>
+				<OurTeam />
+				<Testimonials />
 				<GetStarted />
 			</div>
 		)
