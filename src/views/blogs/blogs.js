@@ -7,6 +7,7 @@ const newdata = data.map((data) => {
 	const BlogName = data.comp;
 	const BlogNameUrl = "/blog/" + BlogName;
 	const blogComp = data.compName
+	const blogDate = new Date(data.createdOn)
 	//alert(BlogNameUrl);
 	return (
 		<div key={data.id} className="blog-list">
@@ -20,7 +21,7 @@ const newdata = data.map((data) => {
             </NavLink>
 					</p>
 				</div>
-				<p className="blog-otherInfo">By {data.author} | {data.category} | {data.createdOn}</p>
+				<p className="blog-otherInfo">By {data.author} | {data.category} | {data.createdOn} </p>
 			</div>
 
 		</div>
