@@ -95,7 +95,7 @@ class Header extends React.Component {
 					<NavLink className="droplet-logo" to='/home'></NavLink>
 					<div>
 						<ul className={"header-tabs clear " + (this.state.slideMenu == true ? 'slide-right' : '')} id="header-tabs">
-							<li><NavLink to='/home' activeClassName="active" className="link icon-home" onClick={this.setDefault}>Home</NavLink>
+							<li><NavLink exact to='/' className="link icon-home" onClick={this.setDefault}>Home</NavLink>
 							</li>
 							<li>
 								<NavLink to='/about-us' className="link icon-team" onClick={this.setDefault}>About Us </NavLink>

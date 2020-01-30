@@ -15,14 +15,11 @@
     0% {
         opacity:0;
     }
-    6% {
-        opacity:1;
+    20% {
+        opacity: 1;
     }
-    24% {
-        opacity:1;
-    }
-    30% {
-        opacity:1;
+    83% {
+        opacity: 1;
     }
     100% {
         opacity:0;
@@ -34,28 +31,20 @@
     top:0;
     /* css3 animation */
     animation-name: anim_slides;
-    animation-duration: 16.0s;
-    animation-timing-function: linear;
+    animation-duration: 24.0s;
     animation-iteration-count: infinite;
     animation-direction: normal;
-    animation-delay: 0;
-    animation-play-state: forward;
+    animation-delay: 0; 
 }
 /* css3 delays */
 .slides ul  li:nth-child(1), .slides ul  li:nth-child(1) div {
   opacity: 1 !important;
 }
 .slides ul  li:nth-child(2), .slides ul  li:nth-child(2) div {
-    -webkit-animation-delay: 4.0s;
-    animation-delay: 4.0s;
+    animation-delay: 12.0s;
 }
 .slides ul  li:nth-child(3), .slides ul  li:nth-child(3) div {
-    -webkit-animation-delay: 8.0s;
-    animation-delay: 8.0s;
-}
-.slides ul  li:nth-child(4), .slides ul  li:nth-child(4) div {
-    -webkit-animation-delay: 12.0s;
-    animation-delay: 12.0s;
+    animation-delay: 18.0s;
 }
 .slides ul li img {
     display:block;
