@@ -224,3 +224,19 @@ background: url('images/insurance.svg') no-repeat;
 .bottom-spacer {
   margin-bottom: 15px;
 }
+.section-title:before {
+content:'';
+width: 25px;
+border-bottom: 2px solid #dc2214;
+display: inline-block;
+vertical-align: middle;
+margin-right: 10px;;
+}
+.section-title:after {
+  content:'';
+width: 25px;
+border-bottom: 2px solid #dc2214;
+display: inline-block;
+vertical-align: middle;
+margin-left: 10px;
+}

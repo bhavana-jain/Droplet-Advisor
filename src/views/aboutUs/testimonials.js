@@ -19,7 +19,7 @@ class Testimonials extends React.Component {
 		return (
 			<div className="testimonial-bg">
 				<div className="container">
-					<h1 className="text-center">What our Clients Say</h1>
+					<h1 className="text-center section-title">What our Clients Say</h1>
 					<AliceCarousel mouseTrackingEnabled responsive={this.responsive} buttonsDisabled={true}>
 						<div>
 							<p className="client-review">

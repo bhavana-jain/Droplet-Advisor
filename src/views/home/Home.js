@@ -15,12 +15,10 @@ class Home extends React.Component {
 		super(props);
 
 	}
-	//	const handleOnDragStart = (e) => e.preventDefault()
 	render() {
 		return (
 			<div>
-				<LazyLoad debounce={true} unmountIfInvisible={true}>
-
+				<LazyLoad debounce={true}>
 					<DropletValues />
 				</LazyLoad>
 
@@ -28,7 +26,7 @@ class Home extends React.Component {
 
 				<div className="text-center services-bg">
 					<div className="droplet-overview container">
-						<h1 className="text-center"> Who We Are</h1>
+						<h1 className="text-center section-title">Who We Are</h1>
 						<p>At any point of time, there is 40% of population that is at work in our country. The average life span @ work in 30 years. At Droplet, we believe that every 30 Years, at least half of this workforce should become “financially independent”. However, Financial Independence is still a relatively unknown term in our country. Our Mission is to educate the masses about Financial Independence.</p>
 						<button className="btn">Know More About Us</button>
 						<LazyLoad debounce={true} className="services-overview">
@@ -46,7 +44,7 @@ class Home extends React.Component {
 
 				</div>
 				<div className="container text-center bottom-spacer">
-					<h1>Our Blogs </h1>
+					<h1 className="section-title">Our Blogs</h1>
 					<div className="blogs-home"><Blogs /></div>
 					<NavLink to='/blog' className="btn">View All Blogs</NavLink>
 				</div>

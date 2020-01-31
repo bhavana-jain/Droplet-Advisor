@@ -505,11 +505,12 @@ h1 {
 .blogs-home > .blog-list img{
     width: 100%;
     float: none;
+    height: 120px;
 }
 .blogs-home .blog-description-wrap {
-    width: 100%;
+    width: calc(100% - 20px);
     float: none;
-    margin:5px 0 0 15px;
+    margin:10px;
     text-align: left;
 }
 .slider-content {
