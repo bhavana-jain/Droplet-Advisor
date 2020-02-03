@@ -1,7 +1,6 @@
 import React from 'react';
 import './aboutUs.css';
-import AliceCarousel from 'react-alice-carousel'
-import 'react-alice-carousel/lib/alice-carousel.css'
+import { Animated } from "react-animated-css";
 
 
 class OurTeam extends React.Component {
@@ -42,7 +41,9 @@ class OurTeam extends React.Component {
 </p>
 				<div className="team-wrap">
 					<div className="team-wrap-inner">
-						<div className="team" data-name="S"></div>
+						<Animated animationIn="fadeIn" animationInDuration={1000} isVisible={true}>
+							<div className="team" data-name="S"></div>
+						</Animated>
 						<div className="member-name">Saravanan Viswalingam </div>
 						<div className="member-role">Founding Partner</div>
 						<i className="member-tagline">Steve Jobs. Dogma. Stock Markets. Down the Line. Over the Period of Time.

@@ -1,69 +1,64 @@
 import React from 'react';
 import './home.css';
 import './dropletValues.css';
-import { Fade } from 'react-slideshow-image';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-class DropletValues extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			loaded: false,
-			slideIndex: 0
-		}
-
-	}
-	componentDidMount() {
-		this.setState({
-			loaded: true
-
-		})
-
-	}
-
-
-
-
-
+export default class DropletValues extends React.Component {
 	render() {
-
+		const settings = {
+			dots: true,
+			infinite: true,
+			speed: 3000,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade: true,
+			autoplay: true
+		};
 		return (
-			<>
-				<div className="image-container">
-					<div className="image-wrap">
+			<div>
+				<Slider {...settings}>
+					<div>
 						<img src={require('../../images/Droplet-Banner-01.jpg')} />
 						<div className="image-text">
-							<h1>Trust</h1>
-							<p>Trust that you will believe, at Droplet,
-in each of our endeavors, we will keep
+							<div>
+								<h1>Trust</h1>
+								<p>Trust that you will believe, at Droplet,
+	in each of our endeavors, we will keep
 your needs and expectation first.</p>
+							</div>
 						</div>
 					</div>
-					<div className="image-wrap">
+					<div>
 						<img src={require('../../images/Droplet-Banner-02.jpg')} />
 						<div className="image-text">
-							<h1>Discipline</h1>
-							<p>The Ants reflect discipline. When it shines,
-they work hard with discipline so that they
-can live off the rainy days with peace. 
+							<div>
+								<h1>Discipline</h1>
+								<p>The Ants reflect discipline. When it shines,
+	they work hard with discipline so that they
+	can live off the rainy days with peace.
 
 </p>
+							</div>
 						</div>
 					</div>
-					<div className="image-wrap">
+					<div>
 						<img src={require('../../images/Droplet-Banner-03.jpg')} />
 						<div className="image-text">
-							<h1>Longevity</h1>
-							<p>We deal in a product that is inherently
-perceived risky. However, research has
-proven that longevity negates risk.
+							<div>
+								<h1>Longevity</h1>
+								<p>We deal in a product that is inherently
+	perceived risky. However, research has
+	proven that longevity negates risk.
 
 </p>
+							</div>
 						</div>
-					</div>
 
-				</div>			</>
-		)
+					</div>
+				</Slider>
+			</div>
+		);
 	}
 }
-export default DropletValues;

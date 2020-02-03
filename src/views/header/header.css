@@ -109,6 +109,11 @@
     .services-list > li:last-child , .services-list.open > li:last-child {
         border-bottom: 0;
     }
+    .header-tabs .link.active, .header-tabs .link.active:before {
+    color: #000;
+    background-color: transparent;
+    border-radius: none;
+}
 }
 .header-tabs > li > *{
 text-decoration: none;

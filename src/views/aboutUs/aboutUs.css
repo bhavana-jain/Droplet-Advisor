@@ -108,8 +108,9 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 160px;
-    height: 160px;
+    width: 0;
+    height: 0;
+    visibility: hidden;
     border-radius: 140px;
     border: 2px solid gold;
     background-size: cover;
@@ -189,4 +190,10 @@
     display: inline-block;
     vertical-align: middle;
     font-weight: bold;
+}
+.droplet-team.fadeIn .team:after {
+    width: 160px;
+    height: 160px;
+    visibility: visible;
+    transition: width 1.5s, height 1.5s;
 }

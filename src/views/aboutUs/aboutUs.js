@@ -51,7 +51,10 @@ We wish, just like the Banyan Tree, you would remain stay put in the game for a 
 						</ScrollAnimation>
 
 					</div>
-					<OurTeam />
+					<ScrollAnimation animateIn="fadeIn" className="droplet-team">
+						<OurTeam />
+					</ScrollAnimation>
+
 				</div>
 				<Testimonials />
 				<GetStarted />
