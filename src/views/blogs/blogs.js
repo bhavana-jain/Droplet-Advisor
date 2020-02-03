@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import data from '../blogs.json'
 import { NavLink, useParams } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
+
 const newdata = data.map((data) => {
 	const BlogName = data.comp;
 	const BlogNameUrl = "/blog/" + BlogName;
-	const blogComp = data.compName
-	const blogDate = new Date(data.createdOn)
-	//alert(BlogNameUrl);
+	const blogComp = data.compName;
+	let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+	let blogDate = new Date(data.createdOn).toString();
+	console.log(months[new Date(data.createdOn).getMonth() - 1]);
+	blogDate = `${months[new Date(data.createdOn).getMonth() - 1]} ` + `${new Date(data.createdOn).getDate()}` + ` , ` + `${new Date(data.createdOn).getFullYear()}`;
 	return (
 		<div key={data.id} className="blog-list">
 			<img src={`images/${data.image}.jpg`}></img>
@@ -21,7 +24,7 @@ const newdata = data.map((data) => {
             </NavLink>
 					</p>
 				</div>
-				<p className="blog-otherInfo">By {data.author} | {data.category} | {data.createdOn} </p>
+				<p className="blog-otherInfo">By {data.author} | {data.category} | {blogDate} </p>
 			</div>
 
 		</div>

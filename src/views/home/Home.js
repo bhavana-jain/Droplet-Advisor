@@ -18,10 +18,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				<LazyLoad debounce={true}>
 					<DropletValues />
-				</LazyLoad>
-
 				{/* Our Services */}
 
 				<div className="text-center services-bg">
