@@ -13,6 +13,7 @@ import financialPlanning from './views/ourServices/financialPlanning';
 import insurance from './views/ourServices/insurance';
 import mutualFunds from './views/ourServices/mutualFunds';
 import Blogs from './views/blogs/blogs';
+import BlogsNavigation from './views/blogs/blogNav';
 import BlogDetails from './views/blogs/blog';
 
 
@@ -39,7 +40,7 @@ class App extends React.Component {
 						<Route exact path='/home' component={Home} />
 						<Route path='/about-us' component={AboutUs} />
 						<Route path='/contactus' component={ContactUs} />
-						<Route exact path='/blog' component={Blogs} />
+						<Route exact path='/blog' component={BlogsNavigation} />
 						<Route path='/blog/:id' component={BlogDetails} />
 						<Switch>
 							<Route exact path='/our-services' component={financialPlanning} />

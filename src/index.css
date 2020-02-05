@@ -103,18 +103,18 @@ input:focus {
 .animated-label {
   padding: 25px 5px 5px 5px;
 }
-.animated {
+.field-animated {
   padding:25px 5px 5px 5px !important;
 }
-.animated + label {
+.field-animated + label {
   top: 5px;
   transition: top 0.3s;
   font-size: 12px;
 }
-.animated.set-default {
+.field-animated.set-default {
   padding:15px 5px;
 }
-.animated.set-default + label {
+.field-animated.set-default + label {
   top: 15px;
   transition: top 0.3s;
 }

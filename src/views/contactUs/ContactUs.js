@@ -28,7 +28,7 @@ class ContactUs extends React.Component {
 			<div className="container">
 
 				<form className="contact-us-form">
-					<h3>Let's discuss </h3>
+					<h1 className="section-title">Let's discuss</h1>
 					<div>
 						<div className="row cols-2">
 							<div className="relative">
@@ -83,7 +83,7 @@ class ContactUs extends React.Component {
 						onClick={this.handleSubmit} />
 				</form>
 				<div className="locate-us">
-					<h3>Let's connect </h3>
+					<h1 className="section-title">Let's connect</h1>
 					<SimpleMap></SimpleMap>
 					<div className="droplet-location">
 						<div className="clear">
@@ -112,13 +112,13 @@ class ContactUs extends React.Component {
 		this.setState({
 			errorCount: this.state.errorCount - 1
 		})
-		e.target.classList.add("animated")
+		e.target.classList.add("field-animated")
 	}
 	checkValue(e) {
 		let inputType = e.target.type
 		if (e.target.value == null || e.target.value == '') {
 			e.target.classList.add("set-default")
-			e.target.classList.remove("animated")
+			e.target.classList.remove("field-animated")
 		}
 		switch (inputType) {
 			case "text":
