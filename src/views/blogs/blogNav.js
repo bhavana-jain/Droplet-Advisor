@@ -32,20 +32,46 @@ const newdata = data.map((data) => {
 	)
 }
 )
+// Show list of recent posts
+const recentPost = data.map((data) => {
+	const BlogName = data.comp;
+	const BlogNameUrl = "/blog/" + BlogName;
+	const blogComp = data.compName;
+	if (data.recent == "true") {
+		return (
+			<div key={data.id} className="blog-list">
+				<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>
+					{data.title}
+				</NavLink>
+			</div>
+
+		)
+	}
+}
+)
+
+// Archives 
+let archiveList = ["April 2019", "May 2018", "April 2018", "March 2018", "February 2018", "January 2018", "December 2017"]
+
 export default class BlogsNavigation extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			search: '',
-			shldSearch: false
+			archiveText: '',
+			shldSearch: false,
+			archives: false
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.searchBlog = this.searchBlog.bind(this);
+		this.fetchArchive = this.fetchArchive.bind(this);
 	}
 	render() {
 		return (
 			<>
-				{this.state.shldSearch ? <Blogs filter={this.state.search} /> : <Blogs />}
+				{this.state.shldSearch && !this.state.archives ? <Blogs filter={this.state.search} /> : ''}
+				{!this.state.shldSearch && this.state.archives ? <Blogs archive={this.state.archiveText} /> : ''}
+				{!this.state.shldSearch && !this.state.archives ? <Blogs /> : ''}
 				<div className="blogs-nav">
 					<div className="blogs-nav-blocks">
 						<input type="text" id="search"
@@ -60,13 +86,27 @@ export default class BlogsNavigation extends React.Component {
 					</div>
 					<div className="blogs-nav-blocks">
 						<h3>Recent Posts</h3>
+						<div>{recentPost}</div>
 					</div>
 					<div className="blogs-nav-blocks">
 						<h3>Archives</h3>
+						<ul>
+							{archiveList.map((archiveList) =>
+								<li onClick={() => this.fetchArchive(archiveList)}>{archiveList}</li>
+							)}
+						</ul>
+
 					</div>
 				</div>
 			</>
 		)
+	}
+	fetchArchive(year) {
+		this.setState({
+			archiveText: year,
+			archives: true,
+			shldSearch: false
+		})
 	}
 	handleChange(e) {
 		this.setState({
@@ -76,8 +116,8 @@ export default class BlogsNavigation extends React.Component {
 	searchBlog(e) {
 		let searchVal = this.state.search;
 		this.setState({
-			shldSearch: true
-
+			shldSearch: true,
+			archives: false
 		})
 		// const filterSearch = data.filter(function (data) {
 
