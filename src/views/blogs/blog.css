@@ -137,3 +137,19 @@ float:left;
 	border: 0;
 	margin-bottom: 0;
 }
+.blogs-archive {
+	margin: 0;
+	padding: 0;
+}
+.blogs-archive li {
+	padding: 0 0 10px 0;
+	font-weight: bold;
+	cursor: pointer;
+	list-style: none;
+}
+.blogs-recent {
+	margin-bottom: 10px;
+}
+.blogs-recent a {
+	text-decoration: none;
+}

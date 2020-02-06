@@ -114,7 +114,7 @@ export default class Blogs extends React.Component {
 		return (
 
 			<div className="main-blog">
-				{!this.props.filter && !this.props.archive ? newdata : ''}
+				{!this.props.filter && !this.props.archive || this.props.filter == "" ? newdata : ''}
 				{this.props.filter ? filterData(searchVal) : ''}
 				{this.props.archive ? archiveData(archiveYear) : ''}
 			</div>

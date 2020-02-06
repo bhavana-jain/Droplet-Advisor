@@ -39,7 +39,7 @@ const recentPost = data.map((data) => {
 	const blogComp = data.compName;
 	if (data.recent == "true") {
 		return (
-			<div key={data.id} className="blog-list">
+			<div key={data.id} className="blogs-recent">
 				<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>
 					{data.title}
 				</NavLink>
@@ -60,7 +60,8 @@ export default class BlogsNavigation extends React.Component {
 			search: '',
 			archiveText: '',
 			shldSearch: false,
-			archives: false
+			archives: false,
+			searchText: ''
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.searchBlog = this.searchBlog.bind(this);
@@ -69,7 +70,7 @@ export default class BlogsNavigation extends React.Component {
 	render() {
 		return (
 			<>
-				{this.state.shldSearch && !this.state.archives ? <Blogs filter={this.state.search} /> : ''}
+				{this.state.shldSearch && !this.state.archives ? <Blogs filter={this.state.searchText} /> : ''}
 				{!this.state.shldSearch && this.state.archives ? <Blogs archive={this.state.archiveText} /> : ''}
 				{!this.state.shldSearch && !this.state.archives ? <Blogs /> : ''}
 				<div className="blogs-nav">
@@ -90,7 +91,7 @@ export default class BlogsNavigation extends React.Component {
 					</div>
 					<div className="blogs-nav-blocks">
 						<h3>Archives</h3>
-						<ul>
+						<ul className="blogs-archive">
 							{archiveList.map((archiveList) =>
 								<li onClick={() => this.fetchArchive(archiveList)}>{archiveList}</li>
 							)}
@@ -113,44 +114,12 @@ export default class BlogsNavigation extends React.Component {
 			search: e.target.value
 		})
 	}
+
 	searchBlog(e) {
-		let searchVal = this.state.search;
 		this.setState({
 			shldSearch: true,
-			archives: false
+			archives: false,
+			searchText: this.state.search
 		})
-		// const filterSearch = data.filter(function (data) {
-
-		// 	if (data.title.indexOf(searchVal) >= 0) {
-		// 		const BlogName = data.comp;
-		// 		const BlogNameUrl = "/blog/" + BlogName;
-		// 		const blogComp = data.compName;
-		// 		let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
-		// 		let blogDate = new Date(data.createdOn).toString();
-		// 		blogDate = `${months[new Date(data.createdOn).getMonth() - 1]} ` + `${new Date(data.createdOn).getDate()}` + ` , ` + `${new Date(data.createdOn).getFullYear()}`;
-		// 		return (
-
-		// 			<div key={data.id} className="blog-list">
-		// 				<img src={`images/${data.image}.jpg`}></img>
-		// 				<div className="blog-description-wrap">
-		// 					<div className="blog-description">
-		// 						<div><h3>{data.title}</h3></div>
-		// 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
-		// 			<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>
-		// 								Learn More
-		//     </NavLink>
-		// 						</p>
-		// 					</div>
-		// 					<p className="blog-otherInfo">By {data.author} | {data.category} | {blogDate} </p>
-		// 				</div>
-
-		// 			</div>
-
-		// 		)
-		// 	}
-
-		// });
-		// //	console.log(filterSearch);
-
 	}
 }
