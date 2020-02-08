@@ -90,8 +90,10 @@
 }
 
 .team-wrap-inner {
-    width: 25%;
-    margin-bottom: 20px;
+    /* width: 25%; */
+    margin: 20px 0;
+    padding: 0 15px;
+    text-align: center;
 }
 .team-wrap-inner.selected {
     background: gold;
@@ -175,13 +177,13 @@
     .droplet-value-content {width: 100%;}
     
 .team-wrap-inner {
-    width: 100%;
+    /* width: 100%; */
 }
 }
 @media all and (max-width: 1024px) and (orientation: landscape) {
     
 .team-wrap-inner {
-    width: 50%;
+    /* width: 50%; */
 }
 .droplet-value-content { width: 100%;}
 }

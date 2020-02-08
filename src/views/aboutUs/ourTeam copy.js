@@ -1,8 +1,7 @@
 import React from 'react';
 import './aboutUs.css';
 import { Animated } from "react-animated-css";
-import AliceCarousel from 'react-alice-carousel'
-import 'react-alice-carousel/lib/alice-carousel.css'
+
 
 class OurTeam extends React.Component {
 	constructor(props) {
@@ -18,12 +17,7 @@ class OurTeam extends React.Component {
 	}
 	responsive = {
 		0: { items: 1 },
-		1024: { items: 2 },
-		1200: { items: 2 }
-	}
-	spadding = {
-		paddingLeft: 75,
-		paddingRight: 75
+		1024: { items: 4 },
 	}
 	componentDidMount() {
 		// let team = document.getElementsByClassName('team-wrap-inner');
@@ -42,8 +36,10 @@ class OurTeam extends React.Component {
 				</p>
 				<p className="text-center">
 					India is young country with millions graduating from Colleges and helping their Families migrate from one economic class to the other higher economic class. This has however unfurled the problem of poor financial planning and personal debt crisis in many of the Young earners’ life. The Five men have to come together to “solve this Problem that does well in some way” exactly as Mr Dhirubhai Ambani wanted it be done.
-				</p>
-				<AliceCarousel mouseTrackingEnabled responsive={this.responsive} >
+
+
+</p>
+				<div className="team-wrap">
 					<div className="team-wrap-inner">
 						<Animated animationIn="fadeIn" animationInDuration={1000} isVisible={true}>
 							<div className="team" data-name="S"></div>
@@ -82,7 +78,41 @@ class OurTeam extends React.Component {
 						<i className="member-tagline">Gym, Eat, Gym, Cricket, Gym, Eat – Repeat in loop.</i>
 						<p>If Rajkumar were to build heaven, it will take tons of Iron and Steel. Because for him – Gym is Heaven. When God wrote the simplest coding when he programmed his Birth. He wrote 3 letters – GYM  EAT REPEAT – and looped it with Until function. His friends are yet to find answer for “until when”. A Gym enthusiast, A Cricket fanatic, Raj Kumar Cost account cum Commerce Graduate from MCC, Chennai. Known for his simplicity, affable nature and honest reviews. </p>
 					</div>
-				</AliceCarousel>
+				</div>
+				<div className="team-profile">
+					<div className={"profile1 profile-description " + (this.state.profile1 ? "fade-in" : '')}>
+						<i className="member-tagline">Gym, Eat, Gym, Cricket, Gym, Eat – Repeat in loop.
+
+						</i>
+						<p>If Rajkumar were to build heaven, it will take tons of Iron and Steel. Because for him – Gym is Heaven. When God wrote the simplest coding when he programmed his Birth. He wrote 3 letters – GYM  EAT REPEAT – and looped it with Until function. His friends are yet to find answer for “until when”. A Gym enthusiast, A Cricket fanatic, Raj Kumar Cost account cum Commerce Graduate from MCC, Chennai. Known for his simplicity, affable nature and honest reviews.
+
+</p>
+					</div>
+					<div className={"profile2 profile-description " + (this.state.profile2 ? "fade-in" : '')}>
+						<i>Gym, Eat, Gym, Cricket, Gym, Eat – Repeat in loop.
+
+						</i>
+						<p>If Rajkumar were to build heaven, it will take tons of Iron and Steel. Because for him – Gym is Heaven. When God wrote the simplest coding when he programmed his Birth. He wrote 3 letters – GYM  EAT REPEAT – and looped it with Until function. His friends are yet to find answer for “until when”. A Gym enthusiast, A Cricket fanatic, Raj Kumar Cost account cum Commerce Graduate from MCC, Chennai. Known for his simplicity, affable nature and honest reviews.
+
+</p>
+					</div>
+					<div className={"profile3 profile-description " + (this.state.profile3 ? "fade-in" : '')}>
+						<i>Gym, Eat, Gym, Cricket, Gym, Eat – Repeat in loop.
+
+						</i>
+						<p>If Rajkumar were to build heaven, it will take tons of Iron and Steel. Because for him – Gym is Heaven. When God wrote the simplest coding when he programmed his Birth. He wrote 3 letters – GYM  EAT REPEAT – and looped it with Until function. His friends are yet to find answer for “until when”. A Gym enthusiast, A Cricket fanatic, Raj Kumar Cost account cum Commerce Graduate from MCC, Chennai. Known for his simplicity, affable nature and honest reviews.
+
+</p>
+					</div>
+					<div className={"profile4 profile-description " + (this.state.profile4 ? "fade-in" : '')}>
+						< i > Gym, Eat, Gym, Cricket, Gym, Eat – Repeat in loop.
+
+						</i >
+						<p>If Rajkumar were to build heaven, it will take tons of Iron and Steel. Because for him – Gym is Heaven. When God wrote the simplest coding when he programmed his Birth. He wrote 3 letters – GYM  EAT REPEAT – and looped it with Until function. His friends are yet to find answer for “until when”. A Gym enthusiast, A Cricket fanatic, Raj Kumar Cost account cum Commerce Graduate from MCC, Chennai. Known for his simplicity, affable nature and honest reviews.
+
+</p>
+					</div >
+				</div >
 			</>
 		)
 	}

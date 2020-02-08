@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './blog.css';
-
+import BlogComment from './blogComments';
 export default class RealtyReality extends React.Component {
 	constructor(props) {
 		super(props);
@@ -12,7 +12,7 @@ export default class RealtyReality extends React.Component {
 			<div className="container blogs-wrap">
 				<h2>Reality about Realty</h2>
 				<h6>by admin | Apr 15, 2018 | Uncategorized | 0 comments</h6>
-				<div className="blogs-wrap-left">
+				<div>
 					<img src={require("../../images/blogs/Reality-about-Realty-1080x675.jpg")}
 						alt="Reality about Realty" />
 					<p>The state of our mind is in such a state that it takes a lot of courage to just state the facts since the facts we state have to peddle through the fake facts (aka lies) to reach it shores. The shores we are trying to reach are nothing but you  – “Readers”. And by the time, it reaches its shores, it is so confusing which is real and fake that the confusion swallows everything leaving nothing for the readers who await. We are afraid the knowledge is not crossing the shores! For the sails have not left the shores, not set forth towards knowledge. Alas!
@@ -39,6 +39,7 @@ export default class RealtyReality extends React.Component {
 						</div>
 					</div>
 				</div>
+				<BlogComment />
 			</div>
 		)
 	}

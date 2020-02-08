@@ -53,7 +53,7 @@ class App extends React.Component {
 
 						</Switch>
 					</Switch>
-					<footer className="clear">
+					{/* <footer className="clear">
 						<ul className="ul-reset flex connect-options">
 							<li>
 								<NavLink to='/contactus' className="icon-call"></NavLink>
@@ -70,7 +70,7 @@ class App extends React.Component {
 
 							</li>
 						</ul>
-					</footer>
+					</footer> */}
 				</Router>
 
 
