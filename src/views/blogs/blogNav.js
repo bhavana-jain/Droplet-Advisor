@@ -69,38 +69,41 @@ export default class BlogsNavigation extends React.Component {
 	}
 	render() {
 		return (
-			<>
-				{this.state.shldSearch && !this.state.archives ? <Blogs filter={this.state.searchText} /> : ''}
-				{!this.state.shldSearch && this.state.archives ? <Blogs archive={this.state.archiveText} /> : ''}
-				{!this.state.shldSearch && !this.state.archives ? <Blogs /> : ''}
-				<div className="blogs-nav">
-					<div className="blogs-nav-blocks">
-						<div className="relative">
-							<input type="text" id="search"
-								name="search"
-								className="search-blog"
-								onChange={(e) => this.handleChange(e)}
-								placeholder="Search Blogs"
-								required
-								value={this.state.search} />
-							<a href="javascript:;" className="search-icon" onClick={(e) => this.searchBlog(e)}></a>
+			<div className="container">
+				<h1 className="section-title text-center">Our Blogs</h1>
+				<div className="blogs-container">
+					{this.state.shldSearch && !this.state.archives ? <Blogs filter={this.state.searchText} /> : ''}
+					{!this.state.shldSearch && this.state.archives ? <Blogs archive={this.state.archiveText} /> : ''}
+					{!this.state.shldSearch && !this.state.archives ? <Blogs /> : ''}
+					<div className="blogs-nav">
+						<div className="blogs-nav-blocks">
+							<div className="relative">
+								<input type="text" id="search"
+									name="search"
+									className="search-blog"
+									onChange={(e) => this.handleChange(e)}
+									placeholder="Search Blogs"
+									required
+									value={this.state.search} />
+								<a href="javascript:;" className="search-icon" onClick={(e) => this.searchBlog(e)}></a>
+							</div>
+						</div>
+						<div className="blogs-nav-blocks">
+							<h3>Recent Posts</h3>
+							<div>{recentPost}</div>
+						</div>
+						<div className="blogs-nav-blocks">
+							<h3>Archives</h3>
+							<ul className="blogs-archive">
+								{archiveList.map((archiveList) =>
+									<li onClick={() => this.fetchArchive(archiveList)}>{archiveList}</li>
+								)}
+							</ul>
+
 						</div>
 					</div>
-					<div className="blogs-nav-blocks">
-						<h3>Recent Posts</h3>
-						<div>{recentPost}</div>
-					</div>
-					<div className="blogs-nav-blocks">
-						<h3>Archives</h3>
-						<ul className="blogs-archive">
-							{archiveList.map((archiveList) =>
-								<li onClick={() => this.fetchArchive(archiveList)}>{archiveList}</li>
-							)}
-						</ul>
-
-					</div>
 				</div>
-			</>
+			</div>
 		)
 	}
 	fetchArchive(year) {
@@ -113,7 +116,13 @@ export default class BlogsNavigation extends React.Component {
 	handleChange(e) {
 		this.setState({
 			search: e.target.value
-		})
+		});
+		if (e.target.value.length == 0) {
+			this.setState({
+				shldSearch: false,
+				archives: false
+			})
+		}
 	}
 
 	searchBlog(e) {
@@ -122,5 +131,6 @@ export default class BlogsNavigation extends React.Component {
 			archives: false,
 			searchText: this.state.search
 		})
+
 	}
 }
