@@ -22,11 +22,7 @@ class App extends React.Component {
 		super(props);
 		this.header = createRef()
 	}
-	componentDidMount() {
-		document.addEventListener('scroll', function () {
-			console.log(window.scrollTop);
-		})
-	}
+
 	render() {
 		return (
 			<div>

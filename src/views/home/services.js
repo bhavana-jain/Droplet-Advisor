@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './home.css';
 
 
+let card;
 class ServicesList extends React.Component {
 	constructor(props) {
 		super(props);
@@ -12,6 +13,7 @@ class ServicesList extends React.Component {
 		this.flip = this.flip.bind(this);
 		this.unflip = this.unflip.bind(this);
 	}
+
 	flip = (e) => {
 		console.log(e);
 		this.setState({
@@ -24,18 +26,13 @@ class ServicesList extends React.Component {
 		})
 	}
 	componentDidMount() {
-		let card = document.getElementsByClassName('card');
+		card = document.getElementsByClassName('card');
 		Array.from(card).forEach(function (element) {
-			element.addEventListener('mouseenter', function () {
-				Array.from(card).forEach(function (element) {
-					element.classList.remove('is-flipped');
-				});
-				setTimeout(function () {
-					element.classList.add('is-flipped');
-				}, 100)
-			});
-			element.addEventListener('mouseleave', function () {
-				element.classList.remove('is-flipped');
+			element.addEventListener('click', function () {
+				// Array.from(card).forEach(function (element) {
+				// 	element.classList.remove('is-flipped');
+				// });
+				element.classList.toggle('is-flipped');
 			});
 		})
 

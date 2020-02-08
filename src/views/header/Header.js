@@ -55,7 +55,6 @@ class Header extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log(this.divElement.clientHeight);
 		let headerFix = false;
 		document.addEventListener('scroll', this.updateHeader);
 		document.body.addEventListener('click', function (e) {
@@ -85,7 +84,6 @@ class Header extends React.Component {
 				fixHeader: false
 			})
 		}
-		console.log(document.documentElement.scrollTop);
 	}
 	render() {
 		return (
