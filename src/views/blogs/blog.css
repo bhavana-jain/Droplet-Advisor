@@ -153,3 +153,21 @@ float:left;
 .blogs-recent a {
 	text-decoration: none;
 }
+.search-icon {
+	 position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    text-decoration: none;
+    border-left: 1px solid #ccc;
+    display: inline-block;
+    height: 47px;
+    text-align: center;
+}
+.search-icon:before {
+	content: "\ed11";
+	font-family: "IcoFont";
+	color: #333;
+	font-size: 21px;
+	line-height: 42px;
+}

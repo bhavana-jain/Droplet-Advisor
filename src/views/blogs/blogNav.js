@@ -75,15 +75,16 @@ export default class BlogsNavigation extends React.Component {
 				{!this.state.shldSearch && !this.state.archives ? <Blogs /> : ''}
 				<div className="blogs-nav">
 					<div className="blogs-nav-blocks">
-						<input type="text" id="search"
-							name="search"
-							className="search-blog"
-							onChange={(e) => this.handleChange(e)}
-							placeholder="Search Blogs"
-							required
-							value={this.state.search} />
-						<button className="btn" onClick={(e) => this.searchBlog(e)}>Search</button>
-
+						<div className="relative">
+							<input type="text" id="search"
+								name="search"
+								className="search-blog"
+								onChange={(e) => this.handleChange(e)}
+								placeholder="Search Blogs"
+								required
+								value={this.state.search} />
+							<a href="javascript:;" className="search-icon" onClick={(e) => this.searchBlog(e)}></a>
+						</div>
 					</div>
 					<div className="blogs-nav-blocks">
 						<h3>Recent Posts</h3>
