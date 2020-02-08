@@ -199,3 +199,33 @@
     visibility: visible;
     transition: width 1.5s, height 1.5s;
 }
+.alice-carousel__dots-item:hover, .alice-carousel__dots-item.__active {
+    background-color: #333;
+}
+.alice-carousel__next-btn-wrapper ,  .alice-carousel__prev-btn-wrapper {
+position: absolute;
+top: calc(50% - 16px);
+}
+.alice-carousel__next-btn-wrapper {
+    right: -10px;
+    content: "\ea5d";
+}
+.alice-carousel__next-btn-wrapper:after, .alice-carousel__prev-btn-wrapper:after {
+font-family: "IcoFont";
+font-size: 30px;
+background: #ddd;
+border-radius: 20px;
+color: #333;
+}
+.alice-carousel__next-btn-wrapper:after {
+    content: "\ea5d";
+    
+}
+.alice-carousel__prev-btn-wrapper {
+    left: -10px;
+}
+.alice-carousel__prev-btn-wrapper:after {
+    content: "\ea5c";
+    font-family: "IcoFont";
+}
+.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item { display: none;}

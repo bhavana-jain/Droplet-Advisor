@@ -24,10 +24,7 @@ class BlogComment extends React.Component {
 	handleSubmit(e) {
 		console.log('submit')
 		e.preventDefault();
-
 		console.log(this.state.errorCount);
-
-
 		const templateId = 'template_WXjvXZJi';
 		const userId = 'user_jGbfA1cf87kBG6A6nYDBs'
 
