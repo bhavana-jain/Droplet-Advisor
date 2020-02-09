@@ -61,7 +61,8 @@ export default class BlogsNavigation extends React.Component {
 			archiveText: '',
 			shldSearch: false,
 			archives: false,
-			searchText: ''
+			searchText: '',
+			searchMobile: ''
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.searchBlog = this.searchBlog.bind(this);
@@ -70,13 +71,23 @@ export default class BlogsNavigation extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<h1 className="section-title text-center">Our Blogs</h1>
+				<h1 className="section-title text-center">Blogs</h1>
+				<div className="relative mobile-search">
+					<input type="text" id="searchMobile"
+						name="searchMobile"
+						className="search-blog"
+						onChange={(e) => this.handleChange(e)}
+						placeholder="Search Blogs"
+						required
+						value={this.state.searchMobile} />
+					<a href="javascript:;" className="search-icon" onClick={(e) => this.searchBlog(e)}></a>
+				</div>
 				<div className="blogs-container">
 					{this.state.shldSearch && !this.state.archives ? <Blogs filter={this.state.searchText} /> : ''}
 					{!this.state.shldSearch && this.state.archives ? <Blogs archive={this.state.archiveText} /> : ''}
 					{!this.state.shldSearch && !this.state.archives ? <Blogs /> : ''}
 					<div className="blogs-nav">
-						<div className="blogs-nav-blocks">
+						<div className="blogs-nav-blocks search-nav">
 							<div className="relative">
 								<input type="text" id="search"
 									name="search"
@@ -115,7 +126,8 @@ export default class BlogsNavigation extends React.Component {
 	}
 	handleChange(e) {
 		this.setState({
-			search: e.target.value
+			search: e.target.value,
+			searchMobile: e.target.value
 		});
 		if (e.target.value.length == 0) {
 			this.setState({
