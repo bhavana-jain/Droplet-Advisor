@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import * as emailjs from 'emailjs-com';
-import axios from 'axios';
 
 
 
@@ -10,7 +8,6 @@ class BlogComment extends React.Component {
 		super(props);
 		this.state = {
 			name: '',
-			mobile: '',
 			email: '',
 			comment: '',
 			errorCount: 0
@@ -26,8 +23,19 @@ class BlogComment extends React.Component {
 		e.preventDefault();
 		console.log(this.state.errorCount);
 		const templateId = 'template_WXjvXZJi';
-		const userId = 'user_jGbfA1cf87kBG6A6nYDBs'
+		const userId = 'user_jGbfA1cf87kBG6A6nYDBs';
 
+		fetch('http://localhost:3000/src/views/blogs/blogsComment.json', {
+			method: "POST",
+			body: JSON.stringify({
+				name: this.state.name,
+				email: this.state.email,
+				comment: this.state.comment
+			})
+		})
+			.then(res => res.json())
+			.then(data => console.log(data))
+			.catch(err => console.log(err));
 		//this.sendFeedback(templateId, { message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email }, userId)
 	}
 	sendFeedback(templateId, variables, id) {

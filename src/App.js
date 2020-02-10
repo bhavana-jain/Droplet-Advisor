@@ -49,7 +49,9 @@ class App extends React.Component {
 
 						</Switch>
 					</Switch>
-					{<footer className="clear">
+					{<footer className="clear" style={{
+						'display': 'none'
+					}}>
 						<ul className="ul-reset flex connect-options">
 							<li>
 								<NavLink to='/contactus' className="icon-call"></NavLink>
