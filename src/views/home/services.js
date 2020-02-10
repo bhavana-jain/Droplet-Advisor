@@ -46,7 +46,7 @@ class ServicesList extends React.Component {
 						<div className="card__face card__face--front">
 							<h4 className="services-title">Financial Planning</h4>
 							<div className="services-info">
-								<div className="financial-planning-icon"></div>
+								<div className="icon-planning"></div>
 								<h3>Acheive Your Goals </h3>
 							</div>
 						</div>
@@ -60,7 +60,7 @@ class ServicesList extends React.Component {
 						<div className="card__face card__face--front">
 							<h4 className="services-title bg-green">Mutual Funds</h4>
 							<div className="services-info">
-								<div className="mf-icon"></div>
+								<div className="icon-mf"></div>
 								<h3>Expert Guidance</h3>
 							</div>
 						</div>
@@ -74,7 +74,8 @@ class ServicesList extends React.Component {
 						<div className="card__face card__face--front">
 							<h4 className="services-title bg-violet">Insurance</h4>
 							<div className="services-info">
-								<div className="insurance-icon"></div>
+								<div className="icon-insurance"></div>
+								<h3>&nbsp;</h3>
 							</div>
 						</div>
 						<div className="card__face card__face--back bg-violet">
