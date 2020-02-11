@@ -99,7 +99,7 @@ float:left;
 	box-shadow: none;
 }
 .main-blog .blog-list img{
-    width: 20%;
+    width: 150px;
     height: inherit;
     float: left;
 }
@@ -111,7 +111,7 @@ float:left;
 	margin-top: 15px;
 }
 .main-blog .blog-list .blog-description-wrap {
-width: calc(80% - 15px);
+width: calc(100% - 175px);
 }
 .main-blog .blog-list p {
 	    line-height: 19px;

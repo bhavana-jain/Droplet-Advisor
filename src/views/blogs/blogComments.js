@@ -41,18 +41,18 @@ class BlogComment extends React.Component {
 			}
 		};
 
-		// axios.post('http://droplet-advisor.herokuapp.com/src/views/blogs/blogComments.json', postData, axiosConfig)
-		// 	.then((res) => {
-		// 		console.log("RESPONSE RECEIVED: ", res);
-		// 	})
-		// 	.catch((err) => {
-		// 		console.log("AXIOS ERROR: ", err);
-		// 	})
+		axios.post('blogsComment.json', postData)
+			.then((res) => {
+				console.log("RESPONSE RECEIVED: ", res);
+			})
+			.catch((err) => {
+				console.log("AXIOS ERROR: ", err);
+			})
 
 
 
 
-		this.sendFeedback(templateId, { message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email }, userId)
+		this.sendFeedback(templateId, { message_html: this.state.comment, from_name: this.state.name, reply_to: this.state.email }, userId)
 	}
 	sendFeedback(templateId, variables, id) {
 		console.log('2');
