@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as emailjs from 'emailjs-com';
 import axios from 'axios';
-
+import data from './comments.json';
 
 
 class BlogComment extends React.Component {
@@ -23,7 +23,6 @@ class BlogComment extends React.Component {
 	handleSubmit(e) {
 		console.log('submit')
 		e.preventDefault();
-		console.log(this.state.errorCount);
 		const templateId = 'template_WXjvXZJi';
 		const userId = 'user_jGbfA1cf87kBG6A6nYDBs';
 		let postData = {
@@ -41,7 +40,7 @@ class BlogComment extends React.Component {
 			}
 		};
 
-		axios.post('blogsComment.json', postData)
+		axios.post('./comments', postData)
 			.then((res) => {
 				console.log("RESPONSE RECEIVED: ", res);
 			})
@@ -52,10 +51,9 @@ class BlogComment extends React.Component {
 
 
 
-		this.sendFeedback(templateId, { message_html: this.state.comment, from_name: this.state.name, reply_to: this.state.email }, userId)
+		//this.sendFeedback(templateId, { message_html: this.state.comment, from_name: this.state.name, reply_to: this.state.email }, userId)
 	}
 	sendFeedback(templateId, variables, id) {
-		console.log('2');
 		emailjs.send(
 			'gmail', templateId,
 			variables, id
@@ -79,6 +77,7 @@ class BlogComment extends React.Component {
 								id="name"
 								name="name"
 								className="p-100 block"
+								value="daram"
 								onChange={(e) => this.handleChange(e)}
 								onFocus={(e) => this.animateLabel(e)}
 								onBlur={(e) => { this.checkValue(e) }}
@@ -93,6 +92,7 @@ class BlogComment extends React.Component {
 							<input type="email"
 								className="p-100 block"
 								name="email"
+								value="bhavanachajjed@gmail.com"
 								onChange={(e) => this.handleChange(e)}
 								onFocus={(e) => this.animateLabel(e)}
 								onBlur={(e) => { this.checkValue(e) }} id="email" value={this.state.email}></input>
@@ -108,7 +108,7 @@ class BlogComment extends React.Component {
 							onFocus={(e) => this.animateLabel(e)}
 							onBlur={(e) => { this.checkValue(e) }}
 							rows="5"
-							value={this.state.comment}></textarea>
+							value={this.state.comment}>blog comment here</textarea>
 						<label htmlFor="comment" className="animate-label">Post your comments</label>
 						<div className="error-text">Comment cannot be empty</div>
 					</div>
@@ -183,7 +183,6 @@ class BlogComment extends React.Component {
 		}
 	}
 	handleChange(e) {
-		console.log(e)
 		this.setState({
 			[e.target.name]: e.target.value,
 			[e.target.mobile]: e.target.value,

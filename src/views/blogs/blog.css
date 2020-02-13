@@ -68,8 +68,13 @@ float:left;
 	width: calc(80% - 15px);
 }
 .blog-description {
-	
 	border-bottom: 1px solid #ccc;
+}
+.blog-nav-link {
+	margin-bottom: 10px;
+}
+.blog-nav-link > * {
+	font-size: 13px;
 }
 .blog-description h3 {
 	margin-top: 0;
