@@ -18,13 +18,20 @@
 	color: #ccc;
 }
 .blogs-wrap h4 {
-	color: green;
+	color: #dc2214;
 }
 .blogs-wrap ul {
 	margin: 0 0 0 15px;
 	padding: 0;
 }
-.blogs-wrap ul li {
+.blogs-wrap p {
+	line-height: 22px;
+}
+.blogs-wrap ul, .blogs-wrap ol {
+margin: 0;
+padding-left:15px;
+}
+.blogs-wrap ul li, .blogs-wrap ol li {
 	padding: 5px 0;
 }
 .realty-articles {

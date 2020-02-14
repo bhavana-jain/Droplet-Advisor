@@ -143,7 +143,9 @@ input:focus {
   padding:0;
   list-style: none;
 }
-
+.underline {
+  text-decoration: underline;
+}
 .header-tabs [class*="icon-"]:before{
     color: #ccc;
   font-size: 25px;
