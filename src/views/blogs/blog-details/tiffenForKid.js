@@ -13,7 +13,7 @@ class tiffenForKid extends React.Component {
 				<img src={require("../../../images/blogs/A-Tiffen-for-you-Kid-1080x675.jpg")}
 					alt="Reality about Realty" />
 				<h2>A Tiffen for you Kid</h2>
-				<h6>by admin | Apr 15, 2018 | Uncategorized | 0 comments</h6>
+				<h6 className="blog-publish-info">By Admin | Apr 15, 2018 | Uncategorized | 0 comments</h6>
 				<p>I had get caught being honest rather than being caught lying. So let me agree, Out of sheer boredom and being a new user of Swiggy, I decided to pass my time off with some Swiggy browsing. There came my sister’s Kid –</p>
 				<p>"Kae Karo mama” (What are you doing Mama). <br />
 					I told him, Ordering food for you dear. <br />
@@ -28,7 +28,7 @@ class tiffenForKid extends React.Component {
 					alt="Reality about Realty" className="align-right blog-info-img" />
 				<p>The Financial Planner started to work.
 					 If i were to feed the kid, the whole month, It will come to INR 2,500 approximately. As like all the times, We always think there is so much we can achieve in terms of wealth, If only we can have <strong>Time</strong> on our side.
-	As elders, we may have to some extent lost this valuable resource but fortunately Our kids have it intact.
+  As elders, we may have to some extent lost this valuable resource but fortunately Our kids have it intact.
 
 				</p>
 				<p>Today, we parents want to give our kids the best of everything, Education, Health, Lifestyle so on.  In all the modern day circus, we inadvertently do the same mistake that our parents did. That is not saving for our kids. Something meant only for them and no one else. On these lines we said lets give our readers some food for thought. </p>

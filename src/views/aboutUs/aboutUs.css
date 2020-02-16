@@ -228,4 +228,4 @@ color: #333;
     content: "\ea5c";
     font-family: "IcoFont";
 }
-.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item { display: none;}
+.alice-carousel__prev-btn-item span, .alice-carousel__next-btn-item span { display: none;}

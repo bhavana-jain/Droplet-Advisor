@@ -13,7 +13,7 @@ class securingFuture extends React.Component {
 				<img src={require("../../../images/blogs/pawn-mirror-chess-king-1024x640.jpg")}
 					alt="Reality about Realty" />
 				<h2>Securing your Future with Rs 5000</h2>
-				<h6>by admin | Apr 12, 2019 | Uncategorized | 0 comments</h6>
+				<h6 className="blog-publish-info">By Admin | Apr 12, 2019 | Uncategorized | 0 comments</h6>
 				<p>Earlier, we wrote a blog about investing 30K and earning an income of 50K every month. Most of them might have thought that they need such a huge amount to start investing. Nothing so! At Droplet, our wish is to be all-inclusive and that constant endeavor has resulted in this blog. </p>
 				<p>I think it is relatively safe to assume that an average middle-class earner can save 5K monthly. Now next we are trying to secure this Middle-class earner's future. In the Financial world, the future is always and always 15 years after. Hence we will plan with 15 years in our mind -</p>
 				<p>Droplet Team advises that a saver should split his investments into 2 parts one. One for Security and another for Savings. </p>

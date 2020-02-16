@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
+import BlogComment from '../blogComments';
 
 class losingFewCrores extends React.Component {
 	constructor(props) {
@@ -10,10 +11,11 @@ class losingFewCrores extends React.Component {
 	render() {
 		return (
 			<div className="container blogs-wrap">
-				<img src={require("../../../images/blogs/Starting-Late-and-losing-a-few-Crores-1080x675.jpg")}
-					alt="Starting Late and losing a few Crores" />
 				<h2>Starting Late and losing a few Crores</h2>
-				<h6>by admin | Apr 01, 2018 | Uncategorized | 0 comments</h6>
+				<h6 className="blog-publish-info">By Admin | Apr 01, 2018 | Uncategorized | 0 comments</h6>
+				<img src='/images/Starting-Late-and-losing-a-few-Crores-1080x675.jpg'
+					alt="Starting Late and losing a few Crores" />
+
 				<p>My first Salary was Rs 12000. This was my life’s first big income and until that point, This income had no expense against it.
 
 				</p>
@@ -60,6 +62,7 @@ class losingFewCrores extends React.Component {
 					<li>Next time you get a hike, Pledge to save at least half of it!</li>
 					<li>Lets get going, Lets start saving!</li>
 				</ul>
+				<BlogComment />
 			</div>
 		)
 	}

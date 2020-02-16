@@ -1,5 +1,27 @@
 [
     {
+        "title": "Union Budget 2020",
+        "comp": "union-budget-2020",
+        "compName": "unionBudget",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2020-02-15",
+        "image": "union-budget",
+        "description": "We were worried as financial advisers about the budget. Of course the Union Budget because if the budget was perceived to the be good then the markets would rally and our investors will not get discounts on their Investments.",
+        "recent": "true"
+    },
+    {
+        "title": "Budget 2020",
+        "comp": "budget-2020",
+        "compName": "budget2020",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2020-02-01",
+        "image": "DropletBudgetinPlanning",
+        "description": "Of course, like with all things @ Droplet, this one is not related to Superficial things like Budget/macro economics. So if you want to know our feedback on this year's budget,",
+        "recent": "true"
+    },
+    {
         "title": "Mutual Funds earn you Money",
         "comp": "ow-do-mutual-fund-earn-money",
         "compName": "mfEarnMoney",
@@ -34,13 +56,24 @@
     },
     {
         "title": "NPS - Non Performing Saving!",
-        "comp": "RealtyReality",
-        "compName": "RealtyReality",
+        "comp": "nps-non-performing-saving",
+        "compName": "nonPerfomingSaving",
         "author": "Admin",
         "category": "uncatogerized",
-        "createdOn": "2017-03-12",
-        "image": "A-Tiffen-for-you-Kid-1080x675",
-        "description": "",
+        "createdOn": "2017-11-25",
+        "image": "NPS-Non-Performing-Saving-1080x675",
+        "description": "It was a rainy afternoon and I was peeping through a large window and enjoying the scenery of rains, waiting for the lift to take us closer to earth from these bundles of Elixir that clouds are.",
+        "recent": "true"
+    },
+    {
+        "title": "Home 'Loans' at 50% Discount",
+        "comp": "unlimited-period-offer-home-loans-at-50-discount",
+        "compName": "unlimitedPeriodOffer",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2017-11-18",
+        "image": "Unlimited-Period-Offer-Home-Loans-@-50-Discount-1080x675",
+        "description": "Recently friends of mine were discussing the rush @ global brand Apparel store because of the discount that they were offering to the customers. A certain ",
         "recent": "true"
     },
     {
@@ -49,10 +82,120 @@
         "compName": "losingFewCrores",
         "author": "Admin",
         "category": "uncatogerized",
-        "createdOn": "2019-04-12",
+        "createdOn": "2018-04-01",
         "image": "Starting-Late-and-losing-a-few-Crores-1080x675",
         "description": "My first Salary was Rs 12000. This was my life’s first big income and until that point, This income had no expense against it.",
         "recent": "true"
+    },
+    {
+        "title": "Savings, You (can’t) WON’T Do It!",
+        "comp": "savings-you-cant",
+        "compName": "savingsYouCant",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2018-03-23",
+        "image": "Savings-You-cant-WONT-Do-It-1080x675",
+        "description": "Let us tell you something. It is not just the money that you invest helps you build the wealth nor the returns. It is the habit of savings that you make. Wealth created ",
+        "recent": "false"
+    },
+    {
+        "title": "A Titan Story – Delayed Gratification",
+        "comp": "a-titan-story",
+        "compName": "titanStory",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2018-03-18",
+        "image": "A-Titan-Story-Delayed-Gratification-1080x675",
+        "description": "How would you feel If were you to tell you that a piece of land that your Dad bought years back and sold immediately off is worth today 200 times its purchase price?",
+        "recent": "false"
+    },
+    {
+        "title": "A Tiffen for your Kid",
+        "comp": "tiffenForKid",
+        "compName": "RealtyReality",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2019-04-12",
+        "image": "A-Tiffen-for-you-Kid-1080x675",
+        "description": "I had get caught being honest rather than being caught lying. So let me agree, Out of sheer boredom and being a new user of Swiggy, I decided to pass my time off with some Swiggy browsing. There came my sister’s Kid",
+        "recent": "false"
+    },
+    {
+        "title": " A GOLDen Plan!",
+        "comp": "a-golden-plan",
+        "compName": "goldenPlan",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2019-03-04",
+        "image": "A-GOLDen-Plan-1080x675",
+        "description": "For those of you reading our blogs, you would realise that we have written about most of the forms of investments available for common man except one.",
+        "recent": "false"
+    },
+    {
+        "title": "G. G. P. – The conclusion!",
+        "comp": "GGP-the-conclusion",
+        "compName": "ggpConclusion",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2018-02-25",
+        "image": "Greed.-Gain.-Pain.-The-conclusion-1080x675",
+        "description": "The Markets continue to wobble. Option traders are still making money. Note we told money and not Wealth. As usual we continue to remain focussed and bring to you the final part of Man made mis-doings of Markets.",
+        "recent": "false"
+    },
+    {
+        "title": "Greed. Gain. Pain.",
+        "comp": "greed-gain-pain",
+        "compName": "greedGainPain",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2018-02-04",
+        "image": "Greed.-Gain.-Pain.-1080x675",
+        "description": "We all live in a world of instant gratification. With the prevailing technological disruption, we were able to buy everything and anything in an instant click and it is delivered at our doorstep without",
+        "recent": "false"
+    },
+    {
+        "title": "Greed. Gain. Pain. II",
+        "comp": "greed-gain-pain-series",
+        "compName": "greedGainPainSeries",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2018-02-13",
+        "image": "Greed.-Gain.-Pain.-1080x675",
+        "description": "Markets have for now bounced off the lows it fell to last week.  Let’s, just as in other things in life, keep focused on our objective that is to educate our readers about greed,  the",
+        "recent": "false"
+    },
+    {
+        "title": "Happy New Year!",
+        "comp": "happy-new-year",
+        "compName": "happyNewYear",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2018-01-07",
+        "image": "Happy-New-Year-1080x675",
+        "description": "We have been blogging for a couple of months now. We are so glad that our blog has reached over 1500 readers in aggregate. Our ultimate intention through this blog ",
+        "recent": "false"
+    },
+    {
+        "title": "Horses for Courses!",
+        "comp": "horses-for-courses",
+        "compName": "horsesForCourses",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2017-12-30",
+        "image": "Horses-for-Courses-1080x675",
+        "description": "On this fine Saturday, Dharam my Investment Partner, and myself were attending a training on various financials products! Along with us there were other participants mostly aged 45+",
+        "recent": "false"
+    },
+    {
+        "title": "Investments go up or down ?",
+        "comp": "investments-go-up-or-down",
+        "compName": "investmentsUpDown",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2019-04-19",
+        "image": "What-to-do-when-my-Investments-go-up-or-down-1080x675",
+        "description": "We have spoken to a whole lot of people and were surprised to notice the same mentality among most of the them. What is that mentality ?",
+        "recent": "false"
     },
     {
         "title": "Securing your future with Rs 5000",
@@ -74,17 +217,6 @@
         "createdOn": "2018-04-12",
         "image": "A-Tiffen-for-you-Kid-1080x675",
         "description": "The state of our mind is in such a state that it takes a lot of courage to just state the facts since the facts we state have to peddle through the fake facts (aka lies) to reach it shores. The shores we are trying to reach are nothing but you  – “Readers”. And by the time, it reaches its shores, it is so confusing which is real and fake that the confusion swallows everything leaving nothing for the readers who await. We are afraid the knowledge is not crossing the shores! For the sails have not left the shores, not set forth towards knowledge. Alas!",
-        "recent": "false"
-    },
-    {
-        "title": "A Tiffen for your Kid",
-        "comp": "tiffenForKid",
-        "compName": "RealtyReality",
-        "author": "Admin",
-        "category": "uncatogerized",
-        "createdOn": "2019-04-12",
-        "image": "A-Tiffen-for-you-Kid-1080x675",
-        "description": "I had get caught being honest rather than being caught lying. So let me agree, Out of sheer boredom and being a new user of Swiggy, I decided to pass my time off with some Swiggy browsing. There came my sister’s Kid",
         "recent": "false"
     }
 ]

@@ -74,7 +74,7 @@ class Header extends React.Component {
 		});
 	}
 	updateHeader = () => {
-		if (document.documentElement.scrollTop - 30 >= this.divElement.clientHeight) {
+		if (document.documentElement.scrollTop - 60 >= this.divElement.clientHeight) {
 			this.setState({
 				fixHeader: true
 			})
@@ -87,11 +87,13 @@ class Header extends React.Component {
 	}
 	render() {
 		return (
-			<div className={"border-bottom-grey " + (this.state.fixHeader ? "sticky-header" : "")} ref={(divElement) => { this.divElement = divElement }}>
-				<header className="container header-layer">
+
+			<div className="header-wrap">
+				<header className={"container header-layer " + (this.state.fixHeader ? "sticky-header" : "")} ref={(divElement) => { this.divElement = divElement }}>
+
 					<div className="droplet-menu" id="droplet-menu" onClick={this.slideMenu}></div>
 					<NavLink className="droplet-logo" to='/home'></NavLink>
-					<div>
+					<div style={{ "margin-left": "auto" }}>
 						<ul className={"header-tabs clear " + (this.state.slideMenu == true ? 'slide-right' : '')} id="header-tabs">
 							<li><NavLink exact to='/' className="link icon-home" onClick={this.setDefault}>Home</NavLink>
 							</li>
@@ -117,8 +119,8 @@ class Header extends React.Component {
 							</li>
 						</ul>
 					</div>
+					<div className={"page-overlay " + (this.state.slideMenu == true ? 'active' : '')} onClick={this.hideSideMenu}></div>
 				</header>
-				<div className={"page-overlay " + (this.state.slideMenu == true ? 'active' : '')} onClick={this.hideSideMenu}></div>
 			</div>
 		)
 	}

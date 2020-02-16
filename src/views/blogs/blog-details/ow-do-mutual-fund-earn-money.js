@@ -12,7 +12,7 @@ class mfEarnMoney extends React.Component {
 		return (
 			<div className="container blogs-wrap">
 				<h2>Mutual Funds earn you Money</h2>
-				<h6>by admin | Dec 24, 2017 | Uncategorized | 0 comments</h6>
+				<h6 className="blog-publish-info">By Admin | Dec 24, 2017 | Uncategorized | 0 comments</h6>
 				<img src={require("../../../images/blogs/How-do-Mutual-Funds-earn-you-Money-1080x675.jpg")}
 					alt="How-do-Mutual-Funds-earn-you-Money-1080x675" />
 

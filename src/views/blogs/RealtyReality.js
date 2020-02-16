@@ -11,7 +11,7 @@ export default class RealtyReality extends React.Component {
 		return (
 			<div className="container blogs-wrap">
 				<h2>Reality about Realty</h2>
-				<h6>by admin | Apr 15, 2018 | Uncategorized | 0 comments</h6>
+				<h6 className="blog-publish-info">By Admin | Apr 15, 2018 | Uncategorized | 0 comments</h6>
 				<div>
 					<img src={require("../../images/blogs/Reality-about-Realty-1080x675.jpg")}
 						alt="Reality about Realty" />

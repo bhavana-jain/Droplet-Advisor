@@ -12,7 +12,7 @@ class taxSaverInvestor extends React.Component {
 		return (
 			<div className="container blogs-wrap">
 				<h2>Tax Saver or Tax Investor?</h2>
-				<h6>by admin | Dec 01, 2017 | Uncategorized | 0 comments</h6>
+				<h6 className="blog-publish-info">By Admin | Dec 01, 2017 | Uncategorized | 0 comments</h6>
 				<img src={require("../../../images/blogs/Tax-Saver-or-Tax-Investor-1080x675.jpg")}
 					alt="Tax saver or investor" />
 				<p><strong>Caution:</strong> Request readers to consider this write up seriously if they don’t want to feel bad looking at their march month Salary statements.</p>

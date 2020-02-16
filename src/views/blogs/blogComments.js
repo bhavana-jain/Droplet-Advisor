@@ -67,7 +67,7 @@ class BlogComment extends React.Component {
 	render() {
 
 		return (
-			<form onSubmit={this.handleSubmit}>
+			<form onSubmit={this.handleSubmit} style={{ "width": "75%" }}>
 				<h3>Submit a comment</h3>
 				<p>Your email address will not be published. Required fields are marked *</p>
 				<div>

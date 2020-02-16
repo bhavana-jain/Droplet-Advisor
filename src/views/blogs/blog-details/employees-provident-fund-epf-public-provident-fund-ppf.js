@@ -13,7 +13,7 @@ class employeePublicProvidentFund extends React.Component {
 			<div className="container blogs-wrap">
 				<h2>Employees Provident Fund (EPF) &amp; Public Provident Fund (PPF)
 </h2>
-				<h6>by admin | Dec 13, 2017 | Uncategorized | 0 comments</h6>
+				<h6 className="blog-publish-info">By Admin | Dec 13, 2017 | Uncategorized | 0 comments</h6>
 				<img src={require("../../../images/blogs/EPF-PPF-1080x675.jpg")}
 					alt="EPF and PPF" />
 				<p>Initially we thought of coming up with a write-up which is close to our heart anytime. But fortunately we did learn a lot and got to know a few interesting things about Provident Funds (popularly known as PFs) So we decided to postpone the actual blog and wrote this one, as this will help readers to correlate with the next one! So, this week let us look at what Provident Funds are all about!</p>

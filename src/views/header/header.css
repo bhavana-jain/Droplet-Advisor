@@ -1,10 +1,17 @@
+
+.header-wrap {
+position: fixed;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    min-height: 80px;
+    z-index: 100;
+}
 .header-layer {
-    padding-left:15px;
-    padding-right:15px;
     padding-bottom:15px;
     display: flex;
     align-items: center;
-    position: relative;
+    
 }
 .sticky-header .droplet-logo {
     width: 120px;
@@ -42,6 +49,9 @@
     display: none;
 }
 @media all and (max-width: 1024px){
+    .header-wrap {
+min-height: 60px;
+    }
     .header-layer  {
         align-items:baseline;
     }
@@ -228,10 +238,9 @@ content: "\ec46";
     display: block;
 }
 .sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
     background-color: #fff;
     z-index: 100;
-    width: 100%;
+}
+.sticky-header .ul.services-list.open {
+    top: 36px;
 }

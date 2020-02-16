@@ -1,3 +1,9 @@
+.text-grey {
+	color: #333;
+}
+.blog-publish-info {
+	margin:10px 0;
+}
 .blogs-container {
 	display: flex;
 }
@@ -7,15 +13,25 @@
 	object-fit: cover;
 	margin-bottom: 15px;
 }
+.blogs-wrap img.img-center, .blogs-wrap img.img-center {
+    width: auto;
+    height: auto;
+}
 .blogs-wrap h2 {
 	margin-top: 0;
 	margin-bottom: 5px;
 }
 .blogs-wrap h6 {
-	margin-top: 0;
-	margin-bottom: 5px;
 	font-size: 12px;
 	color: #ccc;
+}
+.blog-details-title {
+	font-weight: normal;
+	color: #333;
+}
+.blog-details-title span {
+	color: #dc2214;
+	font-weight: bold;
 }
 .blogs-wrap h4 {
 	color: #dc2214;
@@ -33,6 +49,7 @@ padding-left:15px;
 }
 .blogs-wrap ul li, .blogs-wrap ol li {
 	padding: 5px 0;
+	line-height: 22px;
 }
 .realty-articles {
 	display: flex;
@@ -228,4 +245,19 @@ width: calc(100% - 175px);
 	padding: 0;
 	box-shadow: none;
 }
+}
+.note-text{
+	    position: relative;
+    padding-top: 25px !important;
+    margin-top: 10px;
+}
+.note-text:before {
+	content: "Points to be noted - ";
+    color: #dc2214;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 10px;
+	display: block;
+	font-weight: bold;
 }

@@ -31,27 +31,27 @@ class App extends React.Component {
 					<Header
 					></Header>
 
-					<Switch>
-						<Route exact path='/' component={Home} />
-						<Route exact path='/home' component={Home} />
-						<Route path='/about-us' component={AboutUs} />
-						<Route path='/contactus' component={ContactUs} />
-						<Route exact path='/blog' component={BlogsNavigation} />
-						<Route path='/blog/:id' component={BlogDetails} />
+					<main>
 						<Switch>
-							<Route exact path='/our-services' component={financialPlanning} />
-							<Route path='/our-services/financialplanning' component={financialPlanning} />
-							<Route path='/our-services/insurance' component={insurance} />
-							<Route path='/our-services/mutualFunds' component={mutualFunds} />
-						</Switch>
+							<Route exact path='/' component={Home} />
+							<Route exact path='/home' component={Home} />
+							<Route path='/about-us' component={AboutUs} />
+							<Route path='/contactus' component={ContactUs} />
+							<Route exact path='/blog' component={BlogsNavigation} />
+							<Route path='/blog/:id' component={BlogDetails} />
+							<Switch>
+								<Route exact path='/our-services' component={financialPlanning} />
+								<Route path='/our-services/financialplanning' component={financialPlanning} />
+								<Route path='/our-services/insurance' component={insurance} />
+								<Route path='/our-services/mutualFunds' component={mutualFunds} />
+							</Switch>
 
-						<Switch>
+							<Switch>
 
+							</Switch>
 						</Switch>
-					</Switch>
-					{<footer className="clear" style={{
-						'display': 'none'
-					}}>
+					</main>
+					{<footer className="clear">
 						<ul className="ul-reset flex connect-options">
 							<li>
 								<NavLink to='/contactus' className="icon-call"></NavLink>

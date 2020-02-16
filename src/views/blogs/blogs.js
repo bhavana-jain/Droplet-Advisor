@@ -17,7 +17,7 @@ const newdata = data.map((data) => {
 
 	return (
 		<div key={data.id} className="blog-list">
-			<img src={`images/${data.image}.jpg`}></img>
+			<img src={`/images/${data.image}.jpg`}></img>
 			<div className="blog-description-wrap">
 				<div className="blog-description">
 					<div><h3>{data.title}</h3></div>
