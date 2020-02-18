@@ -3,11 +3,11 @@ import GetStarted from '../../components/getStarted';
 import LazyLoad from 'react-lazyload';
 import ServicesList from './services';
 import DropletValues from './dropletValues';
-import Blogs from '../blogs/blogs'
 import { Animated } from "react-animated-css";
 import { NavLink } from 'react-router-dom';
-
 import './home.css';
+import TrendingBlogs from '../blogs/topBlogs';
+import Blogs from '../blogs/blogs';
 
 
 class Home extends React.Component {
@@ -42,7 +42,8 @@ class Home extends React.Component {
 				</div>
 				<div className="container text-center bottom-spacer">
 					<h1 className="section-title">Our Blogs</h1>
-					<div className="blogs-home"><Blogs /></div>
+					<div className="blogs-home">
+						<TrendingBlogs /></div>
 					<NavLink to='/blog' className="btn">View All Blogs</NavLink>
 				</div>
 				<LazyLoad debounce={true} unmountIfInvisible={true}>

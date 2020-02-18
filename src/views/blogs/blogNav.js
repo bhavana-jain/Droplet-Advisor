@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import data from '../blogs.json'
 import { NavLink, useParams } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';

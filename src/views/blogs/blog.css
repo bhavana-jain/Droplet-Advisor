@@ -81,7 +81,6 @@ img.blog-info-img {
 }
 .blog-list {
 	box-shadow: 0px 0px 5px 2px rgba(204,204,204,1);
-	padding: 15px;
 	margin-bottom: 10px;
 	clear: both;
 	height:auto;
@@ -90,7 +89,7 @@ img.blog-info-img {
 }
 .blog-description-wrap {
 float:left;
-	margin:0 0 5px 15px;
+	padding: 15px;
 	width: calc(80% - 15px);
 }
 .blog-description {
@@ -130,7 +129,7 @@ float:left;
 	box-shadow: none;
 }
 .main-blog .blog-list img{
-    width: 150px;
+    width: 250px;
     height: inherit;
     float: left;
 }
@@ -142,7 +141,7 @@ float:left;
 	margin-top: 15px;
 }
 .main-blog .blog-list .blog-description-wrap {
-width: calc(100% - 175px);
+width: calc(100% - 250px);
 }
 .main-blog .blog-list p {
 	    line-height: 19px;

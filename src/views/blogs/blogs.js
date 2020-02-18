@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import data from '../blogs.json';
-import BlogsNavigation from './blogNav';
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 import TextTruncate from 'react-text-truncate';
 
