@@ -96,7 +96,7 @@ class Header extends React.Component {
 
 					<div className="droplet-menu" id="droplet-menu" onClick={this.slideMenu}></div>
 					<NavLink className="droplet-logo" to='/home'></NavLink>
-					<div style={{ "margin-left": "auto" }}>
+					<div style={{ "marginLeft": "auto" }}>
 						<ul className={"header-tabs clear " + (this.state.slideMenu == true ? 'slide-right' : '')} id="header-tabs">
 							<li><NavLink exact to='/' className="link icon-home" onClick={this.setDefault}>Home</NavLink>
 							</li>

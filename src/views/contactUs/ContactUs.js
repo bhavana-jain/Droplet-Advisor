@@ -14,7 +14,8 @@ class ContactUs extends React.Component {
 			mobile: '',
 			email: '',
 			comment: '',
-			errorCount: 0
+			errorCount: 0,
+			isError: false
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,6 +23,8 @@ class ContactUs extends React.Component {
 		this.checkValue = this.checkValue.bind(this);
 		this.submitBtn = React.createRef();
 	}
+
+
 	render() {
 
 		return (
@@ -42,6 +45,7 @@ class ContactUs extends React.Component {
 									placeholder=""
 									required
 									value={this.state.name}
+									autoComplete="off"
 								/>
 								<label htmlFor="name" className="animate-label">Name</label>
 								<div className="error-text">Invalid Name</div>
@@ -51,7 +55,7 @@ class ContactUs extends React.Component {
 									onChange={(e) => this.handleChange(e)}
 									onFocus={(e) => this.animateLabel(e)}
 									onBlur={(e) => { this.checkValue(e) }}
-									id="mobileNumber" value={this.state.mobile} className="p-100 block"></input>
+									id="mobileNumber" value={this.state.mobile} className="p-100 block" autoComplete="off"></input>
 								<label htmlFor="mobile" className="animate-label">Mobile</label>
 								<div className="error-text">Invalid Mobile Number</div>
 							</div>
@@ -64,7 +68,7 @@ class ContactUs extends React.Component {
 								name="email"
 								onChange={(e) => this.handleChange(e)}
 								onFocus={(e) => this.animateLabel(e)}
-								onBlur={(e) => { this.checkValue(e) }} id="email" value={this.state.email}></input>
+								onBlur={(e) => { this.checkValue(e) }} id="email" value={this.state.email} autoComplete="off"></input>
 							<label htmlFor="email" className="animate-label">Email Address</label>
 							<div className="error-text">Invalid Email</div>
 						</div>
@@ -73,13 +77,14 @@ class ContactUs extends React.Component {
 								onChange={(e) => this.handleChange(e)}
 								onFocus={(e) => this.animateLabel(e)}
 								onBlur={(e) => { this.checkValue(e) }}
-								rows="5"
+								rows="5" autoComplete="off"
 								value={this.state.comment}></textarea>
 							<label htmlFor="comment" className="animate-label">Post your comments</label>
 							<div className="error-text">Comment cannot be empty</div>
 						</div>
 					</div>
-					<input type="button" value="Submit" className="btn btn-submit right" disabled ref={this.submitBtn}
+					<input type="button" value="Submit" className="btn btn-submit right" ref={this.submitBtn}
+						disabled={!this.state.name || !this.state.mobile || !this.state.email || !this.state.comment || this.state.isError || document.getElementsByClassName('error').length > 0}
 						onClick={this.handleSubmit} />
 				</form>
 				<div className="locate-us">
@@ -109,9 +114,6 @@ class ContactUs extends React.Component {
 		//	e.target.className += " animated"
 		e.target.classList.remove("set-default");
 		e.target.classList.remove("error");
-		this.setState({
-			errorCount: this.state.errorCount - 1
-		})
 		e.target.classList.add("field-animated")
 	}
 	checkValue(e) {
@@ -124,52 +126,56 @@ class ContactUs extends React.Component {
 			case "text":
 				if (/^([a-zA-Z]+)$/.test(e.target.value) && (e.target.value) != null) {
 					this.setState({
-						errorCount: this.state.errorCount - 1
+						errorCount: this.state.errorCount - 1,
+						isError: false
 					})
+
 				}
 				else {
 					e.target.classList.add('error');
 					this.setState({
-						errorCount: this.state.errorCount + 1
+						errorCount: this.state.errorCount + 1,
+						isError: true
 					})
 				}
 				break;
 			case "email":
 				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value) && (e.target.value) != null) {
 					this.setState({
-						errorCount: this.state.errorCount - 1
+						errorCount: this.state.errorCount - 1,
+						isError: false
 					})
+
 				}
 				else {
 					e.target.classList.add('error');
 					this.setState({
-						errorCount: this.state.errorCount + 1
+						errorCount: this.state.errorCount + 1,
+						isError: true
 					})
 				}
 				break;
 			case "tel":
 				if (/^\d{10}$/.test(e.target.value) && (e.target.value) != null) {
 					this.setState({
-						errorCount: this.state.errorCount - 1
+						errorCount: this.state.errorCount - 1,
+						isError: false
 					})
 				}
 				else {
 					e.target.classList.add('error');
 					this.setState({
-						errorCount: this.state.errorCount + 1
+						errorCount: this.state.errorCount + 1,
+						isError: true
 					})
 				}
 				break;
 			default:
 				break;
 		}
-		if (this.state.errorCount == 0) {
-			//document.querySelector('.btn').removeAttribute('disabled')
-			React.findDOMNode(this.refs.submitBtn).removeAttribute('disabled');
-		}
+		console.log(document.getElementsByClassName('error').length)
 	}
 	handleChange(e) {
-		console.log(e)
 		this.setState({
 			[e.target.name]: e.target.value,
 			[e.target.mobile]: e.target.value,
@@ -184,10 +190,9 @@ class ContactUs extends React.Component {
 		const templateId = 'template_WXjvXZJi';
 		const userId = 'user_jGbfA1cf87kBG6A6nYDBs'
 
-		//this.sendFeedback(templateId, { message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email }, userId)
+		this.sendFeedback(templateId, { message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email }, userId)
 	}
 	sendFeedback(templateId, variables, id) {
-		console.log('2');
 		emailjs.send(
 			'gmail', templateId,
 			variables, id
