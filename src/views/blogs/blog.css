@@ -15,7 +15,8 @@
 }
 .blogs-wrap img.img-center, .blogs-wrap img.img-center {
     width: auto;
-    height: auto;
+	height: auto;
+	max-width: 100%;
 }
 .blogs-wrap h2 {
 	margin-top: 0;
@@ -41,15 +42,16 @@
 	padding: 0;
 }
 .blogs-wrap p {
-	line-height: 22px;
+	line-height: 24px;
 }
 .blogs-wrap ul, .blogs-wrap ol {
 margin: 0;
-padding-left:15px;
+padding-left:0;
+list-style-position: inside;
 }
 .blogs-wrap ul li, .blogs-wrap ol li {
 	padding: 5px 0;
-	line-height: 22px;
+	line-height: 24px;
 }
 .realty-articles {
 	display: flex;
@@ -99,13 +101,13 @@ float:left;
 }
 .blog-nav-link > * {
 	font-size: 13px;
+	line-height: 20px;
 }
 .blog-description h3 {
 	margin-top: 0;
 }
 .blog-description a {
 	font-weight: bold;
-	margin-left: 5px;
 	display: inline-block;
 	text-decoration: none;
 }
@@ -211,13 +213,19 @@ width: calc(100% - 175px);
 .search-nav {
 	display: block;
 }
+.blog-comment {
+	width: 75%;
+}
 @media all and (max-width: 767px){
+	.blog-comment {
+		width:100%;
+	}
 	.blog-list {
 		flex-direction: column;
 	}
 	.main-blog .blog-list img {
 		width: 100%;
-		height: 100px;
+		height: auto;
 	}
 	.main-blog .blog-list .blog-description-wrap {
 		width: 100%;

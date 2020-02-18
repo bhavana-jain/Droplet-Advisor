@@ -23,9 +23,9 @@ const newdata = data.map((data) => {
 					<div><h3>{data.title}</h3></div>
 					<div className="blog-nav-link">
 						<TextTruncate
-							line={1}
-							element="span"
-							truncateText="…"
+							line={1.5}
+							element="div"
+							truncateText="… "
 							text={data.description}
 						/>
 						<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>

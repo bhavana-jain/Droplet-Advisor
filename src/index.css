@@ -33,7 +33,7 @@ main {
     display: block;
     padding-top: 90px;
     padding-bottom: 60px;
-}
+} 
 .container {
   margin: 0 auto;
   padding:15px;
@@ -76,19 +76,27 @@ input[type="text"], input[type="tel"], input[type="email"]{
  padding:15px 0 15px 5px;
   border-bottom: 1px solid #ccc;
 }
+.required + label:before {
+  content:'* ';
+  color: #dc2214;
+  margin-top: -2px;
+}
+.text-red {
+  color: #dc2214;
+}
 input.error {
-  color: red;
-  border-bottom-color: red;
+  color: #dc2214;;
+  border-bottom-color: #dc2214;;
 }
 input.error + label, input.error + label + .error-text {
   display: block;
-  color: red
+  color: #dc2214;
 }
 .error-text{
     z-index: 20;
     font-size: 12px;
     padding-left: 5px;
-    color: red;
+    color: #dc2214;;
     display: none;
 }
 label { font-weight: bold;}

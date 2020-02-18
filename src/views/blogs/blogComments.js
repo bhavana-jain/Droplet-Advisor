@@ -67,16 +67,17 @@ class BlogComment extends React.Component {
 	render() {
 
 		return (
-			<form onSubmit={this.handleSubmit} style={{ "width": "75%" }}>
+			<form onSubmit={this.handleSubmit} className="blog-comment">
 				<h3>Submit a comment</h3>
-				<p>Your email address will not be published. Required fields are marked *</p>
+				<p>Your email address will not be published. <br />
+					Required fields are marked <span className="text-red bold">*</span></p>
 				<div>
 					<div className="row cols-2">
 						<div className="relative">
 							<input type="text"
 								id="name"
 								name="name"
-								className="p-100 block"
+								className="p-100 block required"
 								value="daram"
 								onChange={(e) => this.handleChange(e)}
 								onFocus={(e) => this.animateLabel(e)}
@@ -90,7 +91,7 @@ class BlogComment extends React.Component {
 						</div>
 						<div className="relative">
 							<input type="email"
-								className="p-100 block"
+								className="p-100 block required"
 								name="email"
 								value="bhavanachajjed@gmail.com"
 								onChange={(e) => this.handleChange(e)}
@@ -103,7 +104,7 @@ class BlogComment extends React.Component {
 
 
 					<div className="row relative">
-						<textarea id="comment" name="comment" className="p-100 block"
+						<textarea id="comment" name="comment" className="p-100 block required"
 							onChange={(e) => this.handleChange(e)}
 							onFocus={(e) => this.animateLabel(e)}
 							onBlur={(e) => { this.checkValue(e) }}

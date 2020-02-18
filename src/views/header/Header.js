@@ -31,12 +31,15 @@ class Header extends React.Component {
 	updateSource() {
 		this.setState({
 			childActive: true,
-			slideMenu: false
+			slideMenu: false,
+			droplist: !this.state.droplist,
 		})
 	}
 	// Our services droplist
 	renderServices(e) {
 		e.preventDefault();
+		(e.target).classList.toggle('close');
+		(e.target).classList.toggle('active');
 		this.setState({
 			droplist: !this.state.droplist,
 		})
@@ -88,7 +91,7 @@ class Header extends React.Component {
 	render() {
 		return (
 
-			<div className="header-wrap">
+			<div className={"header-wrap " + (this.state.fixHeader ? "sticky-top" : "'")}>
 				<header className={"container header-layer " + (this.state.fixHeader ? "sticky-header" : "")} ref={(divElement) => { this.divElement = divElement }}>
 
 					<div className="droplet-menu" id="droplet-menu" onClick={this.slideMenu}></div>
@@ -101,7 +104,8 @@ class Header extends React.Component {
 								<NavLink to='/about-us' className="link icon-team" onClick={this.setDefault}>About Us </NavLink>
 							</li>
 							<li className={"services-wrap"}>
-								<NavLink to='/our-services/financialplanning' className={"link icon-services " + (this.state.droplist ? "close" : '') + (this.state.childActive ? " close active" : "")}
+								{/* Condition if droplist open or child selected or droplist open and child selected */}
+								<NavLink to='/our-services/financialplanning' className={"link icon-services " + (this.state.droplist ? "close " : '') + (this.state.childActive ? "active" : "") + (this.state.droplist && this.state.childActive ? "close active" : '')}
 									onClick={this.renderServices}>Our Services</NavLink>
 								<ul className={"services-list " + (this.state.droplist ? "open" : "")} id="services-list">
 									<li><NavLink to='/our-services/financialplanning'
