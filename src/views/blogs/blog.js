@@ -20,6 +20,8 @@ import horsesForCourses from './blog-details/horses-for-courses';
 import investmentsUpDown from './blog-details/investments-go-up-or-down';
 import unionBudget from './blog-details/union-budget-2020';
 import budget2020 from './blog-details/budget-2020';
+import creditcard from './blog-details/paying-minimum-balance-on-credit-cards';
+
 const components = {
 	RealtyReality: RealtyReality,
 	tiffenForKid: tiffenForKid,
@@ -40,7 +42,8 @@ const components = {
 	horsesForCourses: horsesForCourses,
 	investmentsUpDown: investmentsUpDown,
 	unionBudget: unionBudget,
-	budget2020: budget2020
+	budget2020: budget2020,
+	creditcard: creditcard
 };
 
 class BlogDetails extends React.Component {

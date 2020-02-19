@@ -13,8 +13,7 @@ export default class DropletValues extends React.Component {
 			speed: 3000,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			fade: true,
-			autoplay: true
+			fade: true
 		};
 		return (
 			<div>
