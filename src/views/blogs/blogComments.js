@@ -12,7 +12,8 @@ class BlogComment extends React.Component {
 			name: '',
 			email: '',
 			comment: '',
-			errorCount: 0
+			errorCount: 0,
+			isError: false
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -79,6 +80,7 @@ class BlogComment extends React.Component {
 								name="name"
 								className="p-100 block required"
 								value="daram"
+								autoComplete="off"
 								onChange={(e) => this.handleChange(e)}
 								onFocus={(e) => this.animateLabel(e)}
 								onBlur={(e) => { this.checkValue(e) }}
@@ -93,6 +95,7 @@ class BlogComment extends React.Component {
 							<input type="email"
 								className="p-100 block required"
 								name="email"
+								autoComplete="off"
 								value="bhavanachajjed@gmail.com"
 								onChange={(e) => this.handleChange(e)}
 								onFocus={(e) => this.animateLabel(e)}
@@ -115,7 +118,7 @@ class BlogComment extends React.Component {
 					</div>
 				</div>
 
-				<input type="submit" className="btn btn-submit right" ref={this.submitBtn} value="submit Comment" />
+				<input type="submit" className="btn btn-submit right" value="submit Comment" disabled={!this.state.name || !this.state.email || !this.state.comment || this.state.isError || document.getElementsByClassName('error').length > 0} />
 
 			</form>
 		)
@@ -139,48 +142,47 @@ class BlogComment extends React.Component {
 			case "text":
 				if (/^([a-zA-Z]+)$/.test(e.target.value) && (e.target.value) != null) {
 					this.setState({
-						errorCount: this.state.errorCount - 1
+						errorCount: this.state.errorCount - 1, isError: false
 					})
 				}
 				else {
 					e.target.classList.add('error');
 					this.setState({
-						errorCount: this.state.errorCount + 1
+						errorCount: this.state.errorCount + 1, isError: true
 					})
 				}
 				break;
 			case "email":
 				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value) && (e.target.value) != null) {
 					this.setState({
-						errorCount: this.state.errorCount - 1
+						errorCount: this.state.errorCount - 1,
+						isError: false
 					})
 				}
 				else {
 					e.target.classList.add('error');
 					this.setState({
-						errorCount: this.state.errorCount + 1
+						errorCount: this.state.errorCount + 1,
+						isError: true
 					})
 				}
 				break;
 			case "tel":
 				if (/^\d{10}$/.test(e.target.value) && (e.target.value) != null) {
 					this.setState({
-						errorCount: this.state.errorCount - 1
+						errorCount: this.state.errorCount - 1, isError: false
 					})
 				}
 				else {
 					e.target.classList.add('error');
 					this.setState({
-						errorCount: this.state.errorCount + 1
+						errorCount: this.state.errorCount + 1,
+						isError: true
 					})
 				}
 				break;
 			default:
 				break;
-		}
-		if (this.state.errorCount == 0) {
-			//document.querySelector('.btn').removeAttribute('disabled')
-			React.findDOMNode(this.refs.submitBtn).removeAttribute('disabled');
 		}
 	}
 	handleChange(e) {

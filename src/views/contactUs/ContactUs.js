@@ -95,8 +95,8 @@ class ContactUs extends React.Component {
 							<div className="icofont-location-pin left"></div>
 							<div className="left droplet-address">
 								<h4>Droplet Wealth Advisory</h4>
-								No. 23, Sri Sai Anugraha, Kagapujandar Nagar, <br />
-								New Perungalathur, Chennai – 600 063 <br />
+								Tower 24, Flat #1104, North Town, Jamalia, Perambur
+								 Chennai – 600 011 <br />
 								Tamil Nadu, India
 							</div>
 						</div>
