@@ -19,7 +19,8 @@ export default class DropletValues extends React.Component {
 			<div>
 				<Slider {...settings}>
 					<div>
-						<img src={require('../../images/Droplet-Banner-01.jpg')} />
+						{/* <div className="values-banner-1"></div> */}
+						<img src={require('../../images/trust-banner.jpg')} />
 						<div className="image-text">
 							<div>
 								<h1>Trust</h1>

@@ -48,4 +48,7 @@ transition: opacity 1s linear;
   .image-text > div {
     padding-left: 25px;
   }
+  .slick-slide {
+    height: 200px !important;
+  }
 }
