@@ -228,7 +228,7 @@ width: calc(100% - 250px);
 		height: auto;
 	}
 	.main-blog .blog-list .blog-description-wrap {
-		width: 100%;
+		width: calc(100% - 30px);
 		margin: 10px 0 0 0;
 	}
 }

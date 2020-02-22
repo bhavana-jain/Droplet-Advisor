@@ -21,6 +21,8 @@ import investmentsUpDown from './blog-details/investments-go-up-or-down';
 import unionBudget from './blog-details/union-budget-2020';
 import budget2020 from './blog-details/budget-2020';
 import creditcard from './blog-details/paying-minimum-balance-on-credit-cards';
+import happyNewYear2020 from './blog-details/happy-new-year-2020';
+import needFinancialAdvisor from './blog-details/do-you-really-need-financial-advisor';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -43,7 +45,9 @@ const components = {
 	investmentsUpDown: investmentsUpDown,
 	unionBudget: unionBudget,
 	budget2020: budget2020,
-	creditcard: creditcard
+	creditcard: creditcard,
+	happyNewYear2020: happyNewYear2020,
+	needFinancialAdvisor: needFinancialAdvisor
 };
 
 class BlogDetails extends React.Component {

@@ -1,28 +1,5 @@
 [
     {
-        "title": "Paying Minimum Balance on Credit Cards ?",
-        "comp": "paying-minimum-balance-on-credit-cards",
-        "compName": "creditcard",
-        "author": "Admin",
-        "category": "uncatogerized",
-        "createdOn": "2020-01-25",
-        "image": "creditCard",
-        "description": "Of late credit card penetration in India has increased multi-fold. A decade back 1 in 10 would have a credit card. Today 9 in 10 have 3 credit cards each. A ratio of 1:27. All these are mostly owned by salaried people, because they are the ones who pay.",
-        "recent": "true",
-        "tags": [
-            "credit cards",
-            "debt",
-            "droplet",
-            "droplet wealth advisors",
-            "finance charge",
-            "financial planning",
-            "late payment",
-            "minimum due",
-            "personal finance",
-            "personal loan"
-        ]
-    },
-    {
         "title": "Union Budget 2020",
         "comp": "union-budget-2020",
         "compName": "unionBudget",
@@ -67,6 +44,65 @@
             "personal finance",
             "personal loan"
         ]
+    },
+    {
+        "title": "Paying Minimum Balance on Credit Cards ?",
+        "comp": "paying-minimum-balance-on-credit-cards",
+        "compName": "creditcard",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2020-01-25",
+        "image": "creditCard",
+        "description": "Of late credit card penetration in India has increased multi-fold. A decade back 1 in 10 would have a credit card. Today 9 in 10 have 3 credit cards each. A ratio of 1:27. All these are mostly owned by salaried people, because they are the ones who pay.",
+        "recent": "true",
+        "tags": [
+            "credit cards",
+            "debt",
+            "droplet",
+            "droplet wealth advisors",
+            "finance charge",
+            "financial planning",
+            "late payment",
+            "minimum due",
+            "personal finance",
+            "personal loan"
+        ]
+    },
+    {
+        "title": "Happy New Year 20-20",
+        "comp": "happy-new-year-2020",
+        "compName": "happyNewYear2020",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2018-12-28",
+        "image": "newYear2020",
+        "description": "As we beckon a new year, Droplet recommends 20 things that will help you turn a new page in your financial life.Have a monthly budget in place. Earn. Save. Spend. - Start early. Start immediately.",
+        "recent": "false",
+        "tags": [
+            "chennai",
+            "ELSS",
+            "financial advisors",
+            "financial planning",
+            "financial resolution",
+            "insurance",
+            "investment",
+            "mutual funds",
+            "NewYear2020",
+            "NPS",
+            "real estate"
+        ]
+    },
+    {
+        "title": "Do you really need a FINANCIAL ADVISOR?!",
+        "comp": "do-you-really-need-financial-advisor",
+        "compName": "needFinancialAdvisor",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2018-12-01",
+        "image": "needFinancialAdvisor",
+        "description": "Do I need someone to help me with something? Ideally, the answer would be yes until or otherwise you are an expert at something. Even an expert was a beginner at some point in time, experience/passion in the field would have made him an expert over time. For instance. ",
+        "recent": "false",
+        "tags": []
     },
     {
         "title": "Mutual Funds earn you Money",
