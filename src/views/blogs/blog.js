@@ -23,8 +23,8 @@ import budget2020 from './blog-details/budget-2020';
 import creditcard from './blog-details/paying-minimum-balance-on-credit-cards';
 import happyNewYear2020 from './blog-details/happy-new-year-2020';
 import needFinancialAdvisor from './blog-details/do-you-really-need-financial-advisor';
-import chasingReturns from './blog-details/chasingReturns';
-import numInsuranceToBuy from './blog-details/numInsuranceToBuy';
+import chasingReturns from './blog-details/chasing-returns';
+import numInsuranceToBuy from './blog-details/how-much-insurance-should-one-buy';
 
 const components = {
 	RealtyReality: RealtyReality,
