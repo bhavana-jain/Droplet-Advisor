@@ -26,6 +26,8 @@ import needFinancialAdvisor from './blog-details/do-you-really-need-financial-ad
 import chasingReturns from './blog-details/chasing-returns';
 import numInsuranceToBuy from './blog-details/how-much-insurance-should-one-buy';
 import insuranceNotInvestment from './blog-details/life-insurance-policy-guaranteed-part-i';
+import directEquityInvesting from './blog-details/direct-equity-investing-ii';
+import childsInterestInvest from './blog-details/how-to-spark-childs-interest-in';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -53,7 +55,9 @@ const components = {
 	needFinancialAdvisor: needFinancialAdvisor,
 	chasingReturns: chasingReturns,
 	numInsuranceToBuy: numInsuranceToBuy,
-	insuranceNotInvestment: insuranceNotInvestment
+	insuranceNotInvestment: insuranceNotInvestment,
+	directEquityInvesting: directEquityInvesting,
+	childsInterestInvest: childsInterestInvest
 };
 
 class BlogDetails extends React.Component {

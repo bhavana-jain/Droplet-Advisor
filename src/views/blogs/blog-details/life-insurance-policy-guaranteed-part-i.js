@@ -36,7 +36,7 @@ class insuranceNotInvestment extends React.Component {
 
 				<p> &lt; &lt; &lt; &lt; &lt; &lt; INSURANCE IS TAKEN TO COVER RISK. ANY ASSESSMENT OF INSURANCE WITHOUT CONSIDERING RISK IS LIKE ASSESSING SACHIN TENDULKAR WITHOUT HIS BATTING RECORD &gt; &gt; &gt; &gt; &gt; &gt; </p>
 
-				<img src="/images/Droplet-LIC 02.jpg" className="img-centre" alt="LIC Vs Term insurance" />
+				<img src="/images/Droplet-LIC 02.jpg" className="img-center" alt="LIC Vs Term insurance" />
 				<p className="text-tiny"><sup>*</sup>Premium of 36,000/monthly is for a 30-year-old male who wishes to take Jeevan Anand policy cover for 1 crore. </p>
 
 				<p>
@@ -61,7 +61,7 @@ class insuranceNotInvestment extends React.Component {
 					So you go to your insurer and ask for your money back. Below is what you get back -
 				</p>
 
-				<img src="/images/Droplet-LIC- 01.jpg" className="img-centre" alt="Life Vs Term Insurance" />
+				<img src="/images/Droplet-LIC- 01.jpg" className="img-center" alt="Life Vs Term Insurance" />
 
 				<p>
 					Shocked! I was too! We were too! Almost like its a White Lie. Don't believe us? if you have a life insurance policy which is more than 3 years old, call up your insurer and ask them "what's the surrender value?". Debate rests.
