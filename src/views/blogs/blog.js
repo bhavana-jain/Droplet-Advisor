@@ -25,6 +25,7 @@ import happyNewYear2020 from './blog-details/happy-new-year-2020';
 import needFinancialAdvisor from './blog-details/do-you-really-need-financial-advisor';
 import chasingReturns from './blog-details/chasing-returns';
 import numInsuranceToBuy from './blog-details/how-much-insurance-should-one-buy';
+import insuranceNotInvestment from './blog-details/life-insurance-policy-guaranteed-part-i';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -51,7 +52,8 @@ const components = {
 	happyNewYear2020: happyNewYear2020,
 	needFinancialAdvisor: needFinancialAdvisor,
 	chasingReturns: chasingReturns,
-	numInsuranceToBuy: numInsuranceToBuy
+	numInsuranceToBuy: numInsuranceToBuy,
+	insuranceNotInvestment: insuranceNotInvestment
 };
 
 class BlogDetails extends React.Component {

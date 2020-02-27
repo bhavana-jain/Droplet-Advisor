@@ -117,7 +117,7 @@
         "tags": []
     },
     {
-        "title": "How Much Insurance should one Buy ?",
+        "title": "How Much Insurance should one Buy?",
         "comp": "how-much-insurance-should-one-buy",
         "compName": "numInsuranceToBuy",
         "author": "Admin",
@@ -139,6 +139,30 @@
             "term insurance",
             "term policy",
             "wealth advisors in chennai"
+        ]
+    },
+    {
+        "title": "Insurance is not INVESTMENT! Part I",
+        "comp": "life-insurance-policy-guaranteed-part-i",
+        "compName": "insuranceNotInvestment",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2019-08-18",
+        "image": "Insurance-is-not-investment-2",
+        "description": "Most of us fail to understand the fundamental purpose of life insurance. We are made to believe that insurance is saving or worse in most cases an investment. However, the whole idea of insurance is to cover the risk of loss.",
+        "recent": "false",
+        "tags": [
+            "80C",
+            "Droplet Wealth Advisors",
+            "financial planning",
+            "investments",
+            "personal finance",
+            "risk",
+            "tax planning",
+            "tax saving",
+            "term insurance",
+            "wealth advisors in chennai",
+            "wealth creation"
         ]
     },
     {
