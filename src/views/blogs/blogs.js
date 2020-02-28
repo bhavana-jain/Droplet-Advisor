@@ -3,7 +3,9 @@ import data from '../blogs.json';
 import { NavLink } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 
+let blogLength = 0;
 const newdata = data.map((data) => {
+
 	const BlogName = data.comp;
 	const BlogNameUrl = "/blog/" + BlogName;
 	const blogComp = data.compName;
@@ -13,13 +15,17 @@ const newdata = data.map((data) => {
 	let blogDate = new Date(data.createdOn).toString();
 	console.log(months[new Date(data.createdOn).getMonth() - 1]);
 	blogDate = `${months[new Date(data.createdOn).getMonth()]} ` + `${new Date(data.createdOn).getDate()}` + ` , ` + `${new Date(data.createdOn).getFullYear()}`;
-
+	blogLength++;
+	console.log('blog length', blogLength)
 	return (
 		<div key={data.id} className="blog-list">
 			<img src={`/images/${data.image}.jpg`}></img>
 			<div className="blog-description-wrap">
 				<div className="blog-description">
-					<div><h3>{data.title}</h3></div>
+					<div className="blog-title-outer">
+						<h3>{data.title}</h3>
+						<p className="blog-otherInfo"> {blogDate} </p>
+					</div>
 					<div className="blog-nav-link">
 						<p>{truncateDescription}
 							<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>
@@ -27,7 +33,7 @@ const newdata = data.map((data) => {
             </NavLink></p>
 					</div>
 				</div>
-				<p className="blog-otherInfo">By {data.author} | {data.category} | {blogDate} </p>
+
 			</div>
 
 		</div>

@@ -1,5 +1,5 @@
 .slick-slide {
-  height: 300px !important;
+  height: calc(100vh - 145px) !important;
 }
 .slick-slide img {
  height:100%;
@@ -16,12 +16,23 @@
   bottom: 20px !important;
 }
 .image-text {
-  position: relative;
-  top: -90%;
+  position: absolute;
+  top: 50%;
   max-width: 1280px;
   margin: 0 auto;
   opacity: 0;
   transition: opacity 1s linear;
+  transform: translateY(-50%);
+  left: 40px;
+}
+.image-text ul {
+  padding-left: 20px;
+  color: #fff;
+}
+.image-text ul li {
+  padding-bottom: 10px;
+  line-height: 18px;
+  font-size: 16px;
 }
 .slick-active .image-text {
 opacity: 1;
@@ -29,7 +40,7 @@ transition: opacity 1s linear;
 }
 .image-text > div {
   padding-left: 10px;
-  max-width: 350px;
+  max-width: 60%;
 }
 .image-text h1 {
   color: #fff;
@@ -48,7 +59,5 @@ transition: opacity 1s linear;
   .image-text > div {
     padding-left: 25px;
   }
-  .slick-slide {
-    height: 200px !important;
-  }
+ 
 }

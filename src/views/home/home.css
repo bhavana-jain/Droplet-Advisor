@@ -35,9 +35,9 @@ width: 120px;
 height: 120px;
 }
 .services-bg {
-    background: url('../../images/piggy-bank.jpg') no-repeat;
+    /* background: url('../../images/piggy-bank.jpg') no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     height: auto;
     position: relative;
     background-attachment: fixed;
