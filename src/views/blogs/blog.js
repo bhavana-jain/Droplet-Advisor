@@ -28,6 +28,7 @@ import numInsuranceToBuy from './blog-details/how-much-insurance-should-one-buy'
 import insuranceNotInvestment from './blog-details/life-insurance-policy-guaranteed-part-i';
 import directEquityInvesting from './blog-details/direct-equity-investing-ii';
 import childsInterestInvest from './blog-details/how-to-spark-childs-interest-in';
+import investorsInterestRate from './blog-details/investors-interest-rates';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -57,7 +58,8 @@ const components = {
 	numInsuranceToBuy: numInsuranceToBuy,
 	insuranceNotInvestment: insuranceNotInvestment,
 	directEquityInvesting: directEquityInvesting,
-	childsInterestInvest: childsInterestInvest
+	childsInterestInvest: childsInterestInvest,
+	investorsInterestRate: investorsInterestRate
 };
 
 class BlogDetails extends React.Component {

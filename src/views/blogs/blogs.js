@@ -88,7 +88,7 @@ export default class Blogs extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			offset: 1,
+			offset: 0,
 			data: [],
 			perPage: 6,
 			currentPage: 1,

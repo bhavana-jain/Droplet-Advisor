@@ -1,5 +1,29 @@
 [
     {
+        "title": "Investors & Interest Rates",
+        "comp": "investors-interest-rates",
+        "compName": "investorsInterestRate",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2020-02-29",
+        "image": "Droplet_Interest_Rate",
+        "description": "My Partner called me and told me that we are no different from laymen who know that Short term Interest rates are going to fall. We both know the same and hence we are the same. Yes I would say but only for the sake of that knowledge. ",
+        "recent": "true",
+        "tags": [
+            "best mutual funds",
+            "chennai advisors",
+            "droplet wealth advisors",
+            "equities",
+            "fixed deposit",
+            "interest",
+            "liquid funds",
+            "low duration",
+            "rates",
+            "short duration",
+            "warren buffet"
+        ]
+    },
+    {
         "title": "Union Budget 2020",
         "comp": "union-budget-2020",
         "compName": "unionBudget",
@@ -54,7 +78,7 @@
         "createdOn": "2020-01-25",
         "image": "creditCard",
         "description": "Of late credit card penetration in India has increased multi-fold. A decade back 1 in 10 would have a credit card. Today 9 in 10 have 3 credit cards each. A ratio of 1:27. All these are mostly owned by salaried people, because they are the ones who pay.",
-        "recent": "true",
+        "recent": "false",
         "tags": [
             "credit cards",
             "debt",
