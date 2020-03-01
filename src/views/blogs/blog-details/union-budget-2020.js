@@ -7,6 +7,10 @@ class unionBudget extends React.Component {
 	constructor(props) {
 		super(props);
 	}
+	componentDidMount() {
+		console.clear();
+		console.log(this.props.alltag)
+	}
 
 	render() {
 		return (

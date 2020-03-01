@@ -11,7 +11,7 @@ let filterData = () => data.map(function (data) {
 		const BlogNameUrl = "/blog/" + BlogName;
 		const blogComp = data.compName;
 		let description = data.description;
-		let truncateDescription = description.substring(0, 150) + '...  ';
+		let truncateDescription = description.substr(0, 150) + '...  ';
 		let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
 		let blogDate = new Date(data.createdOn).toString();
 		blogDate = `${months[new Date(data.createdOn).getMonth()]} ` + `${new Date(data.createdOn).getDate()}` + ` , ` + `${new Date(data.createdOn).getFullYear()}`;
@@ -50,7 +50,7 @@ let archiveData = () => data.map(function (data) {
 	archiveMonth = months[new Date(archiveYear).getMonth()];
 	archiveYr = new Date(archiveYear).getFullYear();
 	let description = data.description;
-	let truncateDescription = description.substring(0, 150) + '...  ';
+	let truncateDescription = description.substr(0, 150) + '...  ';
 	console.log(months[new Date(data.createdOn).getMonth()], new Date(data.createdOn).getFullYear())
 	console.log("archive", months[new Date(archiveYear).getMonth()], new Date(archiveYear).getFullYear())
 	if (blogMonth == archiveMonth && blogYear == archiveYr) {
@@ -109,7 +109,8 @@ export default class Blogs extends React.Component {
 			const BlogNameUrl = "/blog/" + BlogName;
 			const blogComp = data.compName;
 			let description = data.description;
-			let truncateDescription = description.substring(0, 150) + '...  ';
+			let truncateDescription = description.substr(0, 150) + '...  ';
+			console.log(data.tags)
 			let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
 			let blogDate = new Date(data.createdOn).toString();
 			blogDate = `${months[new Date(data.createdOn).getMonth()]} ` + `${new Date(data.createdOn).getDate()}` + ` , ` + `${new Date(data.createdOn).getFullYear()}`;
@@ -124,7 +125,7 @@ export default class Blogs extends React.Component {
 							</div>
 							<div className="blog-nav-link">
 								<p>{truncateDescription}
-									<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>
+									<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}`, tag: data.tags } }}>
 										Learn More
             </NavLink></p>
 							</div>
@@ -132,7 +133,7 @@ export default class Blogs extends React.Component {
 
 					</div>
 
-				</div>
+				</div >
 
 			)
 		})

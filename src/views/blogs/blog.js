@@ -71,16 +71,27 @@ const components = {
 class BlogDetails extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			tag: []
+		}
 	}
-	componentDidMount() {
 
+	componentDidMount() {
+		this.setState({
+			tag: this.props.location.state.tag
+		});
 	}
+
 	render() {
-		console.log(this.props.location.state);
+		console.log(this.props.location.state.comp);
+		console.log(this.state.tag)
+
+		let allTags;
+
 		return (
 			<>
 				{
-					this.props.location && this.props.location.state && this.props.location.state != "" && components[this.props.location.state] ? React.createElement(components[this.props.location.state]) : <div>NoDetails</div>
+					this.props.location && this.props.location.state && this.props.location.state != "" && components[this.props.location.state.comp] ? React.createElement(components[this.props.location.state.comp], { alltag: this.props.location.state.tag }) : <div>NoDetails</div>
 				}
 			</>
 		)
