@@ -29,6 +29,7 @@ import insuranceNotInvestment from './blog-details/life-insurance-policy-guarant
 import directEquityInvesting from './blog-details/direct-equity-investing-ii';
 import childsInterestInvest from './blog-details/how-to-spark-childs-interest-in';
 import investorsInterestRate from './blog-details/investors-interest-rates';
+import directEquityInvestingI from './blog-details/direct-equity-investing';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -59,7 +60,8 @@ const components = {
 	insuranceNotInvestment: insuranceNotInvestment,
 	directEquityInvesting: directEquityInvesting,
 	childsInterestInvest: childsInterestInvest,
-	investorsInterestRate: investorsInterestRate
+	investorsInterestRate: investorsInterestRate,
+	directEquityInvestingI: directEquityInvestingI
 };
 
 class BlogDetails extends React.Component {
