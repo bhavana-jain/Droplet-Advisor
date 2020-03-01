@@ -32,6 +32,7 @@ import investorsInterestRate from './blog-details/investors-interest-rates';
 import directEquityInvestingI from './blog-details/direct-equity-investing';
 import prePayHomeLoan from './blog-details/pre-paying-your-home-loans-think-twice';
 import dropletLoanPlus from './blog-details/a-100-interest-return-loan-scheme';
+import healthWealthConnection from './blog-details/co-relation-of-health-and-wealth';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -65,7 +66,8 @@ const components = {
 	investorsInterestRate: investorsInterestRate,
 	directEquityInvestingI: directEquityInvestingI,
 	prePayHomeLoan: prePayHomeLoan,
-	dropletLoanPlus: dropletLoanPlus
+	dropletLoanPlus: dropletLoanPlus,
+	healthWealthConnection: healthWealthConnection
 };
 
 class BlogDetails extends React.Component {
