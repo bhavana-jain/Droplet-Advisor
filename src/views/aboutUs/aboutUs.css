@@ -92,7 +92,7 @@
 .team-wrap-inner {
     /* width: 25%; */
     margin: 20px 0;
-    padding: 0 15px;
+    padding: 0 25px;
     text-align: center;
 }
 .team-wrap-inner.selected {
@@ -175,9 +175,8 @@
         width: 100%;
     }
     .droplet-value-content {width: auto;}
-    
-.team-wrap-inner {
-    /* width: 100%; */
+ .alice-carousel__next-btn-wrapper ,  .alice-carousel__prev-btn-wrapper {
+display: none;
 }
 }
 @media all and (max-width: 1024px) and (orientation: landscape) {
@@ -200,14 +199,14 @@
     transition: width 1.5s, height 1.5s;
 }
 .alice-carousel__dots-item:hover, .alice-carousel__dots-item.__active {
-    background-color: #333;
+    background-color: #333 !important;
 }
 .alice-carousel__next-btn-wrapper ,  .alice-carousel__prev-btn-wrapper {
 position: absolute;
 top: calc(50% - 16px);
 }
 .alice-carousel__next-btn-wrapper {
-    right: -10px;
+    right: -25px;
     content: "\ea5d";
 }
 .alice-carousel__prev-btn-item, .alice-carousel__next-btn-item { 
@@ -225,7 +224,7 @@ color: #333;
     
 }
 .alice-carousel__prev-btn-wrapper {
-    left: -10px;
+    left: -15px;
 }
 .alice-carousel__prev-btn [data-area]:after {
     content: "\ea5c" !important;

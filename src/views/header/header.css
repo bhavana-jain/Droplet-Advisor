@@ -185,7 +185,7 @@ ul.services-list{
 
 
 ul.services-list > li > *{
-    color: #ccc; 
+    color: #333; 
 }
 ul.services-list > li > * {
     padding: 9px 6px;
@@ -195,6 +195,7 @@ ul.services-list > li > * {
 }
 ul.services-list > li > .active {
   color: #333;
+  background: gold;
 }
 .connect-options [class*= "icon-"] {
     background: gold;

@@ -26,8 +26,9 @@
   left: 40px;
 }
 .image-text ul {
-  padding-left: 20px;
+  padding-left: 0;
   color: #fff;
+  list-style-type: none;
 }
 .image-text ul li {
   padding-bottom: 10px;
