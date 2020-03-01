@@ -178,6 +178,9 @@ width: calc(100% - 150px);
 	padding-bottom: 10px;
 	border-bottom: 1px solid #ccc;
 }
+.blog-title-outer h3 {
+	max-width: 80%;
+}
 .blog-title-outer > * {
 	margin: 0;
 }

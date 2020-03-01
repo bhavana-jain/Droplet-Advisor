@@ -11,7 +11,7 @@ class investorsInterestRate extends React.Component {
 	render() {
 		return (
 			<div className="container blogs-wrap">
-				<h2 className="blogs-main-title"><span>Investors &amp; Interest Rates</span></h2>
+				<h2 className="blog-details-title"><span>Investors &amp; Interest Rates</span></h2>
 				<h6 className="blog-publish-info">By Admin | Feb 29, 2020 | Uncategorized | 0 comments</h6>
 				<img src="/images/Droplet_Interest_Rate.jpg" alt="Droplet Interest Rate" className="img-center" />
 				<p>My Partner called me and told me that we are no different from laymen who know that Short term Interest rates are going to fall. We both know the same and hence we are the same. Yes I would say but only for the sake of that knowledge.
