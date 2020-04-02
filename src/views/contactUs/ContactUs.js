@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import * as emailjs from 'emailjs-com';
 import './ContactUs.css';
 import SimpleMap from './googleMaps';
+import axios from 'axios';
 
 
 
@@ -10,10 +11,10 @@ class ContactUs extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: '',
-			mobile: '',
-			email: '',
-			comment: '',
+			name: 'bh',
+			mobile: '9003223661',
+			email: 'bh@gmail.com',
+			comment: 'xzxzxc',
 			errorCount: 0,
 			isError: false
 		};
@@ -26,11 +27,11 @@ class ContactUs extends React.Component {
 
 
 	render() {
-
+		const { name, email, mobile, comment } = this.state;
 		return (
 			<div className="container">
 
-				<form className="contact-us-form">
+				<form className="contact-us-form" onSubmit={this.handleSubmit}>
 					<h1 className="section-title">Let's discuss</h1>
 					<div>
 						<div className="row cols-2">
@@ -185,12 +186,41 @@ class ContactUs extends React.Component {
 		})
 	}
 
-	handleSubmit() {
-		console.log(this.state.errorCount)
+	handleSubmit(event) {
+		event.preventDefault();
+
+		const { name, email, mobile, comment } = this.state;
+
+
+		fetch('https://jsonplaceholder.typicode.com/todos/1')
+			.then(response => response.json())
+			.then(json => console.log(json))
+
+
+		var data = new FormData();
+		data.append("name", "chotu");
+		data.append("age", "12");
+
+		var xhr = new XMLHttpRequest();
+		xhr.withCredentials = true;
+
+		xhr.addEventListener("readystatechange", function () {
+			if (this.readyState === 4) {
+				console.log(this.responseText);
+			}
+		});
+
+		xhr.open("POST", "/ContactUs/comments");
+		xhr.setRequestHeader("cache-control", "no-cache");
+		xhr.setRequestHeader("postman-token", "1c3f61ed-7c1c-78b3-12de-a78a9dbe974d");
+
+		xhr.send(data);
+
+
 		const templateId = 'template_WXjvXZJi';
 		const userId = 'user_jGbfA1cf87kBG6A6nYDBs'
 
-		this.sendFeedback(templateId, { message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email }, userId)
+		//	this.sendFeedback(templateId, { message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email }, userId)
 	}
 	sendFeedback(templateId, variables, id) {
 		emailjs.send(
