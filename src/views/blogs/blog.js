@@ -33,6 +33,9 @@ import directEquityInvestingI from './blog-details/direct-equity-investing';
 import prePayHomeLoan from './blog-details/pre-paying-your-home-loans-think-twice';
 import dropletLoanPlus from './blog-details/a-100-interest-return-loan-scheme';
 import healthWealthConnection from './blog-details/co-relation-of-health-and-wealth';
+import stepToFinancial from './blog-details/1st-step-to-path-of-financial';
+import mutualFundsWontMakeMoney from './blog-details/mutual-funds-wont-make-you-money-be';
+import guaranteedIncome from './blog-details/earn-guaranteed-income-of-50kmonth-for';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -67,7 +70,10 @@ const components = {
 	directEquityInvestingI: directEquityInvestingI,
 	prePayHomeLoan: prePayHomeLoan,
 	dropletLoanPlus: dropletLoanPlus,
-	healthWealthConnection: healthWealthConnection
+	healthWealthConnection: healthWealthConnection,
+	stepToFinancial: stepToFinancial,
+	mutualFundsWontMakeMoney: mutualFundsWontMakeMoney,
+	guaranteedIncome: guaranteedIncome
 };
 
 class BlogDetails extends React.Component {
