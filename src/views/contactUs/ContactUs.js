@@ -4,6 +4,7 @@ import * as emailjs from 'emailjs-com';
 import './ContactUs.css';
 import SimpleMap from './googleMaps';
 import axios from 'axios';
+import firebase from '../../firebase';
 
 
 
@@ -16,7 +17,8 @@ class ContactUs extends React.Component {
 			email: 'bh@gmail.com',
 			comment: 'xzxzxc',
 			errorCount: 0,
-			isError: false
+			isError: false,
+			test: ''
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,7 +26,21 @@ class ContactUs extends React.Component {
 		this.checkValue = this.checkValue.bind(this);
 		this.submitBtn = React.createRef();
 	}
+	componentDidMount() {
+		console.clear();
+		console.log('im in');
+		console.log(firebase.database().ref('data').child('data'));
 
+
+
+		firebase.database().ref('data').child('contact').on('value', (snap) => {
+			console.log(snap.val());
+		});
+
+
+
+
+	}
 
 	render() {
 		const { name, email, mobile, comment } = this.state;

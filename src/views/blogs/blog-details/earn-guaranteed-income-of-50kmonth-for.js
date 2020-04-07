@@ -25,12 +25,11 @@ class guaranteedIncome extends React.Component {
 					<li>
 						<strong>Compounding</strong> - Just as compounding is important, the rate @ which compounding takes place is important. That's why we insist that you choose an instrument that gives the best compounding rate for longer periods of time. So let's say your chosen instrument gives a return of 12.5% p.a. Now let's see how much your investment would have grown into in 8 years' time.
 
-					<img src={require("/images/Idea1.jpg")}
-						/>
+					<img src="images/Idea1.jpg" />
 
 						<p>So it grows to become 48 lacs. Alright, now hold it for another 7 years without making any additional investment
 						</p>
-						<img src={require("/images/Idea2.jpg")} />
+						<img src="images/Idea2.jpg" />
 						<p>So in just 15 years, with an investment of Just 30k for 8 years, You have BECOME A CROREPATI. </p>
 						<p>
 							Lets now return to the title of the blog -
@@ -41,7 +40,7 @@ class guaranteedIncome extends React.Component {
 </p>
 						<p>
 							How much will be left after 10 Years? Guess Guess Guess!</p>
-						<img src={require("/images/Idea3.jpg")} />
+						<img src="images/Idea3.jpg" />
 					</li>
 				</ol>
 				<p>

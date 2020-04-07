@@ -22,8 +22,7 @@ class mutualFundsWontMakeMoney extends React.Component {
 
 				<p>
 					All the enlightenment down the drain it went...
-						<img src={require("/images/planA_B.jpg")}
-						alt="Plan A or B" className="img-centre" />				</p>
+						<img src="/images/planA_B.jpg" alt="Plan A or B" className="img-centre" />				</p>
 
 				<p>The first time investors, please note that in case you are investing in markets thinking that you will be rich overnight. Forget it, cos If you were that lucky, You would have been already married to Isha! But you are only as lucky as reading this blog ;)
 
