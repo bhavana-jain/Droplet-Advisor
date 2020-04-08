@@ -29,16 +29,16 @@ class ContactUs extends React.Component {
 	componentDidMount() {
 		console.clear();
 		console.log('im in');
-		console.log(firebase.database().ref('data').child('data'));
-
-
-
-		firebase.database().ref('data').child('contact').on('value', (snap) => {
+		//	console.log(firebase.database().ref('data').child('data'));
+		firebase.database().ref('contact').on('value', (snap) => {
 			console.log(snap.val());
 		});
-
-
-
+		let user = "daram"
+		let newPost = firebase.database().ref('contact').child(user);
+		newPost.set({
+			name: "daram",
+			email: "daram.me@gmail.com"
+		})
 
 	}
 
