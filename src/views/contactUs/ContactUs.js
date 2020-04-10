@@ -12,10 +12,10 @@ class ContactUs extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: 'bh',
-			mobile: '9003223661',
-			email: 'bh@gmail.com',
-			comment: 'xzxzxc',
+			name: '',
+			mobile: '',
+			email: '',
+			comment: '',
 			errorCount: 0,
 			isError: false,
 			test: ''
@@ -30,15 +30,7 @@ class ContactUs extends React.Component {
 		console.clear();
 		console.log('im in');
 		//	console.log(firebase.database().ref('data').child('data'));
-		firebase.database().ref('contact').on('value', (snap) => {
-			console.log(snap.val());
-		});
-		let user = "daram"
-		let newPost = firebase.database().ref('contact').child(user);
-		newPost.set({
-			name: "daram",
-			email: "daram.me@gmail.com"
-		})
+
 
 	}
 
@@ -205,48 +197,38 @@ class ContactUs extends React.Component {
 	handleSubmit(event) {
 		event.preventDefault();
 
-		const { name, email, mobile, comment } = this.state;
-
-
-		fetch('https://jsonplaceholder.typicode.com/todos/1')
-			.then(response => response.json())
-			.then(json => console.log(json))
-
-
-		var data = new FormData();
-		data.append("name", "chotu");
-		data.append("age", "12");
-
-		var xhr = new XMLHttpRequest();
-		xhr.withCredentials = true;
-
-		xhr.addEventListener("readystatechange", function () {
-			if (this.readyState === 4) {
-				console.log(this.responseText);
-			}
-		});
-
-		xhr.open("POST", "/ContactUs/comments");
-		xhr.setRequestHeader("cache-control", "no-cache");
-		xhr.setRequestHeader("postman-token", "1c3f61ed-7c1c-78b3-12de-a78a9dbe974d");
-
-		xhr.send(data);
-
-
 		const templateId = 'template_WXjvXZJi';
 		const userId = 'user_jGbfA1cf87kBG6A6nYDBs'
 
-		//	this.sendFeedback(templateId, { message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email }, userId)
+		this.sendFeedback(templateId, { message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email }, userId)
 	}
 	sendFeedback(templateId, variables, id) {
 		emailjs.send(
 			'gmail', templateId,
 			variables, id
 		).then(res => {
-			console.log('Email successfully sent!')
+			//console.log('Email successfully sent!');
+			// Triggers when any value is updated in firebase database
+			firebase.database().ref('contact').on('value', (snap) => {
+				console.log(snap.val());
+			});
+			let user = "daram"
+			// Create unique key with user name 
+			let newPost = firebase.database().ref('contact').child(user);
+
+			// Add data to the newly created key
+			newPost.set({
+				name: this.state.name,
+				email: this.state.email,
+				comment: this.state.comment,
+				mobile: this.state.mobile
+			})
 		})
 			// Handle errors here however you like, or use a React error boundary
-			.catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+			.catch(err => {
+				console.error('Oh well, you failed. Here some thoughts on the error that occured:', err)
+			}
+			)
 	}
 }
 export default ContactUs;

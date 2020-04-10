@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as emailjs from 'emailjs-com';
-import axios from 'axios';
-import data from './comments.json';
+import firebase from '../../firebase';
 
 
 class BlogComment extends React.Component {
@@ -26,33 +25,7 @@ class BlogComment extends React.Component {
 		e.preventDefault();
 		const templateId = 'template_WXjvXZJi';
 		const userId = 'user_jGbfA1cf87kBG6A6nYDBs';
-		let postData = {
-			name: this.state.name,
-			email: this.state.email,
-			comment: this.state.comment
-		};
-
-		let axiosConfig = {
-			headers: {
-				'Content-Type': 'application/json;charset=UTF-8',
-
-				"Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-				"Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
-			}
-		};
-
-		axios.post('./comments', postData)
-			.then((res) => {
-				console.log("RESPONSE RECEIVED: ", res);
-			})
-			.catch((err) => {
-				console.log("AXIOS ERROR: ", err);
-			})
-
-
-
-
-		//this.sendFeedback(templateId, { message_html: this.state.comment, from_name: this.state.name, reply_to: this.state.email }, userId)
+		this.sendFeedback(templateId, { message_html: this.state.comment, from_name: this.state.name, reply_to: this.state.email }, userId)
 	}
 	sendFeedback(templateId, variables, id) {
 		emailjs.send(
@@ -60,6 +33,20 @@ class BlogComment extends React.Component {
 			variables, id
 		).then(res => {
 			console.log('Email successfully sent!')
+			// Triggers when any value is updated in firebase database
+			firebase.database().ref('blogComment').on('value', (snap) => {
+				console.log(snap.val());
+			});
+			let user = "daram"
+			// Create unique key with user name 
+			let newPost = firebase.database().ref('blogComment').child(user);
+
+			// Add data to the newly created key
+			newPost.set({
+				name: this.state.name,
+				email: this.state.email,
+				comment: this.state.comment
+			})
 		})
 			// Handle errors here however you like, or use a React error boundary
 			.catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
