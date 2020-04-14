@@ -2,15 +2,36 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink, Link } from 'react-router-dom';
+import BlogsNavigation from '../blogNav';
+import TagCloud from 'react-tag-cloud';
+import randomColor from 'randomcolor';
+
 
 class investorsInterestRate extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			tags: []
+		}
+		this.goBack = this.goBack.bind(this);
 	}
+	componentDidMount() {
+
+		this.setState({
+			tags: this.props.alltag
+		});
+
+	}
+	goBack() {
+		this.props.history.goBack();
+	}
+
 
 	render() {
 		return (
 			<div className="container blogs-wrap">
+
 				<h2 className="blog-details-title"><span>Investors &amp; Interest Rates</span></h2>
 				<h6 className="blog-publish-info">By Admin | Feb 29, 2020 | Uncategorized | 0 comments</h6>
 				<img src="/images/Droplet_Interest_Rate.jpg" alt="Droplet Interest Rate" className="img-center" />
@@ -48,8 +69,23 @@ class investorsInterestRate extends React.Component {
 
 				</ol>
 				<p>So readers rather than toying with your money based on hearsay and half knowledge, seek out an good adviser. Merely Investing in FDs and speculating on Interest rates isn't going to be worth of your hard earned money. More Importantly, you might know as much as anyone else knows but knowing and doing are 2 different things. :)</p>
+
+				<ul>
+					{this.props.alltag.map((tag) =>
+						<Link
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</Link>
+
+
+					)}
+				</ul>
+
 				<BlogComment />
-			</div>
+			</div >
 		)
 	}
 }

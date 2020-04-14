@@ -61,11 +61,20 @@ export default class BlogsNavigation extends React.Component {
 			shldSearch: false,
 			archives: false,
 			searchText: '',
-			searchMobile: ''
+			searchMobile: '',
+			tagSearch: false
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.searchBlog = this.searchBlog.bind(this);
 		this.fetchArchive = this.fetchArchive.bind(this);
+	}
+	componentDidMount() {
+		if (this.props.location && this.props.location.state && this.props.location.state.tagName) {
+			console.log('from details', this.props.location.state.tagName);
+			this.setState({
+				tagSearch: true
+			})
+		}
 	}
 	render() {
 		return (
@@ -82,9 +91,10 @@ export default class BlogsNavigation extends React.Component {
 					<a href="javascript:;" className="search-icon" onClick={(e) => this.searchBlog(e)}></a>
 				</div>
 				<div className="blogs-container">
-					{this.state.shldSearch && !this.state.archives ? <Blogs filter={this.state.searchText} /> : ''}
-					{!this.state.shldSearch && this.state.archives ? <Blogs archive={this.state.archiveText} /> : ''}
-					{!this.state.shldSearch && !this.state.archives ? <Blogs /> : ''}
+					{this.state.shldSearch && !this.state.archives && !this.state.tagSearch ? <Blogs filter={this.state.searchText} /> : ''}
+					{!this.state.shldSearch && this.state.archives && !this.state.tagSearch ? <Blogs archive={this.state.archiveText} /> : ''}
+					{!this.state.shldSearch && !this.state.archives && !this.state.tagSearch ? <Blogs /> : ''}
+					{!this.state.shldSearch && !this.state.archives && this.state.tagSearch ? <Blogs filter={this.props.location.state.tagName} /> : ''}
 					<div className="blogs-nav">
 						<div className="blogs-nav-blocks search-nav">
 							<div className="relative">
@@ -120,7 +130,8 @@ export default class BlogsNavigation extends React.Component {
 		this.setState({
 			archiveText: year,
 			archives: true,
-			shldSearch: false
+			shldSearch: false,
+			tagSearch: false
 		})
 	}
 	handleChange(e) {
@@ -131,7 +142,8 @@ export default class BlogsNavigation extends React.Component {
 		if (e.target.value.length == 0) {
 			this.setState({
 				shldSearch: false,
-				archives: false
+				archives: false,
+				tagSearch: false
 			})
 		}
 	}
@@ -140,7 +152,8 @@ export default class BlogsNavigation extends React.Component {
 		this.setState({
 			shldSearch: true,
 			archives: false,
-			searchText: this.state.search
+			searchText: this.state.search,
+			tagSearch: false
 		})
 
 	}

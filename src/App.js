@@ -45,10 +45,6 @@ class App extends React.Component {
 								<Route path='/our-services/insurance' component={insurance} />
 								<Route path='/our-services/mutualFunds' component={mutualFunds} />
 							</Switch>
-
-							<Switch>
-
-							</Switch>
 						</Switch>
 					</main>
 					{<footer className="clear">
