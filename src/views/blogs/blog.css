@@ -324,3 +324,19 @@ width: calc(100% - 150px);
 	display: block;
 	font-weight: bold;
 }
+ul.blogs-tags {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.blogs-tag-link > * {
+	    text-decoration: none;
+    background: grey;
+    padding: 10px 15px;
+    margin-right: 6px;
+    color: #fff;
+    border-radius: 15px;
+    text-transform: capitalize;
+display: inline-block;
+}

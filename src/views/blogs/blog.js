@@ -85,15 +85,13 @@ class BlogDetails extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log('2', this.props.location.state.tag)
 		this.setState({
 			tag: this.props.location.state.tag
 		});
 	}
 
 	render() {
-		console.log(this.props.location.state.comp);
-		console.log(this.state.tag)
-
 		let allTags;
 
 		return (

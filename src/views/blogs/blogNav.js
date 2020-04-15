@@ -18,7 +18,7 @@ const newdata = data.map((data) => {
 				<div className="blog-description">
 					<div><h3>{data.title}</h3></div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
-					<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>
+					<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}`, tag: data.tags } }}>
 							Learn More
             </NavLink>
 					</p>
@@ -39,7 +39,7 @@ const recentPost = data.map((data) => {
 	if (data.recent == "true") {
 		return (
 			<div key={data.id} className="blogs-recent">
-				<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>
+				<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}`, tag: data.tags } }}>
 					{data.title}
 				</NavLink>
 			</div>
@@ -70,9 +70,10 @@ export default class BlogsNavigation extends React.Component {
 	}
 	componentDidMount() {
 		if (this.props.location && this.props.location.state && this.props.location.state.tagName) {
-			console.log('from details', this.props.location.state.tagName);
 			this.setState({
-				tagSearch: true
+				tagSearch: true,
+				shldSearch: false,
+				archives: false
 			})
 		}
 	}

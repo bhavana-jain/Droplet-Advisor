@@ -26,13 +26,6 @@ class ContactUs extends React.Component {
 		this.checkValue = this.checkValue.bind(this);
 		this.submitBtn = React.createRef();
 	}
-	componentDidMount() {
-		console.clear();
-		console.log('im in');
-		//	console.log(firebase.database().ref('data').child('data'));
-
-
-	}
 
 	render() {
 		const { name, email, mobile, comment } = this.state;
@@ -182,7 +175,6 @@ class ContactUs extends React.Component {
 			default:
 				break;
 		}
-		console.log(document.getElementsByClassName('error').length)
 	}
 	handleChange(e) {
 		this.setState({
@@ -210,7 +202,6 @@ class ContactUs extends React.Component {
 			//console.log('Email successfully sent!');
 			// Triggers when any value is updated in firebase database
 			firebase.database().ref('contact').on('value', (snap) => {
-				console.log(snap.val());
 			});
 			let user = "daram"
 			// Create unique key with user name 

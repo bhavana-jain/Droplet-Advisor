@@ -7,9 +7,11 @@ import ReactPaginate from 'react-paginate';
 let searchVal = "", archiveYear = ""
 let filterData = () => data.map(function (data) {
 	if (data.tags.indexOf(searchVal) >= 0) {
+		console.clear();
+		console.log(data.compName)
 		const BlogName = data.comp;
 		const BlogNameUrl = "/blog/" + BlogName;
-		const blogComp = data.compName;
+		let blogComp = data.compName;
 		let description = data.description;
 		let truncateDescription = description.substr(0, 150) + '...  ';
 		let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -27,7 +29,7 @@ let filterData = () => data.map(function (data) {
 						</div>
 						<div className="blog-nav-link">
 							<p>{truncateDescription}
-								<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>
+								<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}`, tag: data.tags } }}>
 									Learn More
             </NavLink></p>
 						</div>
@@ -35,7 +37,7 @@ let filterData = () => data.map(function (data) {
 
 				</div>
 
-			</div>
+			</div >
 
 		)
 	}
@@ -51,8 +53,6 @@ let archiveData = () => data.map(function (data) {
 	archiveYr = new Date(archiveYear).getFullYear();
 	let description = data.description;
 	let truncateDescription = description.substr(0, 150) + '...  ';
-	console.log(months[new Date(data.createdOn).getMonth()], new Date(data.createdOn).getFullYear())
-	console.log("archive", months[new Date(archiveYear).getMonth()], new Date(archiveYear).getFullYear())
 	if (blogMonth == archiveMonth && blogYear == archiveYr) {
 		const BlogName = data.comp;
 		const BlogNameUrl = "/blog/" + BlogName;
@@ -70,14 +70,14 @@ let archiveData = () => data.map(function (data) {
 						</div>
 						<div className="blog-nav-link">
 							<p>{truncateDescription}
-								<NavLink to={{ pathname: `${BlogNameUrl}`, state: `${blogComp}` }}>
+								<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}`, tag: data.tags } }}>
 									Learn More
             </NavLink></p>
 						</div>
 					</div>
 
 				</div>
-			</div>
+			</div >
 
 		)
 	}
@@ -110,7 +110,6 @@ export default class Blogs extends React.Component {
 			const blogComp = data.compName;
 			let description = data.description;
 			let truncateDescription = description.substr(0, 150) + '...  ';
-			console.log(data.tags)
 			let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
 			let blogDate = new Date(data.createdOn).toString();
 			blogDate = `${months[new Date(data.createdOn).getMonth()]} ` + `${new Date(data.createdOn).getDate()}` + ` , ` + `${new Date(data.createdOn).getFullYear()}`;

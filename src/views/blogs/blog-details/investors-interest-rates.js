@@ -14,7 +14,6 @@ class investorsInterestRate extends React.Component {
 		this.state = {
 			tags: []
 		}
-		this.goBack = this.goBack.bind(this);
 	}
 	componentDidMount() {
 
@@ -70,17 +69,15 @@ class investorsInterestRate extends React.Component {
 				</ol>
 				<p>So readers rather than toying with your money based on hearsay and half knowledge, seek out an good adviser. Merely Investing in FDs and speculating on Interest rates isn't going to be worth of your hard earned money. More Importantly, you might know as much as anyone else knows but knowing and doing are 2 different things. :)</p>
 
-				<ul>
+				<ul className="blogs-tags">
 					{this.props.alltag.map((tag) =>
-						<Link
+						<li className="blogs-tag-link"><NavLink
 							to={{
 								pathname: '/blog',
 								state: { tagName: tag }
 							}}>
 							{tag} <br />
-						</Link>
-
-
+						</NavLink></li>
 					)}
 				</ul>
 

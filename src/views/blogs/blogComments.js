@@ -21,7 +21,7 @@ class BlogComment extends React.Component {
 		this.submitBtn = React.createRef();
 	}
 	handleSubmit(e) {
-		console.log('submit')
+
 		e.preventDefault();
 		const templateId = 'template_WXjvXZJi';
 		const userId = 'user_jGbfA1cf87kBG6A6nYDBs';
@@ -35,7 +35,6 @@ class BlogComment extends React.Component {
 			console.log('Email successfully sent!')
 			// Triggers when any value is updated in firebase database
 			firebase.database().ref('blogComment').on('value', (snap) => {
-				console.log(snap.val());
 			});
 			let user = "daram"
 			// Create unique key with user name 
