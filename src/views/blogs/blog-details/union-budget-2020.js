@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class unionBudget extends React.Component {
 	constructor(props) {
 		super(props);
 	}
-	componentDidMount() {
-		console.clear();
-		console.log(this.props.alltag)
+	componentWillMount() {
+		document.title = "Union Budget 2020"
 	}
 
 	render() {
@@ -42,6 +42,18 @@ Below is the list of worst Budget day reactions of the stock market.
 				<p>As you can see the returns have been far better than any of other traditional savings even if your chosen time for investment coincided with worst budgets of the history. </p>
 
 				<p>Droplet's View - Budget are at best gimmicks used by marketeers to get their job done. As far as personal finance goes, <i>Trust, Discipline and Longevity is all that matter</i>. </p>
+
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

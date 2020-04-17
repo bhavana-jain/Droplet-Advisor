@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class mutualFundsWontMakeMoney extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Mutual funds wont make you money"
 	}
 
 	render() {
@@ -43,7 +47,18 @@ class mutualFundsWontMakeMoney extends React.Component {
 
 
 				<p>So if you don't have this as your Plan A, then your Plan B of pulling out money from Markets in your "Emergency needs" will only mess things for you and Your Mutual Funds won't make you MONEY! Be careful.
-</p>
+				</p>
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 
 			</div >

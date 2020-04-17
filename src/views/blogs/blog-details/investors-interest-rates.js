@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
 import { NavLink, Link } from 'react-router-dom';
-import BlogsNavigation from '../blogNav';
-import TagCloud from 'react-tag-cloud';
-import randomColor from 'randomcolor';
-
+import { EmailShareButton, EmailIcon } from 'react-share';
 
 class investorsInterestRate extends React.Component {
 	constructor(props) {
@@ -15,24 +12,24 @@ class investorsInterestRate extends React.Component {
 			tags: []
 		}
 	}
-	componentDidMount() {
-
-		this.setState({
-			tags: this.props.alltag
-		});
-
+	componentWillMount() {
+		document.title = "Investors and Interest Rate"
 	}
-	goBack() {
-		this.props.history.goBack();
-	}
-
-
 	render() {
 		return (
 			<div className="container blogs-wrap">
 
 				<h2 className="blog-details-title"><span>Investors &amp; Interest Rates</span></h2>
 				<h6 className="blog-publish-info">By Admin | Feb 29, 2020 | Uncategorized | 0 comments</h6>
+				<EmailShareButton
+					url={window.location.href}
+					subject="subject here"
+					body="body"
+					className="Demo__some-network__share-button"
+				>
+					<EmailIcon size={32} round />
+				</EmailShareButton>
+
 				<img src="/images/Droplet_Interest_Rate.jpg" alt="Droplet Interest Rate" className="img-center" />
 				<p>My Partner called me and told me that we are no different from laymen who know that Short term Interest rates are going to fall. We both know the same and hence we are the same. Yes I would say but only for the sake of that knowledge.
  </p>

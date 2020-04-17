@@ -333,7 +333,7 @@ ul.blogs-tags {
 .blogs-tag-link > * {
 	    text-decoration: none;
     background: grey;
-    padding: 10px 15px;
+    padding: 2px 15px;
     margin-right: 6px;
     color: #fff;
     border-radius: 15px;

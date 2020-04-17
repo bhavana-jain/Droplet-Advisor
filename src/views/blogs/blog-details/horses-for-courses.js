@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class horsesForCourses extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Horses for courses"
 	}
 
 	render() {
@@ -58,7 +62,17 @@ class horsesForCourses extends React.Component {
 				<p>As we are nearing the end of financial year. We will be approached by the insurance agents who will <strong>hard Sell Insurance for tax planning/Investment</strong>. It is upon us to choose the Horses for Courses, means choosing “Insurance” for “Risk Protection” and not for Investment.</p>
 
 				<p>The choice is yours If you will bet your money on Horse or Donkey 😉</p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

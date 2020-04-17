@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class unlimitedPeriodOffer extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Home loans at 50% discount"
 	}
 
 	render() {
@@ -25,7 +29,7 @@ class unlimitedPeriodOffer extends React.Component {
 					<li>The Buyer would go in for a loan of 34 lacs. <br />A loan of 34 lacs @ 8.65% to be repaid in 15 Years requires the buyer to pay a EMI of 33,780(assume 34K). At the end of 15 Years, Buyer (now the house Owner) will have repaid 61 lacs (34 lacs towards his principal, 26.8 lacs towards Interest).</li>
 					<li className="note-text">The Buyer will pay 26.8 lacs towards Interest.
 
-Here I would like to highlight to the prospective Buyer that half of the Interest is paid during the first 5 Years of the Loan Tenure. In this case, The Prospective Buyer will pay 13.3 Lacs (2.9+2.8+2.7+2.5+2.4) towards interest in first 5 years out of 26 lacs.
+					Here I would like to highlight to the prospective Buyer that half of the Interest is paid during the first 5 Years of the Loan Tenure. In this case, The Prospective Buyer will pay 13.3 Lacs (2.9+2.8+2.7+2.5+2.4) towards interest in first 5 years out of 26 lacs.
 						<p>Now is where the Buyer has to play smart – Instead of Buying the house right away, he should stall his decision by 5 Years and Invest the Interest amount he will pay in these years in a good fund (Don’t Worry, we are there to help you!) which yields 15% compounding return. So he should start saving 13.3 lacs/5 (Years) / 12 (Months) ie., 22,000 every month. Use the remaining portion of the EMI to move into a rented house in the same area. I’m sure you can easily get a 45 Lacs apartment @ 12K rent or even lesser than that (34K-22K).
 						In 5 Years, the 22,000 prospective Buyer’s monthly  investment will grow in to 19.2 lacs. Add to this the Initial Down payment, 6 lacs Invested likewise will be 12 lacs. Both the monthly SIP &amp;  lump sum when invested in a fund yielding 15% returns over the 5 years will aggregate to INR 31 lakhs.
 Alas! the price of your home will not be the same, It will raise too! So @ 7 % appreciation, the value of the same property will be 56 lacs. Good News is you already have 31 lacs and you need a loan of only 25 lacs and on top of that, You can easily afford to pay an EMI of 34K. Let me remind you, In 5 years’ time, your earning will have improved too and you can afford to pay 25% extra hardly feeling a pinch. So in all you can pay a EMI of 34*125% = 42.5K.  You can now repay the loan of 25 lacs in 6.5 Years. The interest outgo will only be 8 lacs.</p>
@@ -39,6 +43,17 @@ Alas! the price of your home will not be the same, It will raise too! So @ 7 % a
 </strong></p>
 					</li>
 				</ol>
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class healthWealthConnection extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Co-relation of health and wealth"
 	}
 
 	render() {
@@ -51,6 +55,17 @@ class healthWealthConnection extends React.Component {
 
 				</ol>
 				<p>Finance and life are the same. It's all simple. We just complicate it.  Have a happy week ahead.</p>
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class goldenPlan extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "A golden plan"
 	}
 
 	render() {
@@ -91,7 +95,17 @@ class goldenPlan extends React.Component {
 				<p><i>So All the Best to the Gold Savers and to the wise Gentlemen out there!</i></p>
 
 				<p><i>Talk to the right financial advisor who can offer a financial plan which you can’t refuse!</i></p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

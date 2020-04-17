@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class titanStory extends React.Component {
 	constructor(props) {
 		super(props);
 	}
-
+	componentWillMount() {
+		document.title = "A titan story"
+	}
 	render() {
 		return (
 			<div className="container blogs-wrap">
@@ -55,7 +58,17 @@ But In real these do not happen. What happens is, You get really unlucky! Yeah I
 
 				<p>Only lesson we want to tell our readers is, never run for instant gratification. Start early, start small, stay the course and reap big benefits over the period of time! Remember one thing, in investing time &amp; emotion are the two most important factors determining one’s fate!
 				</p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 
 			</div >

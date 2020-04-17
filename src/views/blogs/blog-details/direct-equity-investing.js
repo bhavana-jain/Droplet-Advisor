@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class directEquityInvestingI extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Direct Equity investing"
 	}
 
 	render() {
@@ -82,7 +86,17 @@ class directEquityInvestingI extends React.Component {
 				<p>So as of this month, we might have lost as much as 98% of our investments. Many would still persist saying that this is the fee we have to pay to market to learn about investing. However, @ Droplets, we would suggest a wiser way to do the same things, more on that in our next blog-
 
 </p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

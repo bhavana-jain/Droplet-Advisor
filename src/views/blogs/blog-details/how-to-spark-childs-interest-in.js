@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class childsInterestInvest extends React.Component {
 	constructor(props) {
 		super(props);
 	}
-
+	componentWillMount() {
+		document.title = "How to spark a child's interest in investing"
+	}
 	render() {
 		return (
 			<div className="container blogs-wrap">
@@ -44,7 +47,17 @@ To empower your children in money matters, it’s wise to focus on the right les
 
 				<p>Source - JP  Morgan
 </p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
+
 
 class happyNewYear extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Happy New Year";
 	}
 
 	render() {
@@ -55,10 +60,17 @@ class happyNewYear extends React.Component {
 				<p>Its still the 1st week of the New Year – Just take the Pen & Paper, jolt down the numbers and Decide to make your Life – “Healthy” Wealthy.
 
 </p>
-
-
-
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

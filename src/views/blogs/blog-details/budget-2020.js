@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
+
 
 class budget2020 extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Budget 2020"
 	}
 
 	render() {
@@ -43,7 +48,17 @@ class budget2020 extends React.Component {
 				</ol>
 
 				<p>A simple google search tells us that Delhi is 2203 Kilometers away from Chennai and if we think that some one as far away would help you then one might as well look east and buy a Nagaland lottery and wait for the miracle to happen or start working on the BUDGET that matters right now! </p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

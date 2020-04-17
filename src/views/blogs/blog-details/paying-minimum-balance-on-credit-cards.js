@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class creditcard extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+
+	componentWillMount() {
+		document.title = "Paying minimum balance on credit card"
 	}
 
 	render() {
@@ -33,7 +38,17 @@ class creditcard extends React.Component {
 				<p>I was doing the same until 2014-2015. Then I realized I'm doing nothing but paying 42% interest and taxes on the payments I make month on month. Finally I made up my mind to sell of my equity shares and paid all the outstanding dues. My hard earned savings gone for a toss and I had to start from the scratch again.</p>
 
 				<p>Plastic cards are literally a kind of addiction if you don't have control over it.</p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 
 			</div >

@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class dropletLoanPlus extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "100% interest return loan scheme"
 	}
 
 	render() {
@@ -31,7 +35,18 @@ class dropletLoanPlus extends React.Component {
 
 				<p>
 					We request that one should consider any investment plan with their financial advisors so as to employ the best strategy for one's hard-earned money.
-</p>
+				</p>
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 
 				<BlogComment />
 			</div>

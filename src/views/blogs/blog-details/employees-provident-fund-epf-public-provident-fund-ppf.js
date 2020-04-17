@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class employeePublicProvidentFund extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "EPF and PPF"
 	}
 
 	render() {
@@ -45,6 +49,17 @@ class employeePublicProvidentFund extends React.Component {
 </li>
 					<li>PPF – Eligible for deduction under section 80C. In addition, the maturity proceeds are tax-free</li>
 
+				</ul>
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
 				</ul>
 				<BlogComment />
 

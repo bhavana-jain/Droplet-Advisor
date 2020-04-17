@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class chasingReturns extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Chasing returns";
 	}
 
 	render() {
@@ -61,7 +65,17 @@ class chasingReturns extends React.Component {
 					One of the follies of the investors is, they chase returns. Meaning they keep jumping from one product to the other product looking at the past returns. Eventually, missing all the buses, they remain in the same place they started their journey in.
 										</p>
 
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

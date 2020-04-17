@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class taxSaverInvestor extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Are you a tax saver or investor"
 	}
 
 	render() {
@@ -44,7 +48,18 @@ class taxSaverInvestor extends React.Component {
 				<p>We hope that this write up helps the readers migrate from being a “Tax Saver” to being a “Tax Investor”.
 					<strong>Note</strong> – Our country is tipped to be the fastest growing economy in the world and is expected to be Economy equal to size of US/China, it is only fair that as Citizens of this country, We participate in this wonderful story and reap benefits of the same. Equities are best route to be part of this story and to grow our wealth.
 
-</p>
+				</p>
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 
 			</div >

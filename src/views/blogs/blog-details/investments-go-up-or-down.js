@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class investmentsUpDown extends React.Component {
 	constructor(props) {
 		super(props);
 	}
-
+	componentWillMount() {
+		document.title = "What to do when investments go up or down"
+	}
 	render() {
 		return (
 			<div className="container blogs-wrap">
@@ -115,7 +118,17 @@ class investmentsUpDown extends React.Component {
 					<li>Never Invest with out a goal. Goal based investing helps you to get in and get out of markets to your advantage.
 					</li>
 				</ul>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

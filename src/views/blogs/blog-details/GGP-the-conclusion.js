@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class ggpConclusion extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "GGP - The conclusion"
 	}
 
 	render() {
@@ -39,7 +43,17 @@ class ggpConclusion extends React.Component {
 				<h4>Signing off with this famous Buffet quote – </h4>
 				<i>"Be fearful when others are greedy. Be greedy when others are fearful!"</i>
 
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 
 				<BlogComment />
 			</div>

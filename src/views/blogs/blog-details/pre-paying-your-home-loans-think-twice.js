@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class prePayHomeLoan extends React.Component {
 	constructor(props) {
 		super(props);
 	}
-
+	componentWillMount() {
+		document.title = "Prepaying home loans ? think twice"
+	}
 	render() {
 		return (
 			<div className="container blogs-wrap">
@@ -48,7 +51,17 @@ class prePayHomeLoan extends React.Component {
 
 				</ol>
 				<p>Again the above is indicative, Pls get in touch with your financial planner before making any financial decisions. </p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

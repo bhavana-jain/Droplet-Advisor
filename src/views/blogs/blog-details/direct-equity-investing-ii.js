@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
+
 
 class directEquityInvesting extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Direct Equity Investing II"
 	}
 
 	render() {
@@ -83,7 +88,17 @@ class directEquityInvesting extends React.Component {
 				</ol>
 
 				<p>Again a lot of people think of markets gambling and things like that, we leave it to them. For us, the stock market is a great source of wealth creation should we show passion and work hard. </p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 			</div>
 		)

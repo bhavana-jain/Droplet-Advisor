@@ -1,19 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
+import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class tiffenForKid extends React.Component {
 	constructor(props) {
 		super(props);
 	}
-
+	componentWillMount() {
+		document.title = "A tiffin for kids"
+	}
 	render() {
 		return (
 			<div className="container blogs-wrap">
-				<img src={require("../../../images/blogs/A-Tiffen-for-you-Kid-1080x675.jpg")}
-					alt="Reality about Realty" />
+
 				<h2>A Tiffen for you Kid</h2>
 				<h6 className="blog-publish-info">By Admin | Apr 15, 2018 | Uncategorized | 0 comments</h6>
+				<img src={require("../../../images/blogs/A-Tiffen-for-you-Kid-1080x675.jpg")}
+					alt="A tiffin for kids blog banner" />
 				<p>I had get caught being honest rather than being caught lying. So let me agree, Out of sheer boredom and being a new user of Swiggy, I decided to pass my time off with some Swiggy browsing. There came my sister’s Kid –</p>
 				<p>"Kae Karo mama” (What are you doing Mama). <br />
 					I told him, Ordering food for you dear. <br />
@@ -45,7 +50,20 @@ class tiffenForKid extends React.Component {
 				</p>
 				<p>As always We leave it to the Prudence of our readers to decide whether to tiffin your kids’ financial health. All the best.
 
-</p>
+				</p>
+
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
+				<BlogComment />
 			</div>
 		)
 	}

@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class mfEarnMoney extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Mutual funds earn you money"
 	}
 
 	render() {
@@ -63,6 +67,17 @@ class mfEarnMoney extends React.Component {
 					<li>Make sure you do not get “Greedy” when your goal is achieved and revisit your financial stability and help you stay the course accordingly.
 </li>
 
+				</ul>
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
 				</ul>
 				<BlogComment />
 			</div>

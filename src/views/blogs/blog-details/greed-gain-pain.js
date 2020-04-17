@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class greedGainPain extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = " Greed.Gain.Pain"
 	}
 
 	render() {
@@ -31,7 +35,17 @@ class greedGainPain extends React.Component {
 				<p>Let’s pause here.</p>
 
 				<p>Greed never ends! There were unprecedented financial bubbles happened across the globe because of human greed and naivety. We will continue the series next week as well… You ponder until then😇</p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 
 
 				<BlogComment />

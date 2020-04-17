@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
+import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class securingFuture extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Securing your future with Rs5000"
 	}
 
 	render() {
 		return (
 			<div className="container blogs-wrap">
 				<img src={require("../../../images/blogs/pawn-mirror-chess-king-1024x640.jpg")}
-					alt="Reality about Realty" />
+					alt="Secure future blog banner" />
 				<h2>Securing your Future with Rs 5000</h2>
 				<h6 className="blog-publish-info">By Admin | Apr 12, 2019 | Uncategorized | 0 comments</h6>
 				<p>Earlier, we wrote a blog about investing 30K and earning an income of 50K every month. Most of them might have thought that they need such a huge amount to start investing. Nothing so! At Droplet, our wish is to be all-inclusive and that constant endeavor has resulted in this blog. </p>
@@ -45,6 +50,20 @@ class securingFuture extends React.Component {
 					<li>And so on it keeps going... by the time you are 75 years old you will have 50 lacs.  </li>
 				</ul>
 				<p>So with just an Investment 5K for 15 years, you can create a 50 lacs corpus with or without your presence. Every penny is worth it! Plan accordingly! </p>
+
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
+				<BlogComment />
+
 			</div>
 		)
 	}

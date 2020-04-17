@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class needFinancialAdvisor extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Do you really need a financial advisor"
 	}
 
 	render() {
@@ -55,7 +59,17 @@ class needFinancialAdvisor extends React.Component {
 
 				<p>Lastly, we often think that having an advisor would solve all our problems. Ideally it doesn’t if there is no good relationship. Client and advisor should develop mutual trust and have a sense of belief. Because a good advisor would always provide solutions which will enhance the clients financial position in the long run. And a responsible client should reach out to his advisor in case of any doubts, rather than approaching a friend or family. And most importantly, client should adhere to the action plans provided by the advisor. If client or the advisor doesn’t have trust with each other, then there is no point in working with an advisor at all.
 							   </p>
-
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 
 				<BlogComment />
 

@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import { NavLink } from "react-router-dom";
 
 class guaranteedIncome extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+	componentWillMount() {
+		document.title = "Earn a guaranteed income of 50K/month"
 	}
 
 	render() {
@@ -49,6 +53,17 @@ class guaranteedIncome extends React.Component {
 				<p>
 					With this, Droplet will let you decide if you wanna to work on your discipline for 8 years and be patient for 7 years so that you can live a financially independent life forever or ????</p>
 				<p>Go Figure out!</p>
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
 				<BlogComment />
 
 			</div >
