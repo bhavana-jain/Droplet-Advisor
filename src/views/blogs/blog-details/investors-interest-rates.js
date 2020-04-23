@@ -2,8 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import firebase from 'firebase';
 import { NavLink, Link } from 'react-router-dom';
-import { EmailShareButton, EmailIcon } from 'react-share';
+import {
+	FacebookShareButton,
+	FacebookIcon,
+	TwitterShareButton,
+	TwitterIcon,
+	EmailShareButton,
+	EmailIcon,
+	PinterestShareButton,
+	PinterestIcon,
+	WhatsappShareButton,
+	WhatsappIcon
+} from "react-share";
 import { css } from 'emotion';
 
 // import icons
@@ -33,9 +45,34 @@ class investorsInterestRate extends React.Component {
 		this.state = {
 			tags: []
 		}
+		this.likePost = this.likePost.bind(this);
 	}
 	componentWillMount() {
-		document.title = "Investors and Interest Rate"
+		document.title = "Investors and Interest Rate";
+		console.log(window.location.href);
+	}
+
+
+	likePost() {
+		let postname = window.location.pathname.split('/')[2];
+		let clapCount, newClapcount;
+		firebase.database().ref('allBlogs').child(postname).on('value', (snap) => {
+			console.clear();
+			clapCount = snap.val().claps;
+			console.log(clapCount)
+		});
+
+		let user = "daram"
+		// Create unique key with user name 
+		let newPostLikes = firebase.database().ref('allBlogs').child(postname).child("claps")
+
+		// Increment and return new value based on current value
+		newPostLikes.transaction(function (likes) {
+			return likes + 1;
+		})
+		// Add data to the newly created key
+
+
 	}
 	render() {
 		return (
@@ -43,7 +80,31 @@ class investorsInterestRate extends React.Component {
 
 				<h2 className="blog-details-title"><span>Investors &amp; Interest Rates</span></h2>
 				<h6 className="blog-publish-info">By Admin | Feb 29, 2020 | Uncategorized | 0 comments</h6>
-				<ShareComponent />
+				{/* <ShareComponent /> */}
+
+				<div onClick={this.likePost}>Like this</div>
+
+				<FacebookShareButton url={window.location.href}>
+					<FacebookIcon size={32} round={true} />
+				</FacebookShareButton>
+				<TwitterShareButton url={window.location.href}>
+					<TwitterIcon size={32} round={true} />
+				</TwitterShareButton>
+				<WhatsappShareButton url={window.location.href}>
+					<WhatsappIcon size={32} round={true} />
+				</WhatsappShareButton>
+				{/* <PinterestShareButton>
+					<PinterestIcon size={32} round={true} />
+
+				</PinterestShareButton> */}
+				<EmailShareButton
+					url={window.location.href}
+					subject="hello"
+					body="check this out"
+				>
+					<EmailIcon size={32} round={true} />
+				</EmailShareButton>
+				<a href="mailto:?subject=hi;body=checkout" onClick={(e) => e.preventDefault()}>email link</a>
 				<img src="/images/Droplet_Interest_Rate.jpg" alt="Droplet Interest Rate" className="img-center" />
 				<p>My Partner called me and told me that we are no different from laymen who know that Short term Interest rates are going to fall. We both know the same and hence we are the same. Yes I would say but only for the sake of that knowledge.
  </p>

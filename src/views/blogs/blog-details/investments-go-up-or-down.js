@@ -3,13 +3,22 @@ import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
 import { NavLink } from "react-router-dom";
+import {
+	FacebookShareButton,
+	FacebookIcon,
+	TwitterShareButton,
+	TwitterIcon,
+	EmailShareButton,
+	EmailIcon
+} from "react-share";
 
 class investmentsUpDown extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 	componentWillMount() {
-		document.title = "What to do when investments go up or down"
+		document.title = "What to do when investments go up or down";
+		console.log(window.location.href);
 	}
 	render() {
 		return (
@@ -17,6 +26,19 @@ class investmentsUpDown extends React.Component {
 				<h2 className="blog-details-title">What to do when my <span>Investments go up or down ?
 </span></h2>
 				<h6 className="blog-publish-info">By Admin | Apr 12, 2019 | Uncategorized | 0 comments</h6>
+				<FacebookShareButton url={window.location.href}>
+					<FacebookIcon size={32} round={true} />
+				</FacebookShareButton>
+				<TwitterShareButton url={window.location.href}>
+					<TwitterIcon size={32} round={true} />
+				</TwitterShareButton>
+				<EmailShareButton
+					url={window.location.href}
+					subject="hello"
+					body="check this out"
+				>
+					<EmailIcon size={32} round={true} />
+				</EmailShareButton>
 				<img src="/images/What-to-do-when-my-Investments-go-up-or-down-1080x675.jpg" alt="Investments go up or down blog banner" />
 
 				<p>	We have spoken to a whole lot of people and were surprised to notice the same mentality among most of the them. What is that mentality ?</p>
