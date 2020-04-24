@@ -4,54 +4,62 @@ import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
 import firebase from 'firebase';
 import { NavLink, Link } from 'react-router-dom';
-import {
-	FacebookShareButton,
-	FacebookIcon,
-	TwitterShareButton,
-	TwitterIcon,
-	EmailShareButton,
-	EmailIcon,
-	PinterestShareButton,
-	PinterestIcon,
-	WhatsappShareButton,
-	WhatsappIcon
-} from "react-share";
-import { css } from 'emotion';
-
-// import icons
-import { FaFacebook } from "react-icons/fa";
-import { ShareButton, ShareButtonRectangle, ShareBlockStandard } from "react-custom-share";
+import LoadScript from "react-load-script";
 
 
-const ShareComponent = props => {
-	// create object with props for shareBlock
-	const shareBlockProps = {
-		url: 'https://mywebsite.com/page-to-share/',
-		button: ShareButtonRectangle,
-		buttons: [
-			{ network: 'Facebook', icon: FaFacebook }
-		],
-		text: `Give it a try - mywebsite.com `,
-		longtext: `Take a look at this super website I have just found.`,
+const Addthis = () => {
+	const handleScriptLoad = () => {
+		window.addthis.init();
+		window.addthis.toolbox(".addthis_toolbox");
+		console.log("addthis Loaded");
 	};
-
-	return <ShareBlockStandard {...shareBlockProps} />;
-};
+	return (
+		<div>
+			<LoadScript
+				url="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-xxxx"
+				onLoad={handleScriptLoad}
+			/>
+			<div
+				class="addthis_toolbox addthis_default_style "
+				style={{ margin: "20px" }}
+			>
+				<a class="addthis_button_preferred_1" />
+				<a class="addthis_button_preferred_2" />
+				<a class="addthis_button_preferred_3" />
+				<a class="addthis_button_preferred_4" />
+				<a class="addthis_button_compact" />
+				{/* <a class="addthis_counter addthis_bubble_style" /> */}
+			</div>
+		</div>
+	);
+}
 
 
 class investorsInterestRate extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			tags: []
+			tags: [],
+			likes: ''
 		}
 		this.likePost = this.likePost.bind(this);
 	}
 	componentWillMount() {
 		document.title = "Investors and Interest Rate";
 		console.log(window.location.href);
+		let postname = window.location.pathname.split('/')[2];
+		let clapCount;
+		firebase.database().ref('allBlogs').child(postname).on('value', (snap) => {
+			console.clear();
+			clapCount = snap.val().claps;
+			this.setState({
+				likes: clapCount
+			})
+		});
 	}
+	componentDidMount() {
 
+	}
 
 	likePost() {
 		let postname = window.location.pathname.split('/')[2];
@@ -59,7 +67,10 @@ class investorsInterestRate extends React.Component {
 		firebase.database().ref('allBlogs').child(postname).on('value', (snap) => {
 			console.clear();
 			clapCount = snap.val().claps;
-			console.log(clapCount)
+			console.log(clapCount);
+			this.setState({
+				likes: clapCount
+			})
 		});
 
 		let user = "daram"
@@ -72,39 +83,20 @@ class investorsInterestRate extends React.Component {
 		})
 		// Add data to the newly created key
 
-
 	}
+
+
 	render() {
 		return (
 			<div className="container blogs-wrap">
 
 				<h2 className="blog-details-title"><span>Investors &amp; Interest Rates</span></h2>
 				<h6 className="blog-publish-info">By Admin | Feb 29, 2020 | Uncategorized | 0 comments</h6>
-				{/* <ShareComponent /> */}
+				<Addthis />
 
-				<div onClick={this.likePost}>Like this</div>
+				<div onClick={this.likePost}>Like this {this.state.likes} claps</div>
 
-				<FacebookShareButton url={window.location.href}>
-					<FacebookIcon size={32} round={true} />
-				</FacebookShareButton>
-				<TwitterShareButton url={window.location.href}>
-					<TwitterIcon size={32} round={true} />
-				</TwitterShareButton>
-				<WhatsappShareButton url={window.location.href}>
-					<WhatsappIcon size={32} round={true} />
-				</WhatsappShareButton>
-				{/* <PinterestShareButton>
-					<PinterestIcon size={32} round={true} />
 
-				</PinterestShareButton> */}
-				<EmailShareButton
-					url={window.location.href}
-					subject="hello"
-					body="check this out"
-				>
-					<EmailIcon size={32} round={true} />
-				</EmailShareButton>
-				<a href="mailto:?subject=hi;body=checkout" onClick={(e) => e.preventDefault()}>email link</a>
 				<img src="/images/Droplet_Interest_Rate.jpg" alt="Droplet Interest Rate" className="img-center" />
 				<p>My Partner called me and told me that we are no different from laymen who know that Short term Interest rates are going to fall. We both know the same and hence we are the same. Yes I would say but only for the sake of that knowledge.
  </p>
