@@ -36,6 +36,8 @@ import healthWealthConnection from './blog-details/co-relation-of-health-and-wea
 import stepToFinancial from './blog-details/1st-step-to-path-of-financial';
 import mutualFundsWontMakeMoney from './blog-details/mutual-funds-wont-make-you-money-be';
 import guaranteedIncome from './blog-details/earn-guaranteed-income-of-50kmonth-for';
+import behaviour from './blog-details/the-behaviour';
+import newBeginningOldWine from './blog-details/new-year-new-beginning-old-wine';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -73,7 +75,9 @@ const components = {
 	healthWealthConnection: healthWealthConnection,
 	stepToFinancial: stepToFinancial,
 	mutualFundsWontMakeMoney: mutualFundsWontMakeMoney,
-	guaranteedIncome: guaranteedIncome
+	guaranteedIncome: guaranteedIncome,
+	behaviour: behaviour,
+	newBeginningOldWine: newBeginningOldWine
 };
 
 class BlogDetails extends React.Component {

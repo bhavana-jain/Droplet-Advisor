@@ -340,3 +340,28 @@ ul.blogs-tags {
     text-transform: capitalize;
 display: inline-block;
 }
+.addthis_toolbox > a > .at-icon-wrapper {
+    width: 32px !important;
+    height: 32px !important;
+	border-radius: 15px;
+	text-align: center;
+}
+.addthis_toolbox > a >.at-icon-wrapper > svg {
+	width: 30px !important;
+	height: 30px !important;
+	line-height: 32px;
+}
+.main-blog-header {
+	display: flex;
+}
+.main-blog-header > div:last-child {
+	margin-left: auto;
+}
+.clap-icon:before {
+	content:'';
+	background: url('/images/clap.svg') no-repeat;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+}

@@ -16,20 +16,11 @@ const Addthis = () => {
 	return (
 		<div>
 			<LoadScript
-				url="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-xxxx"
+				url="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ea2a77e918821b6"
 				onLoad={handleScriptLoad}
 			/>
-			<div
-				class="addthis_toolbox addthis_default_style "
-				style={{ margin: "20px" }}
-			>
-				<a class="addthis_button_preferred_1" />
-				<a class="addthis_button_preferred_2" />
-				<a class="addthis_button_preferred_3" />
-				<a class="addthis_button_preferred_4" />
-				<a class="addthis_button_compact" />
-				{/* <a class="addthis_counter addthis_bubble_style" /> */}
-			</div>
+			<div class="addthis_inline_share_toolbox"></div>
+
 		</div>
 	);
 }
@@ -90,13 +81,14 @@ class investorsInterestRate extends React.Component {
 		return (
 			<div className="container blogs-wrap">
 
-				<h2 className="blog-details-title"><span>Investors &amp; Interest Rates</span></h2>
-				<h6 className="blog-publish-info">By Admin | Feb 29, 2020 | Uncategorized | 0 comments</h6>
-				<Addthis />
-
-				<div onClick={this.likePost}>Like this {this.state.likes} claps</div>
-
-
+				<div className="main-blog-header">
+					<div>
+						<h2 className="blog-details-title"><span>Investors &amp; Interest Rates</span></h2>
+						<h6 className="blog-publish-info">By Admin | Feb 29, 2020 | Uncategorized | 0 comments</h6>
+						<div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div>
+					</div>
+					<div><Addthis /></div>
+				</div>
 				<img src="/images/Droplet_Interest_Rate.jpg" alt="Droplet Interest Rate" className="img-center" />
 				<p>My Partner called me and told me that we are no different from laymen who know that Short term Interest rates are going to fall. We both know the same and hence we are the same. Yes I would say but only for the sake of that knowledge.
  </p>

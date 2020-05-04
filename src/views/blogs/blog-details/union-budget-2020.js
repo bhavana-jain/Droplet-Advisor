@@ -2,14 +2,75 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../blogs/blog.css';
 import BlogComment from '../blogComments';
+import firebase from 'firebase';
 import { NavLink } from "react-router-dom";
 
+import LoadScript from "react-load-script";
+const Addthis = () => {
+	const handleScriptLoad = () => {
+		window.addthis.init();
+		window.addthis.toolbox(".addthis_toolbox");
+		console.log("addthis Loaded");
+	};
+	return (
+		<div>
+			<LoadScript
+				url="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ea2a77e918821b6"
+				onLoad={handleScriptLoad}
+			/>
+			<div class="addthis_inline_share_toolbox"></div>
+
+		</div>
+	);
+}
 class unionBudget extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			childExist: false
+		}
 	}
 	componentWillMount() {
-		document.title = "Union Budget 2020"
+		document.title = "Union Budget 2020";
+		let postname = window.location.pathname.split('/')[2];
+		let clapCount;
+
+		firebase.database().ref('allBlogs').on('value', (snap) => {
+			console.clear();
+			// Check if child with pagename exists or else create one
+			let checkChild = snap.hasChild(postname);
+			if (!checkChild) {
+				snap.child(postname);
+
+			}
+			// If child already exists, get the claps and update in DOM
+			else {
+				clapCount = snap.child(postname).val().claps;
+				this.setState({
+					likes: clapCount,
+					childExist: true
+				})
+			}
+
+		});
+	}
+	likePost() {
+		let postname = window.location.pathname.split('/')[2];
+		let clapCount, newClapcount;
+
+		// Create unique key with user name 
+		let newPostLikes = firebase.database().ref('allBlogs').child(postname).child("claps")
+
+		// Increment and return new value based on current value
+		newPostLikes.transaction(function (likes) {
+			return likes + 1;
+		})
+
+		this.setState({
+			childExist: true
+		})
+		// Add data to the newly created key
+
 	}
 
 	render() {
@@ -17,6 +78,8 @@ class unionBudget extends React.Component {
 			<div className="container blogs-wrap">
 				<h2>Union Budget 2020</h2>
 				<h6 className="blog-publish-info">By Admin | Feb 15, 2020 | Uncategorized | 0 comments</h6>
+				{this.state.childExist ? <div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div> : ''}
+				<div><Addthis /></div>
 				<p>We were worried as financial advisers about the budget. Of course the Union Budget because if the budget was perceived to the be good then the markets would rally and our investors will not get discounts on their Investments. Discounts are always good, Who knows it better than you guys! The fact is good business shall always thrive irrespective of the budget and when we choose to invest in equities we invest in businesses that will do well in future. Note that we have used the word "Perceived". Again most of the govt policies being good or bad are perceptions of the people. A good businessman would identify each of them as an opportunity. A classic example is Titan which when was forced to import Gold due to "Govt Policies", it started Tanisq and today Tanisq is one of the largest contributor to Titan's Profits.</p>
 
 				<ol>
