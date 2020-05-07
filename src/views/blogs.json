@@ -1,5 +1,17 @@
 [
     {
+        "title": "Should I start or Stop my Stock Markets Investments",
+        "comp": "should-i-start-or-stop-my-stock-markets",
+        "compName": "startOrStopStockMarket",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2020-03-28",
+        "image": "shutterstock_1083474668",
+        "description": "The mighty fall in the stock market has spooked a large many investors and they face the conundrum as titled in the blog. But fortunately for us, with exception of 3-4 Investors, our clients have remained resolute to the path laid out for them and not bothered by market volatility. ",
+        "recent": "true",
+        "tags": []
+    },
+    {
         "title": "Investors & Interest Rates",
         "comp": "investors-interest-rates",
         "compName": "investorsInterestRate",
@@ -343,6 +355,57 @@
             "tax planning",
             "tax saving",
             "term policy"
+        ]
+    },
+    {
+        "title": "Will I lose Money?",
+        "comp": "will-i-lose-money",
+        "compName": "willILoseMoney",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2019-05-28",
+        "image": "dropletBudget",
+        "description": "There are a set of genuine standard questions shot at us from people whoever we have met so far -  Will my capital be safe?Will I seriously make money?How do you say I will make money if I stay invested for a long period?My money in a fixed deposit or LIC is always safe or at least my capital is protected.Mutual funds are risky.",
+        "recent": "false",
+        "tags": [
+            "chennai advisors",
+            "compounding",
+            "droplet wealth advisors",
+            "equities",
+            "financial advisors",
+            "financial planning",
+            "inflation",
+            "LIC",
+            "personal finance",
+            "reliance growth fund",
+            "wealth advisors in chennai",
+            "wealth creation"
+        ]
+    },
+    {
+        "title": "NPS Scheme - A Reality Check",
+        "comp": "nps-scheme-reality-check",
+        "compName": "npsRealityCheck",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2019-05-25",
+        "image": "Droplet_NPS",
+        "description": "Everything is associated with Risk. Even NPS does. What matters the most is how long you stay invested. We read an interesting article about NPS and thought of sharing it with our readers. Read on - Pension funds have marginal exposure to the distressed firm - Many debt funds with the mandate to invest in corporate debt securities have been left saddled with bonds issued by the indebted IL&FS and Essel group companies, resulting in a sharp erosion in their net asset values (NAVs)..",
+        "recent": "false",
+        "tags": [
+            "BSE",
+            "chennai advisors",
+            "chennai investors",
+            "compounding",
+            "droplet wealth advisors",
+            "equities",
+            "equity linked saving scheme",
+            "equity fund",
+            "financial advisor",
+            "financial planning",
+            "mutual funds",
+            "NPS",
+            "NSE"
         ]
     },
     {

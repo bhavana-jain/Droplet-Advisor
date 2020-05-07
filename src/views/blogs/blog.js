@@ -38,6 +38,9 @@ import mutualFundsWontMakeMoney from './blog-details/mutual-funds-wont-make-you-
 import guaranteedIncome from './blog-details/earn-guaranteed-income-of-50kmonth-for';
 import behaviour from './blog-details/the-behaviour';
 import newBeginningOldWine from './blog-details/new-year-new-beginning-old-wine';
+import startOrStopStockMarket from './blog-details/should-i-start-or-stop-my-stock-markets';
+import willILoseMoney from './blog-details/will-i-lose-money';
+import npsRealityCheck from './blog-details/nps-scheme-reality-check';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -77,7 +80,10 @@ const components = {
 	mutualFundsWontMakeMoney: mutualFundsWontMakeMoney,
 	guaranteedIncome: guaranteedIncome,
 	behaviour: behaviour,
-	newBeginningOldWine: newBeginningOldWine
+	newBeginningOldWine: newBeginningOldWine,
+	startOrStopStockMarket: startOrStopStockMarket,
+	willILoseMoney: willILoseMoney,
+	npsRealityCheck: npsRealityCheck
 };
 
 class BlogDetails extends React.Component {

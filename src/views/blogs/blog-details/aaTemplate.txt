@@ -1,0 +1,119 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import '../../blogs/blog.css';
+import BlogComment from '../blogComments';
+import firebase from 'firebase';
+import { NavLink, Link } from 'react-router-dom';
+import LoadScript from "react-load-script";
+
+
+const Addthis = () => {
+	const handleScriptLoad = () => {
+		window.addthis.init();
+		window.addthis.toolbox(".addthis_toolbox");
+		console.log("addthis Loaded");
+	};
+	return (
+		<div>
+			<LoadScript
+				url="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ea2a77e918821b6"
+				onLoad={handleScriptLoad}
+			/>
+			<div class="addthis_inline_share_toolbox"></div>
+
+		</div>
+	);
+}
+
+
+class extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			tags: [],
+			likes: ''
+		}
+		this.likePost = this.likePost.bind(this);
+	}
+	componentWillMount() {
+		document.title = "";
+		let postname = window.location.pathname.split('/')[2];
+		let clapCount;
+
+		firebase.database().ref('allBlogs').on('value', (snap) => {
+			console.clear();
+			// Check if child with pagename exists or else create one
+			let checkChild = snap.hasChild(postname);
+			if (!checkChild) {
+				snap.child(postname);
+
+			}
+			// If child already exists, get the claps and update in DOM
+			else {
+				clapCount = snap.child(postname).val().claps;
+				this.setState({
+					likes: clapCount,
+					childExist: true
+				})
+			}
+
+		});
+	}
+
+	likePost() {
+		let postname = window.location.pathname.split('/')[2];
+		let clapCount, newClapcount;
+		firebase.database().ref('allBlogs').child(postname).on('value', (snap) => {
+			console.clear();
+			clapCount = snap.val().claps;
+			console.log(clapCount);
+			this.setState({
+				likes: clapCount
+			})
+		});
+
+		let user = "daram"
+		// Create unique key with user name 
+		let newPostLikes = firebase.database().ref('allBlogs').child(postname).child("claps")
+
+		// Increment and return new value based on current value
+		newPostLikes.transaction(function (likes) {
+			return likes + 1;
+		})
+		// Add data to the newly created key
+
+	}
+
+
+	render() {
+		return (
+			<div className="container blogs-wrap">
+
+				<div className="main-blog-header">
+					<div>
+						<h2 className="blog-details-title"><span></span></h2>
+						<h6 className="blog-publish-info">By Admin | Apr 12, 2019 | Uncategorized | 0 comments</h6>
+						<div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div>
+					</div>
+					<div><Addthis /></div>
+				</div>
+				<img src="/images/" alt="" className="img-center" />
+
+				<ul className="blogs-tags">
+					{this.props.alltag.map((tag) =>
+						<li className="blogs-tag-link"><NavLink
+							to={{
+								pathname: '/blog',
+								state: { tagName: tag }
+							}}>
+							{tag} <br />
+						</NavLink></li>
+					)}
+				</ul>
+
+				<BlogComment />
+			</div >
+		)
+	}
+}
+export default ;
