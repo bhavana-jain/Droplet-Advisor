@@ -41,6 +41,8 @@ import newBeginningOldWine from './blog-details/new-year-new-beginning-old-wine'
 import startOrStopStockMarket from './blog-details/should-i-start-or-stop-my-stock-markets';
 import willILoseMoney from './blog-details/will-i-lose-money';
 import npsRealityCheck from './blog-details/nps-scheme-reality-check';
+import moneyLessons from './blog-details/money-lessons';
+import wealthCreators from './blog-details/wealth-creator-episode-5';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -83,7 +85,9 @@ const components = {
 	newBeginningOldWine: newBeginningOldWine,
 	startOrStopStockMarket: startOrStopStockMarket,
 	willILoseMoney: willILoseMoney,
-	npsRealityCheck: npsRealityCheck
+	npsRealityCheck: npsRealityCheck,
+	moneyLessons: moneyLessons,
+	wealthCreators: wealthCreators
 };
 
 class BlogDetails extends React.Component {
