@@ -43,6 +43,8 @@ import willILoseMoney from './blog-details/will-i-lose-money';
 import npsRealityCheck from './blog-details/nps-scheme-reality-check';
 import moneyLessons from './blog-details/money-lessons';
 import wealthCreators from './blog-details/wealth-creator-episode-5';
+import maximumAmountMaxJuices from './blog-details/maximum-amount-maximum-juice-80c-spl';
+import richDadPoorDad from './blog-details/rich-dad-poor-dad'
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -87,7 +89,9 @@ const components = {
 	willILoseMoney: willILoseMoney,
 	npsRealityCheck: npsRealityCheck,
 	moneyLessons: moneyLessons,
-	wealthCreators: wealthCreators
+	wealthCreators: wealthCreators,
+	maximumAmountMaxJuices: maximumAmountMaxJuices,
+	richDadPoorDad: richDadPoorDad
 };
 
 class BlogDetails extends React.Component {
