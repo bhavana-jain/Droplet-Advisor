@@ -5,6 +5,7 @@ import BlogComment from '../blogComments';
 import firebase from 'firebase';
 import { NavLink, Link } from 'react-router-dom';
 import LoadScript from "react-load-script";
+import MailChimpSubscribe from 'react-mailchimp-subscribe';
 
 
 const Addthis = () => {
@@ -138,6 +139,8 @@ class investorsInterestRate extends React.Component {
 				</ul>
 
 				<BlogComment />
+				<h2>Subscribe</h2>
+				<MailChimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL} />
 			</div >
 		)
 	}

@@ -99,10 +99,13 @@ class BlogDetails extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log('2', this.props.location.state.tag)
-		this.setState({
-			tag: this.props.location.state.tag
-		});
+
+		if (this.props.location.state.tag) {
+			console.log('2', this.props.location.state.tag)
+			this.setState({
+				tag: this.props.location.state.tag
+			});
+		}
 	}
 
 	render() {
