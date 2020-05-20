@@ -44,7 +44,10 @@ import npsRealityCheck from './blog-details/nps-scheme-reality-check';
 import moneyLessons from './blog-details/money-lessons';
 import wealthCreators from './blog-details/wealth-creator-episode-5';
 import maximumAmountMaxJuices from './blog-details/maximum-amount-maximum-juice-80c-spl';
-import richDadPoorDad from './blog-details/rich-dad-poor-dad'
+import richDadPoorDad from './blog-details/rich-dad-poor-dad';
+import lifeInsurancePolicy from './blog-details/life-insurance-policies-80c-savings';
+import doMfEarnMoney from './blog-details/do-mutual-funds-make-money-find-out';
+import costOfDelay from './blog-details/cost-of-delay'
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -91,7 +94,10 @@ const components = {
 	moneyLessons: moneyLessons,
 	wealthCreators: wealthCreators,
 	maximumAmountMaxJuices: maximumAmountMaxJuices,
-	richDadPoorDad: richDadPoorDad
+	richDadPoorDad: richDadPoorDad,
+	lifeInsurancePolicy: lifeInsurancePolicy,
+	doMfEarnMoney: doMfEarnMoney,
+	costOfDelay: costOfDelay
 };
 
 class BlogDetails extends React.Component {
