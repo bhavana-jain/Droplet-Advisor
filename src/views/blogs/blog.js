@@ -47,7 +47,9 @@ import maximumAmountMaxJuices from './blog-details/maximum-amount-maximum-juice-
 import richDadPoorDad from './blog-details/rich-dad-poor-dad';
 import lifeInsurancePolicy from './blog-details/life-insurance-policies-80c-savings';
 import doMfEarnMoney from './blog-details/do-mutual-funds-make-money-find-out';
-import costOfDelay from './blog-details/cost-of-delay'
+import costOfDelay from './blog-details/cost-of-delay';
+import oldAgeStory from './blog-details/the-age-old-story';
+import commonManUncommonInvestor from './blog-details/common-man-uncommon-investors-anil'
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -97,7 +99,9 @@ const components = {
 	richDadPoorDad: richDadPoorDad,
 	lifeInsurancePolicy: lifeInsurancePolicy,
 	doMfEarnMoney: doMfEarnMoney,
-	costOfDelay: costOfDelay
+	costOfDelay: costOfDelay,
+	oldAgeStory: oldAgeStory,
+	commonManUncommonInvestor: commonManUncommonInvestor
 };
 
 class BlogDetails extends React.Component {

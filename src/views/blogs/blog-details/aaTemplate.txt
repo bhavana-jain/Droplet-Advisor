@@ -25,6 +25,19 @@ const Addthis = () => {
 	);
 }
 
+const SubscribeBlog = () => {
+	const mailChimpLoaded = () => {
+		window.dojoRequire(["mojo/signup-forms/Loader"], function (L) { L.start({ "baseUrl": "mc.us8.list-manage.com", "uuid": "55126eebce7574436da9b2b2f", "lid": "52f2193bbd", "uniqueMethods": true }) });
+		console.clear();
+		console.log("mailchimp loaded")
+	}
+	return (
+		<div>
+			<LoadScript url="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false" onLoad={mailChimpLoaded} />
+		</div>
+	)
+}
+
 
 class extends React.Component {
 	constructor(props) {
@@ -95,7 +108,7 @@ class extends React.Component {
 						<h6 className="blog-publish-info">By Admin | Apr 12, 2019 | Uncategorized | 0 comments</h6>
 						<div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div>
 					</div>
-					<div><Addthis /></div>
+					<div><Addthis /> <SubscribeBlog /> </div>
 				</div>
 				<img src="/images/" alt="" className="img-center" />
 

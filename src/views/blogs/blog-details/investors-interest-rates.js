@@ -12,7 +12,7 @@ const Addthis = () => {
 	const handleScriptLoad = () => {
 		window.addthis.init();
 		window.addthis.toolbox(".addthis_toolbox");
-		console.log("addthis Loaded");
+		//console.log("addthis Loaded");
 	};
 	return (
 		<div>
@@ -26,6 +26,18 @@ const Addthis = () => {
 	);
 }
 
+const SubscribeBlog = () => {
+	const mailChimpLoaded = () => {
+		window.dojoRequire(["mojo/signup-forms/Loader"], function (L) { L.start({ "baseUrl": "mc.us8.list-manage.com", "uuid": "55126eebce7574436da9b2b2f", "lid": "52f2193bbd", "uniqueMethods": true }) });
+		console.clear();
+		console.log("mailchimp loaded")
+	}
+	return (
+		<div>
+			<LoadScript url="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false" onLoad={mailChimpLoaded} />
+		</div>
+	)
+}
 
 class investorsInterestRate extends React.Component {
 	constructor(props) {
@@ -88,7 +100,9 @@ class investorsInterestRate extends React.Component {
 						<h6 className="blog-publish-info">By Admin | Feb 29, 2020 | Uncategorized | 0 comments</h6>
 						<div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div>
 					</div>
-					<div><Addthis /></div>
+					<div><Addthis />
+						<SubscribeBlog />
+					</div>
 				</div>
 				<img src="/images/Droplet_Interest_Rate.jpg" alt="Droplet Interest Rate" className="img-center" />
 				<p>My Partner called me and told me that we are no different from laymen who know that Short term Interest rates are going to fall. We both know the same and hence we are the same. Yes I would say but only for the sake of that knowledge.
