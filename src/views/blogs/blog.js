@@ -49,7 +49,10 @@ import lifeInsurancePolicy from './blog-details/life-insurance-policies-80c-savi
 import doMfEarnMoney from './blog-details/do-mutual-funds-make-money-find-out';
 import costOfDelay from './blog-details/cost-of-delay';
 import oldAgeStory from './blog-details/the-age-old-story';
-import commonManUncommonInvestor from './blog-details/common-man-uncommon-investors-anil'
+import commonManUncommonInvestor from './blog-details/common-man-uncommon-investors-anil';
+import arjunReddyStock from './blog-details/stock-name-arjun-reddy-ltd-stock';
+import sagaciousYoungster from './blog-details/a-sagacious-youngster';
+import underwearMillionaire from './blog-details/the-underwear-millionaire';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -101,7 +104,10 @@ const components = {
 	doMfEarnMoney: doMfEarnMoney,
 	costOfDelay: costOfDelay,
 	oldAgeStory: oldAgeStory,
-	commonManUncommonInvestor: commonManUncommonInvestor
+	commonManUncommonInvestor: commonManUncommonInvestor,
+	arjunReddyStock: arjunReddyStock,
+	sagaciousYoungster: sagaciousYoungster,
+	underwearMillionaire: underwearMillionaire
 };
 
 class BlogDetails extends React.Component {
