@@ -53,6 +53,9 @@ import commonManUncommonInvestor from './blog-details/common-man-uncommon-invest
 import arjunReddyStock from './blog-details/stock-name-arjun-reddy-ltd-stock';
 import sagaciousYoungster from './blog-details/a-sagacious-youngster';
 import underwearMillionaire from './blog-details/the-underwear-millionaire';
+import wealthCreatorsEpi4 from './blog-details/wealth-creators-episode-4';
+import understandingSharePrice from './blog-details/Understanding the Share Price - II';
+import ruleOf15 from './blog-details/the-rule-of-15';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -107,7 +110,10 @@ const components = {
 	commonManUncommonInvestor: commonManUncommonInvestor,
 	arjunReddyStock: arjunReddyStock,
 	sagaciousYoungster: sagaciousYoungster,
-	underwearMillionaire: underwearMillionaire
+	underwearMillionaire: underwearMillionaire,
+	wealthCreatorsEpi4: wealthCreatorsEpi4,
+	understandingSharePrice: understandingSharePrice,
+	ruleOf15: ruleOf15
 };
 
 class BlogDetails extends React.Component {
