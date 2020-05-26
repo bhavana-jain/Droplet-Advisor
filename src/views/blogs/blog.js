@@ -56,6 +56,10 @@ import underwearMillionaire from './blog-details/the-underwear-millionaire';
 import wealthCreatorsEpi4 from './blog-details/wealth-creators-episode-4';
 import understandingSharePrice from './blog-details/Understanding the Share Price - II';
 import ruleOf15 from './blog-details/the-rule-of-15';
+import underStandingSharePrice from './blog-details/understanding-share-price';
+import wealthCreatorsiii from './blog-details/wealth-creators-episode-3';
+import returnOnInvestment from './blog-details/making-18-return-on-your-investments';
+import beingFinanciallyFit from './blog-details/being-financially-fit';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -113,7 +117,11 @@ const components = {
 	underwearMillionaire: underwearMillionaire,
 	wealthCreatorsEpi4: wealthCreatorsEpi4,
 	understandingSharePrice: understandingSharePrice,
-	ruleOf15: ruleOf15
+	ruleOf15: ruleOf15,
+	underStandingSharePrice: underStandingSharePrice,
+	wealthCreatorsiii: wealthCreatorsiii,
+	returnOnInvestment: returnOnInvestment,
+	beingFinanciallyFit: beingFinanciallyFit
 };
 
 class BlogDetails extends React.Component {
