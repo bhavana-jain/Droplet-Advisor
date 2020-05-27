@@ -60,6 +60,8 @@ import underStandingSharePrice from './blog-details/understanding-share-price';
 import wealthCreatorsiii from './blog-details/wealth-creators-episode-3';
 import returnOnInvestment from './blog-details/making-18-return-on-your-investments';
 import beingFinanciallyFit from './blog-details/being-financially-fit';
+import limitedTerm from './blog-details/you-dont-know-your-term-but-for-sure';
+import deferringYouthLuxury from './blog-details/deferring-luxury-vs-deferring-youth';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -121,7 +123,9 @@ const components = {
 	underStandingSharePrice: underStandingSharePrice,
 	wealthCreatorsiii: wealthCreatorsiii,
 	returnOnInvestment: returnOnInvestment,
-	beingFinanciallyFit: beingFinanciallyFit
+	beingFinanciallyFit: beingFinanciallyFit,
+	limitedTerm: limitedTerm,
+	deferringYouthLuxury: deferringYouthLuxury
 };
 
 class BlogDetails extends React.Component {
