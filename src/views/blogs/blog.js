@@ -62,6 +62,9 @@ import returnOnInvestment from './blog-details/making-18-return-on-your-investme
 import beingFinanciallyFit from './blog-details/being-financially-fit';
 import limitedTerm from './blog-details/you-dont-know-your-term-but-for-sure';
 import deferringYouthLuxury from './blog-details/deferring-luxury-vs-deferring-youth';
+import savingsAccountOrLiquidFund from './blog-details/which-one-is-better-savings-account-or';
+import wealthCreatorsEpi2 from './blog-details/wealth-creators-episode-2';
+import eatYourMoney from './blog-details/i-eat-your-money-but-you-still-dont-care';
 
 const components = {
 	RealtyReality: RealtyReality,
@@ -125,7 +128,10 @@ const components = {
 	returnOnInvestment: returnOnInvestment,
 	beingFinanciallyFit: beingFinanciallyFit,
 	limitedTerm: limitedTerm,
-	deferringYouthLuxury: deferringYouthLuxury
+	deferringYouthLuxury: deferringYouthLuxury,
+	savingsAccountOrLiquidFund: savingsAccountOrLiquidFund,
+	wealthCreatorsEpi2: wealthCreatorsEpi2,
+	eatYourMoney: eatYourMoney
 };
 
 class BlogDetails extends React.Component {
