@@ -103,7 +103,7 @@
 }
 .team:after {
     content: '';
-    background: url('../../images/team.JPG') no-repeat;
+    background: url('/images/team/daram.JPG') no-repeat;
     position: absolute;
     font-size: 55px;
     position: absolute;
@@ -117,6 +117,18 @@
     border: 2px solid gold;
     background-size: cover;
     font-weight: bold;
+}
+[data-name="S"]:after{
+background: url('/images/team/Saravanan.jpg') no-repeat;
+background-size: cover;
+}
+[data-name="Dinesh"]:after {
+    background: url('/images/team/Dinesh.jpg') no-repeat;
+background-size: cover;
+}
+[data-name="Raj"]:after {
+    background: url('/images/team/Rajkumar.jpg') no-repeat;
+background-size: cover;
 }
 .member-name {
     text-align: center;

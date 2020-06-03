@@ -67,7 +67,7 @@ class OurTeam extends React.Component {
 	</p>
 					</div>
 					<div className="team-wrap-inner">
-						<div className="team" data-name="P"></div>
+						<div className="team" data-name="Dinesh"></div>
 						<div className="member-name">Dinesh</div>
 						<div className="member-role">Partner</div>
 						<i className="member-tagline">WhatsApp. Facebook. Loquacity.</i>
@@ -76,7 +76,7 @@ class OurTeam extends React.Component {
  </p>
 					</div>
 					<div className="team-wrap-inner">
-						<div className="team" data-name="B"></div>
+						<div className="team" data-name="Raj"></div>
 						<div className="member-name">Raj</div>
 						<div className="member-role">Partner</div>
 						<i className="member-tagline">Gym, Eat, Gym, Cricket, Gym, Eat – Repeat in loop.</i>
