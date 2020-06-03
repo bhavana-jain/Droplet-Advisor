@@ -43,7 +43,7 @@ class OurTeam extends React.Component {
 				<p className="text-center">
 					India is young country with millions graduating from Colleges and helping their Families migrate from one economic class to the other higher economic class. This has however unfurled the problem of poor financial planning and personal debt crisis in many of the Young earners’ life. The Five men have to come together to “solve this Problem that does well in some way” exactly as Mr Dhirubhai Ambani wanted it be done.
 				</p>
-				<AliceCarousel mouseTrackingEnabled responsive={this.responsive} >
+				<AliceCarousel mouseTrackingEnabled responsive={this.responsive} autoPlay={true} autoPlayInterval={5000}>
 					<div className="team-wrap-inner">
 						<Animated animationIn="fadeIn" animationInDuration={1000} isVisible={true}>
 							<div className="team" data-name="S"></div>

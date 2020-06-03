@@ -227,7 +227,25 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 61;
+  z-index: 150;
+  color:#fff;
+  align-items: center;
+}
+.connect-options {
+  margin-left: 20px;
+  padding-left: 15px;
+  border-left: 1px solid #fff;
+}
+@media all and (max-width: 768px) and (orientation: portrait){
+  footer {
+    flex-direction: column;
+  }
+ .connect-options {
+  margin-left: 0px;
+  padding-left: 0px;
+  border-left: none;
+  margin-top: 5px;
+}
 }
 
 .icon-insurance:before {

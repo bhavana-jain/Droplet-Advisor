@@ -242,3 +242,6 @@ color: #333;
     content: "\ea5c" !important;
     font-family: "IcoFont";
 }
+.alice-carousel__stage-item {
+padding-top: 10px;
+}

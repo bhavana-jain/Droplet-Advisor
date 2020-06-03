@@ -48,6 +48,10 @@ class App extends React.Component {
 						</Switch>
 					</main>
 					{<footer className="clear">
+						<div className="">
+							We are <i className="bold">AMFI registered MFD</i> with <i className="bold">ARN-133803</i>
+						</div>
+
 						<ul className="ul-reset flex connect-options">
 							<li>
 								<NavLink to='/contactus' className="icon-call"></NavLink>
