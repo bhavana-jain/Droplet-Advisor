@@ -53,9 +53,9 @@ class App extends React.Component {
 						</div>
 
 						<ul className="ul-reset flex connect-options">
-							<li>
+							{/* <li>
 								<NavLink to='/contactus' className="icon-call"></NavLink>
-							</li>
+							</li> */}
 							<li>
 								<NavLink to='/contactus' className="icon-email"></NavLink>
 							</li>
@@ -64,7 +64,11 @@ class App extends React.Component {
 
 							</li>
 							<li>
-								<a href="https://twitter.com/DropletWealth" target="_blank" className="icon-instagram"></a>
+								<a href="https://twitter.com/DropletWealth" target="_blank" className="icon-twitter"></a>
+
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/company/53270945" target="_blank" className="icon-linkedIn"></a>
 
 							</li>
 						</ul>

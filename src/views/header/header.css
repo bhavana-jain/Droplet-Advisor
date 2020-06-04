@@ -227,6 +227,12 @@ content: "\ec46";
 .connect-options .icon-email:before{
     content:"\ef12";
 }
+.connect-options .icon-twitter:before {
+    content: "\ed7a";
+}
+.connect-options .icon-linkedIn:before {
+    content: "\ed4d";
+}
 .page-overlay {
     position: absolute;
     width: 100%;
