@@ -85,7 +85,7 @@ class behaviour extends React.Component {
 					<div>
 						<h2 className="blog-details-title">The <span>Behaviour!</span></h2>
 						<h6 className="blog-publish-info">By Admin | Feb 23, 2019 | Uncategorized | 0 comments</h6>
-						<div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div>
+						<div onClick={this.likePost} className="clap-icon"> {this.state.likes}Likes</div>
 					</div>
 					<div><Addthis /></div>
 				</div>

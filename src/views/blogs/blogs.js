@@ -6,7 +6,7 @@ import ReactPaginate from 'react-paginate';
 
 let searchVal = "", archiveYear = ""
 let filterData = () => data.map(function (data) {
-	if (data.tags.indexOf(searchVal) >= 0) {
+	if (data.tags.indexOf(searchVal.toLowerCase()) >= 0 || data.tags.indexOf(searchVal) >= 0) {
 		console.clear();
 		console.log(data.compName)
 		const BlogName = data.comp;

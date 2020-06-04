@@ -61,7 +61,7 @@ class commonManUncommonInvestor extends React.Component {
                 snap.child(postname);
 
             }
-            // If child already exists, get the claps and update in DOM
+            // If child already exists, get theLikes and update in DOM
             else {
                 clapCount = snap.child(postname).val().claps;
                 this.setState({
@@ -106,7 +106,7 @@ class commonManUncommonInvestor extends React.Component {
                     <div>
                         <h2 className="blog-details-title"><span>Common Men, Uncommon Investors - Anil Kumar Goel</span></h2>
                         <h6 className="blog-publish-info">By Admin | Oct 22, 2018 | Uncategorized | 0 comments</h6>
-                        <div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div>
+                        <div onClick={this.likePost} className="clap-icon"> {this.state.likes}Likes</div>
                     </div>
                     <div><Addthis /> <SubscribeBlog /> </div>
                 </div>

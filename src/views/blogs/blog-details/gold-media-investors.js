@@ -25,8 +25,7 @@ const Addthis = () => {
     );
 }
 
-
-class lifeInsurancePolicy extends React.Component {
+class goldMediaInvestors extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -36,7 +35,7 @@ class lifeInsurancePolicy extends React.Component {
         this.likePost = this.likePost.bind(this);
     }
     componentWillMount() {
-        document.title = "Life Insurance Policies & 80C Savings";
+        document.title = "Gold, Media & Investors";
         let postname = window.location.pathname.split('/')[2];
         let clapCount;
 
@@ -91,29 +90,38 @@ class lifeInsurancePolicy extends React.Component {
 
                 <div className="main-blog-header">
                     <div>
-                        <h2 className="blog-details-title"><span>Life Insurance Policies &amp; 80C Savings</span></h2>
-                        <h6 className="blog-publish-info">By Admin | Nov 24, 2018 | Uncategorized | 0 comments</h6>
+                        <h2 className="blog-details-title"><span>Gold, Media &amp; Investors</span></h2>
+                        <h6 className="blog-publish-info">By Admin | May 28, 2020 | Uncategorized | 0 comments</h6>
                         <div onClick={this.likePost} className="clap-icon"> {this.state.likes}Likes</div>
                     </div>
-                    <div><Addthis /></div>
+                    <div><Addthis />  </div>
                 </div>
-                {/* <img src="/images/" alt="" className="img-center" /> */}
+                <img src="/images/goldMedia.jpg" alt="" className="img-center" />
+Ever since the Gold started soaring my twitter timeline is filled with Social media "experts" calling out Gold as winner against Amar, Akbar &amp; Anthony, i.e., Stocks, debts &amp; Real Estate. Okay, so I now switched on to News Channel and they too were running headlines like - "Gold outshines bla bla..." I was like - Ye Tu, Brute? We thought that this too shall pass. But then started a galore of news pieces that called the doom for most of other asset classes. We said, enough, lets try and add some common sense to this non-sense!
+
                 <p>
-                    This is the time of the year when fortunate of us would be running to save taxes us 80C. Fortunate because we don't have a home loan and hence we don't "Save Taxes" under 80C.
+                    The 1st thing that we noticed is that the 20 Year returns of Gold is shown against the 20 Year returns of Equities. So it looks like this -
+                     <img src="/images/goldVsEquity.jpg" className="img-center" alt="Gold Vs Equity" />
+                </p>
+                <p>
+                    So Yes over 20 Years looks like Gold has given better returns than Equities. But wait this is a twisted narrative. To know why lets press the rewind button and go to 1997. In 1997, the Price of Gold was Rs 5100 and Nifty was trading @ 998. Between 1997 to 2000, The Gold had corrected (fallen)15% vs Nifty went up by 60%
+                     <img src="/images/goldFallenAsset.jpg" className="img-center" alt="" />
+                </p>
+                <p>
+                    So by taking 2000 as base year for comparison, we are ideally comparing a inflated asset (Equity up 60%) with deflated asset (Gold down 15%). This we believe is not the right comparison at all.
+
+                </p>
+                <p>
+                    A more appropriate comparison would be returns from High to High as shown below.
+ <img src="/images/goldComparison.jpg" className="img-center" alt="" />
+                </p>
+                <p>
+                    We would see that Equities have outdone Gold. As simple as that. The hype around can be simply ignored as media hype since we switch on the TV to know something sensational and hence this jump in gold is sensationalized.
 </p>
 
                 <p>
-                    We will soon have our smartphones throwing up adds like  - "<i className="underline">Save 46,500 in Taxes this year</i>" blah blah... not only that we will also our Dad's/Mom's/Uncle's friends who will call up to say that we can a buy a "Money Back Guaranteed Plan" to  save taxes and insurance our life and get "smart" guaranteed returns on our investment and plan our retirements and oh my what and all they will not tell you until you s**k up..
+                    At this point we would like to clarify that we neither suggest to investing in gold nor suggest moving away from Gold altogether. It is prudent to stick to a healthy asset allocation.
 </p>
-
-                <p>
-                    This year Droplet is going to try to make it different and of course we need your <strong>Patience</strong> and <strong>Attention</strong> so that we can help you.
-</p>
-
-                <p>
-                    Read our Blog <a href="javascript:;">here</a> and enlighten yourself.
-</p>
-
 
                 <ul className="blogs-tags">
                     {this.props.alltag.map((tag) =>
@@ -132,4 +140,4 @@ class lifeInsurancePolicy extends React.Component {
         )
     }
 }
-export default lifeInsurancePolicy;
+export default goldMediaInvestors;

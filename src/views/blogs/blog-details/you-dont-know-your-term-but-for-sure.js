@@ -47,7 +47,7 @@ class limitedTerm extends React.Component {
                 snap.child(postname);
 
             }
-            // If child already exists, get the claps and update in DOM
+            // If child already exists, get theLikes and update in DOM
             else {
                 clapCount = snap.child(postname).val().claps;
                 this.setState({
@@ -92,7 +92,7 @@ class limitedTerm extends React.Component {
                     <div>
                         <h2 className="blog-details-title"><span>You Don't Know Your Term But For Sure Your Term is Limited</span></h2>
                         <h6 className="blog-publish-info">By Admin | June 23, 2018 | Uncategorized | 0 comments</h6>
-                        <div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div>
+                        <div onClick={this.likePost} className="clap-icon"> {this.state.likes}Likes</div>
                     </div>
                     <div><Addthis />  </div>
                 </div>

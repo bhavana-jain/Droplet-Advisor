@@ -43,7 +43,7 @@ class unionBudget extends React.Component {
 				snap.child(postname);
 
 			}
-			// If child already exists, get the claps and update in DOM
+			// If child already exists, get theLikes and update in DOM
 			else {
 				clapCount = snap.child(postname).val().claps;
 				this.setState({
@@ -78,7 +78,7 @@ class unionBudget extends React.Component {
 			<div className="container blogs-wrap">
 				<h2>Union Budget 2020</h2>
 				<h6 className="blog-publish-info">By Admin | Feb 15, 2020 | Uncategorized | 0 comments</h6>
-				{this.state.childExist ? <div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div> : ''}
+				{this.state.childExist ? <div onClick={this.likePost} className="clap-icon"> {this.state.likes}Likes</div> : ''}
 				<div><Addthis /></div>
 				<p>We were worried as financial advisers about the budget. Of course the Union Budget because if the budget was perceived to the be good then the markets would rally and our investors will not get discounts on their Investments. Discounts are always good, Who knows it better than you guys! The fact is good business shall always thrive irrespective of the budget and when we choose to invest in equities we invest in businesses that will do well in future. Note that we have used the word "Perceived". Again most of the govt policies being good or bad are perceptions of the people. A good businessman would identify each of them as an opportunity. A classic example is Titan which when was forced to import Gold due to "Govt Policies", it started Tanisq and today Tanisq is one of the largest contributor to Titan's Profits.</p>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import investorMistakes from './blog-details/the-common-mistakes-of-investor';
 import RealtyReality from './RealtyReality';
 import tiffenForKid from './blog-details/tiffenForKid';
 import losingFewCrores from './blog-details/losing-few-crores';
@@ -65,8 +66,11 @@ import deferringYouthLuxury from './blog-details/deferring-luxury-vs-deferring-y
 import savingsAccountOrLiquidFund from './blog-details/which-one-is-better-savings-account-or';
 import wealthCreatorsEpi2 from './blog-details/wealth-creators-episode-2';
 import eatYourMoney from './blog-details/i-eat-your-money-but-you-still-dont-care';
+import goldMediaInvestors from './blog-details/gold-media-investors';
 
 const components = {
+	investorMistakes: investorMistakes,
+	goldMediaInvestors: goldMediaInvestors,
 	RealtyReality: RealtyReality,
 	tiffenForKid: tiffenForKid,
 	losingFewCrores: losingFewCrores,

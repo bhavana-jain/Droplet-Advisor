@@ -86,7 +86,7 @@ class newBeginningOldWine extends React.Component {
 					<div>
 						<h2 className="blog-details-title"><span>New Year. New Beginning.Old Wine.</span></h2>
 						<h6 className="blog-publish-info">By Admin | Jan 01, 2019 | Uncategorized | 0 comments</h6>
-						<div onClick={this.likePost} className="clap-icon"> {this.state.likes} claps</div>
+						<div onClick={this.likePost} className="clap-icon"> {this.state.likes}Likes</div>
 					</div>
 					<div>{this.state.isPageLoaded ? <Addthis /> : ''}</div>
 				</div>
