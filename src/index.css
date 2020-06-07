@@ -35,9 +35,9 @@ main {
 } 
 .container {
   margin: 0 auto;
-  padding:15px;
+  padding:15px 15px 90px 15px;
   max-width: 1100px;
-}
+} 
 
 .border-bottom-grey {
   border-bottom: 1px solid #ccc;
@@ -278,4 +278,9 @@ border-bottom: 2px solid #dc2214;
 display: inline-block;
 vertical-align: middle;
 margin-left: 10px;
+}
+@media all and (max-width: 1024px) {
+  main {
+    padding-top: 80px;
+  }
 }

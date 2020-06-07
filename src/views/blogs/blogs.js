@@ -101,10 +101,11 @@ export default class Blogs extends React.Component {
 	receivedData = () => {
 		this.setState({
 			data: data
-		})
+		});
 		const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage);
 
 		const postData = slice.map(data => {
+
 			const BlogName = data.comp;
 			const BlogNameUrl = "/blog/" + BlogName;
 			const blogComp = data.compName;
@@ -173,7 +174,7 @@ export default class Blogs extends React.Component {
 							breakClassName={"break-me"}
 							pageCount={this.state.pageCount}
 							marginPagesDisplayed={2}
-							pageRangeDisplayed={10}
+							pageRangeDisplayed={3}
 							onPageChange={this.handlePageClick}
 							containerClassName={"pagination"}
 							subContainerClassName={"pages pagination"}

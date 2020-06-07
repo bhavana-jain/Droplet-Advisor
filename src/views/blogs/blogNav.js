@@ -78,6 +78,7 @@ export default class BlogsNavigation extends React.Component {
 		}
 	}
 	render() {
+		{ document.title = "Blogs | Droplet Wealth Advisor" }
 		return (
 			<div className="container">
 				<h1 className="section-title text-center">Blogs</h1>
@@ -89,7 +90,7 @@ export default class BlogsNavigation extends React.Component {
 						placeholder="Search Blogs"
 						required
 						value={this.state.searchMobile} />
-					<a href="javascript:;" className="search-icon" onClick={(e) => this.searchBlog(e)}></a>
+					<div className="search-icon" onClick={(e) => this.searchBlog(e)}></div>
 				</div>
 				<div className="blogs-container">
 					{this.state.shldSearch && !this.state.archives && !this.state.tagSearch ? <Blogs filter={this.state.searchText} /> : ''}

@@ -243,7 +243,8 @@ width: calc(100% - 150px);
     border-left: 1px solid #ccc;
     display: inline-block;
     height: 47px;
-    text-align: center;
+	text-align: center;
+	cursor:pointer;
 }
 .search-icon:before {
 	content: "\ed11";
@@ -281,6 +282,14 @@ width: calc(100% - 150px);
 	}
 }
 @media all and (max-width: 1024px) and (orientation:portrait) {
+	.blog-otherInfo {
+		display: block;
+		margin-top: 5px;
+	}
+	.blog-title-outer h3 {
+		max-width: 100%;
+		width: 100%;
+	}
 	.blog-title-outer {
 		flex-wrap: wrap;
 	}
@@ -291,6 +300,12 @@ width: calc(100% - 150px);
 	.blog-title-outer p {
 		margin-top: 5px !important;
 		margin-left: unset;
+	}
+	.main-blog-header {
+		flex-direction: column;
+	}
+	.main-blog-header > div:last-child {
+		margin-left: unset !important;
 	}
 	.mobile-search { display: block;margin-bottom: 15px;}
 	.search-nav { display: none;}

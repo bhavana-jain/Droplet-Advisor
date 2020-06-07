@@ -8,8 +8,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { NavLink } from 'react-router-dom';
 import './home.css';
 import TrendingBlogs from '../blogs/topBlogs';
-import Blogs from '../blogs/blogs';
-import Slide from 'react-reveal/Slide';
 
 
 
@@ -57,10 +55,10 @@ class Home extends React.Component {
 						<NavLink to='/blog' className="btn">View All Blogs</NavLink>
 					</div>
 				</ScrollAnimation>
-
-				<ScrollAnimation animateIn="fadeIn">
+				<LazyLoad debounce={true} unmountIfInvisible={true}>
 					<GetStarted />
-				</ScrollAnimation>
+				</LazyLoad>
+
 			</div>
 		)
 	}
