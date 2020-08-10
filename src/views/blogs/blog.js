@@ -67,6 +67,8 @@ import savingsAccountOrLiquidFund from './blog-details/which-one-is-better-savin
 import wealthCreatorsEpi2 from './blog-details/wealth-creators-episode-2';
 import eatYourMoney from './blog-details/i-eat-your-money-but-you-still-dont-care';
 import goldMediaInvestors from './blog-details/gold-media-investors';
+import goldInvestment from './blog-details/gold-investment';
+import moneyFromGold from './blog-details/gold-how-much-money-do-i-actually-make';
 
 const components = {
 	investorMistakes: investorMistakes,
@@ -135,7 +137,9 @@ const components = {
 	deferringYouthLuxury: deferringYouthLuxury,
 	savingsAccountOrLiquidFund: savingsAccountOrLiquidFund,
 	wealthCreatorsEpi2: wealthCreatorsEpi2,
-	eatYourMoney: eatYourMoney
+	eatYourMoney: eatYourMoney,
+    goldInvestment: goldInvestment,
+    moneyFromGold: moneyFromGold
 };
 
 class BlogDetails extends React.Component {

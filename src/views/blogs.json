@@ -1,5 +1,51 @@
 [
     {
+        "title": "Gold - An Investment",
+        "comp": "gold-investment",
+        "compName": "goldInvestment",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2020-07-04",
+        "image": "Physical-ETF-SGB",
+        "description": "In the previous two blogs we saw- Gold does not necessarily out beat other asset classes. Because of the way we 'Buy' old, the returns further diminish. ",
+        "recent": "true",
+        "tags": [
+            "droplet wealth advisors",
+            "financial planning",
+            "personal finance",
+            "investments",
+            "savings",
+            "mutual funds",
+            "money",
+            "mistakes",
+            "chennai advisors",
+        "gold"
+        ]
+    },
+     {
+        "title": "Gold - How much money do I actually make?",
+        "comp": "gold-how-much-money-do-i-actually-make",
+        "compName": "moneyFromGold",
+        "author": "Admin",
+        "category": "uncatogerized",
+        "createdOn": "2020-06-13",
+        "image": "moneyfromGold",
+        "description": "In the last blog, we showed that even though Gold has given better returns in recent times, the long term returns of Gold are still not the best among all asset classes. In that the returns compared were the returns of pure gold vs other Asset class. In this blog, let us understand the difference between the actual returns we make from Gold vs Paper returns based on Gold Prices we see. ",
+        "recent": "true",
+        "tags": [
+            "droplet wealth advisors",
+            "financial planning",
+            "personal finance",
+            "investments",
+            "savings",
+            "mutual funds",
+            "money",
+            "mistakes",
+            "chennai advisors",
+            "asset allocation", "gold"
+        ]
+    },
+    {
         "title": "The Common Mistakes of an Investor!",
         "comp": "the-common-mistakes-of-investor",
         "compName": "investorMistakes",
