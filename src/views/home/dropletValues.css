@@ -51,7 +51,35 @@ transition: opacity 1s linear;
   color: #fff;
   font-size: 18px;
 }
+@media all and (max-width: 767px) {
+  .slick-slide {
+    height: auto !important;
+  }
+  .slick-slide img {
+ height:auto;
+  width: 100%;
+}
 
+.image-text {
+    display: none;
+}
+.image-text-mobile {
+    display: block;
+    position: absolute;
+  top: 50%;
+  max-width: 35%;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity 1s linear;
+  transform: translateY(-50%);
+  left: 40px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+}
 @media all and (max-width: 1024px) and (orientation:portrait) {
   .image-text p {
     font-size: 14px;

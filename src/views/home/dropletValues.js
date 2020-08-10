@@ -14,7 +14,7 @@ export default class DropletValues extends React.Component {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			fade: true,
-			autoplay: true
+			autoPlay: true
 		};
 		return (
 			<div>
@@ -34,6 +34,10 @@ export default class DropletValues extends React.Component {
 
 							</div>
 						</div>
+						<div className="image-text-mobile">
+							Trust that Droplet's each endeavors will be to meet your expectations.
+
+						</div>
 					</div>
 					<div>
 						<img src='/images/Droplet-Banner-02.jpg' />
@@ -49,6 +53,11 @@ export default class DropletValues extends React.Component {
 								</ul>
 							</div>
 						</div>
+							<div className="image-text-mobile">
+							Trust that Droplet's each endeavors will be to meet your expectations.
+
+						</div>
+
 					</div>
 					<div>
 						<img src='/images/Droplet-Banner-03.jpg' />
@@ -69,6 +78,10 @@ export default class DropletValues extends React.Component {
 
 								</ul>
 							</div>
+						</div>
+	<div className="image-text-mobile">
+							Trust beliebe Droplet's each endeavors will be to meet your expectations.
+
 						</div>
 
 					</div>
