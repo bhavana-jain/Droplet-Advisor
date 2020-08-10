@@ -54,7 +54,7 @@ export default class DropletValues extends React.Component {
 							</div>
 						</div>
 							<div className="image-text-mobile">
-							Trust that Droplet's each endeavors will be to meet your expectations.
+							we wish to inculcate an Ant like discipline in your financial life.
 
 						</div>
 
@@ -80,7 +80,7 @@ export default class DropletValues extends React.Component {
 							</div>
 						</div>
 	<div className="image-text-mobile">
-							Trust beliebe Droplet's each endeavors will be to meet your expectations.
+						Build a Banyan of wealth of wealth by staying the course, Just long enough.
 
 						</div>
 

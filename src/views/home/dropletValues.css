@@ -15,6 +15,9 @@
 .slick-dots {
   bottom: 20px !important;
 }
+.image-text-mobile {
+    display: none;
+}
 .image-text {
   position: absolute;
   top: 50%;
@@ -67,7 +70,7 @@ transition: opacity 1s linear;
     display: block;
     position: absolute;
   top: 50%;
-  max-width: 35%;
+  max-width: 45%;
   margin: 0 auto;
   opacity: 1;
   transition: opacity 1s linear;
@@ -80,7 +83,7 @@ transition: opacity 1s linear;
 }
 
 }
-@media all and (max-width: 1024px) and (orientation:portrait) {
+@media all and (max-width: 1024px) {
   .image-text p {
     font-size: 14px;
     max-width: 300px;
@@ -88,5 +91,8 @@ transition: opacity 1s linear;
   .image-text > div {
     padding-left: 25px;
   }
- 
+    .slick-slide {
+        height: auto !important;
+
+    }
 }
