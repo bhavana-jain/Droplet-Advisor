@@ -11,7 +11,8 @@ class financialPlanning extends React.Component {
 		super(props);
 	}
 	componentWillMount() {
-		document.title = "Financial Planning | Droplet Wealth Advisor"
+		document.title = "Financial Planning | Droplet Wealth Advisor";
+        window.scrollTo(0,0)
 	}
 	render() {
 

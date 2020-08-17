@@ -50,9 +50,12 @@ class goldInvestment extends React.Component {
 			// If child already exists, get theLikes and update in DOM
 			else {
 				clapCount = snap.child(postname).val().claps;
+                let alltags = snap.child(postname).val().tags
+              console.log(Object.keys(alltags))
 				this.setState({
 					likes: clapCount,
-					childExist: true
+					childExist: true,
+                    tags: Object.keys(alltags)
 				})
 			}
 
@@ -139,7 +142,7 @@ Hedge  -
 <p> Today investors are investing in gold seeing the returns so they also need to know which is the best choice for them. Just like understanding an Insurance or Mutual fund before buying is important, if Gold is chosen to be invested in, we need to understand the mode of investment and allocation and proceed judiously. </p>
 
 				<ul className="blogs-tags">
-					{this.props.alltag.map((tag) =>
+					{this.state.tags.map((tag) =>
 						<li className="blogs-tag-link"><NavLink
 							to={{
 								pathname: '/blog',

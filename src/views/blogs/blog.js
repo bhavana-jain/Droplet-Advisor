@@ -1,4 +1,5 @@
 import React from 'react';
+import firebase from 'firebase';
 
 import investorMistakes from './blog-details/the-common-mistakes-of-investor';
 import RealtyReality from './RealtyReality';
@@ -146,28 +147,30 @@ class BlogDetails extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			tag: []
+			tag: [],
+            blogPage: '',
+            infoReady: false
 		}
 	}
+componentWillMount(){
+      let blogname = window.location.pathname.split('/')[2];
+        firebase.database().ref('allBlogs').once('value', (snap) => {
 
-	componentDidMount() {
+				let toComp = snap.child(blogname).val().compName;
+                this.setState({
+                    infoReady: true,
+                    blogPage : toComp
+                })
 
-		if (this.props.location.state.tag) {
-			console.log('2', this.props.location.state.tag)
-			this.setState({
-				tag: this.props.location.state.tag
-			});
-		}
-	}
+		});
+}
 
 	render() {
-		let allTags;
 
 		return (
 			<>
-				{
-					this.props.location && this.props.location.state && this.props.location.state != "" && components[this.props.location.state.comp] ? React.createElement(components[this.props.location.state.comp], { alltag: this.props.location.state.tag }) : <div>NoDetails</div>
-				}
+            { this.state.blogPage != "" && this.state.infoReady ? React.createElement(components[this.state.blogPage]) : "loading"}
+
 			</>
 		)
 	}

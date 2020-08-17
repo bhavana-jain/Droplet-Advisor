@@ -29,7 +29,7 @@ let filterData = () => data.map(function (data) {
 						</div>
 						<div className="blog-nav-link">
 							<p>{truncateDescription}
-								<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}`, tag: data.tags } }}>
+								<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}` } }}>
 									Learn More
             </NavLink></p>
 						</div>
@@ -70,7 +70,7 @@ let archiveData = () => data.map(function (data) {
 						</div>
 						<div className="blog-nav-link">
 							<p>{truncateDescription}
-								<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}`, tag: data.tags } }}>
+								<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}` } }}>
 									Learn More
             </NavLink></p>
 						</div>
@@ -125,7 +125,7 @@ export default class Blogs extends React.Component {
 							</div>
 							<div className="blog-nav-link">
 								<p>{truncateDescription}
-									<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}`, tag: data.tags } }}>
+									<NavLink to={{ pathname: `${BlogNameUrl}`, state: { comp: `${blogComp}`} }}>
 										Learn More
             </NavLink></p>
 							</div>
