@@ -29,7 +29,7 @@ class GetStarted extends React.Component {
 						<div className="droplet-stats-title"> Insurance Planning</div>
 					</div>
 					<div>
-						<CountUp from={0} end={9} duration={15} suffix=" Million" className="droplet-stats-count" />
+						<CountUp from={0} end={20} duration={25} suffix=" Million" className="droplet-stats-count" />
 						<div className="droplet-stats-title"> Asset Under Management</div>
 					</div>
 					<div>
