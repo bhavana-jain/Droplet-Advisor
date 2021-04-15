@@ -102,7 +102,7 @@ class ContactUs extends React.Component {
 								Tamil Nadu, India
 							</div>
 						</div>
-						<div className="icofont-ui-call clear"><strong>99623 99924 / 9551373455</strong></div>
+						<div className="icofont-ui-call clear"><strong>9962399924 / 9551373455</strong></div>
 						<div className="icofont-email"><strong>dropletadvisory@gmail.com
 </strong></div>
 
